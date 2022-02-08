@@ -1,0 +1,15 @@
+{
+  "name": "piccolo_theme",
+  "version": "1.0.0",
+  "description": "A Sphinx theme which is based on the Read the Docs theme, but modernised.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.1.2",
+    "less-watch-compiler": "^1.16.3"
+  }
+}

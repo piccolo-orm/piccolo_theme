@@ -1,0 +1,233 @@
+/*****************************************************************************/
+/* Typography */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+p,
+li {
+  font-family: "OpenSans", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+span.caption-text {
+  font-weight: normal !important;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+/*****************************************************************************/
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*****************************************************************************/
+
+div.related {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+div.related ul li {
+  display: inline-block;
+}
+
+div.related ul {
+  padding: 0;
+  margin: 0;
+}
+
+div.related ul li.right {
+  float: right;
+}
+
+/*****************************************************************************/
+
+div.document {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+div.document div.highlight {
+  box-sizing: border-box;
+  padding: 0.2rem 1rem;
+}
+
+div.document a.headerlink {
+  font-size: 0.6em;
+  display: none;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+
+div.document h1:hover a.headerlink,
+div.document h2:hover a.headerlink,
+div.document h3:hover a.headerlink,
+div.document h4:hover a.headerlink {
+  display: inline-block;
+}
+
+/*****************************************************************************/
+
+div.sphinxsidebar {
+  background-color: #333548;
+  flex-grow: 0;
+}
+
+div.sphinxsidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+div.sphinxsidebar ul li > ul {
+  padding-left: 1rem;
+}
+
+div.sphinxsidebar ul {
+  padding-left: 0rem;
+  list-style: none;
+}
+
+/*****************************************************************************/
+
+div.sphinxsidebar,
+div.documentwrapper {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+div.documentwrapper {
+  flex-grow: 1;
+}
+
+/*****************************************************************************/
+/* Side Nav */
+
+/* div.wy-side-nav-search {
+    background: none;
+}
+
+nav.wy-nav-side {
+    background: #333548 !important;
+}
+
+.wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
+    background: #333548;
+    color: white;
+}
+
+.wy-menu-vertical li.toctree-l1.current>a {
+    border: none;
+    border-left: 5px solid #1a90e7;
+}
+
+.wy-menu-vertical li.current ul {
+    background-color: #222532;
+}
+
+.wy-menu-vertical li.current a {
+    border: none;
+}
+
+.wy-menu-vertical li.current ul li a {
+    color: white;
+}
+
+.wy-menu-vertical li.current ul li a:hover {
+    background-color: #222532;
+} */
+
+/*****************************************************************************/
+/* Top Nav */
+
+div[role="navigation"] hr {
+  border: none;
+}
+
+/*****************************************************************************/
+/* Footer */
+
+footer hr {
+  border: none;
+}
+
+div[role="contentinfo"] p {
+  font-size: 0.7rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*****************************************************************************/
+/* Buttons */
+
+.btn {
+  box-shadow: none !important;
+  background-color: white !important;
+}
+
+/*****************************************************************************/
+/* Main content */
+
+.wy-nav-content-wrap,
+.wy-nav-content {
+  background-color: white;
+}
+
+.wy-nav-content {
+  min-height: 100%;
+  max-width: 100%;
+}
+
+div.rst-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div[role="navigation"] {
+  flex-grow: 0;
+}
+
+div[role="main"] {
+  flex-grow: 1;
+}
+
+footer {
+  flex-grow: 0;
+}
+
+div[role="main"],
+div.rst-footer-buttons {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.document h1 {
+  margin-top: 2rem;
+}
