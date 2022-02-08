@@ -51,19 +51,19 @@ body {
 div.related {
   box-sizing: border-box;
   padding: 1rem;
-}
 
-div.related ul li {
-  display: inline-block;
-}
+  ul {
+    padding: 0;
+    margin: 0;
 
-div.related ul {
-  padding: 0;
-  margin: 0;
-}
+    li {
+      display: inline-block;
 
-div.related ul li.right {
-  float: right;
+      &.right {
+        float: right;
+      }
+    }
+  }
 }
 
 /*****************************************************************************/
@@ -72,25 +72,27 @@ div.document {
   flex-grow: 1;
   display: flex;
   flex-direction: row-reverse;
-}
 
-div.document div.highlight {
-  box-sizing: border-box;
-  padding: 0.2rem 1rem;
-}
+  div.highlight {
+    box-sizing: border-box;
+    padding: 0.2rem 1rem;
+  }
 
-div.document a.headerlink {
-  font-size: 0.6em;
-  display: none;
-  padding-left: 0.5rem;
-  vertical-align: middle;
-}
+  a.headerlink {
+    font-size: 0.6em;
+    display: none;
+    padding-left: 0.5rem;
+    vertical-align: middle;
+  }
 
-div.document h1:hover a.headerlink,
-div.document h2:hover a.headerlink,
-div.document h3:hover a.headerlink,
-div.document h4:hover a.headerlink {
-  display: inline-block;
+  h1:hover,
+  h2:hover,
+  h3:hover,
+  h4:hover {
+    a.headerlink {
+      display: inline-block;
+    }
+  }
 }
 
 /*****************************************************************************/
@@ -98,20 +100,20 @@ div.document h4:hover a.headerlink {
 div.sphinxsidebar {
   background-color: #333548;
   flex-grow: 0;
-}
 
-div.sphinxsidebar a {
-  color: white;
-  text-decoration: none;
-}
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
-div.sphinxsidebar ul li > ul {
-  padding-left: 1rem;
-}
+  ul {
+    padding-left: 0rem;
+    list-style: none;
 
-div.sphinxsidebar ul {
-  padding-left: 0rem;
-  list-style: none;
+    li > ul {
+      padding-left: 1rem;
+    }
+  }
 }
 
 /*****************************************************************************/
