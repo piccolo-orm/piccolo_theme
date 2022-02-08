@@ -93,6 +93,66 @@ div.document {
       display: inline-block;
     }
   }
+
+  div.admonition {
+    p {
+      box-sizing: border-box;
+      font-size: 0.9em;
+      padding: 0.3rem 0.5rem;
+      margin: 0;
+    }
+
+    p.admonition-title {
+      color: white;
+      font-weight: bolder;
+      letter-spacing: 0.01rem;
+    }
+
+    &.hint,
+    &.important,
+    &.tip {
+      p.admonition-title {
+        background-color: #56b79c;
+      }
+
+      p {
+        background-color: #ddf4ef;
+      }
+    }
+
+    &.note {
+      p.admonition-title {
+        background-color: #587f9f;
+      }
+
+      p {
+        background-color: #e9f2f9;
+      }
+    }
+
+    &.danger,
+    &.error {
+      p.admonition-title {
+        background-color: #e6a39a;
+      }
+
+      p {
+        background-color: #fbf3f2;
+      }
+    }
+
+    &.attention,
+    &.caution,
+    &.warning {
+      p.admonition-title {
+        background-color: #e7b486;
+      }
+
+      p {
+        background-color: #fcedd0;
+      }
+    }
+  }
 }
 
 /*****************************************************************************/
