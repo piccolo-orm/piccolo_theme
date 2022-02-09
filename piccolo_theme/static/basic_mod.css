@@ -24,16 +24,8 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-legend,
-p,
-li {
-  font-family: "OpenSans", sans-serif !important;
+body {
+  font-family: "OpenSans", sans-serif;
 }
 h1,
 h2,
@@ -59,6 +51,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  margin-left: 20rem;
 }
 /*****************************************************************************/
 div.related {
@@ -78,8 +71,10 @@ div.related ul li.right {
 /*****************************************************************************/
 div.document {
   flex-grow: 1;
-  display: flex;
-  flex-direction: row-reverse;
+}
+div.document div.documentwrapper {
+  max-width: 60rem;
+  margin: 0 auto;
 }
 div.document div.highlight {
   box-sizing: border-box;
@@ -145,7 +140,11 @@ div.document div.admonition.warning p {
 /*****************************************************************************/
 div.sphinxsidebar {
   background-color: #333548;
-  flex-grow: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20rem;
 }
 div.sphinxsidebar a {
   color: white;
@@ -157,6 +156,16 @@ div.sphinxsidebar ul {
 }
 div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
+}
+div.sphinxsidebar div#searchbox h3#searchlabel {
+  display: none;
+}
+div.sphinxsidebar div#searchbox input {
+  display: block;
+  width: 100%;
+}
+div.sphinxsidebar p.caption {
+  color: rgba(255, 255, 255, 0.6);
 }
 /*****************************************************************************/
 div.sphinxsidebar,
@@ -209,10 +218,9 @@ div[role="navigation"] hr {
 }
 /*****************************************************************************/
 /* Footer */
-footer hr {
-  border: none;
-}
-div[role="contentinfo"] p {
+div.footer {
+  box-sizing: border-box;
+  padding: 0.5rem;
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
@@ -222,36 +230,4 @@ div[role="contentinfo"] p {
 .btn {
   box-shadow: none !important;
   background-color: white !important;
-}
-/*****************************************************************************/
-/* Main content */
-.wy-nav-content-wrap,
-.wy-nav-content {
-  background-color: white;
-}
-.wy-nav-content {
-  min-height: 100%;
-  max-width: 100%;
-}
-div.rst-content {
-  display: flex;
-  flex-direction: column;
-}
-div[role="navigation"] {
-  flex-grow: 0;
-}
-div[role="main"] {
-  flex-grow: 1;
-}
-footer {
-  flex-grow: 0;
-}
-div[role="main"],
-div.rst-footer-buttons {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-div.document h1 {
-  margin-top: 2rem;
 }
