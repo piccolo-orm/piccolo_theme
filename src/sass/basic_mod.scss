@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 $sidebarWidth: 20rem;
+$contentWidth: 45rem;
 
 /*****************************************************************************/
 /* Typography */
@@ -70,7 +71,7 @@ div.document {
   }
 
   div.documentwrapper {
-    max-width: 45rem;
+    max-width: $contentWidth;
     margin: 0 auto;
   }
 
@@ -287,8 +288,11 @@ div.footer {
 /* Buttons */
 
 div.button_nav {
+  max-width: $contentWidth;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
+  width: 100%;
 
   div {
     box-sizing: border-box;
