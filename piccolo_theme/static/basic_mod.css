@@ -5,14 +5,6 @@ body {
   font-family: "OpenSans", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-span.caption-text {
-  font-weight: normal !important;
-}
-
 a {
   color: #2980b9;
   text-decoration: none;
@@ -55,9 +47,18 @@ div.related ul li.right {
 /*****************************************************************************/
 div.document {
   flex-grow: 1;
+  margin-bottom: 5rem;
+}
+div.document img {
+  max-width: 100%;
+}
+div.document code {
+  padding: 2px 4px;
+  background-color: #f0f7fd;
+  border-radius: 4px;
 }
 div.document div.documentwrapper {
-  max-width: 60rem;
+  max-width: 45rem;
   margin: 0 auto;
 }
 div.document div.highlight {
@@ -70,17 +71,46 @@ div.document a.headerlink {
   padding-left: 0.5rem;
   vertical-align: middle;
 }
+div.document div[class*=highlight] {
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+div.document h1 {
+  font-weight: normal;
+}
+div.document h1, div.document h2, div.document h3, div.document h4, div.document h5, div.document h6, div.document str, div.document b {
+  font-weight: 700;
+  color: #293c4d;
+}
 div.document h1:hover a.headerlink,
 div.document h2:hover a.headerlink,
 div.document h3:hover a.headerlink,
 div.document h4:hover a.headerlink {
   display: inline-block;
 }
+div.document p,
+div.document li {
+  color: #293c4d;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+div.document hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+}
+div.document div.admonition {
+  margin: 1rem 0;
+}
 div.document div.admonition p {
   box-sizing: border-box;
-  font-size: 0.9em;
-  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem 0.5rem;
   margin: 0;
+}
+div.document div.admonition code {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 div.document div.admonition p.admonition-title {
   color: white;
@@ -162,10 +192,11 @@ div.documentwrapper {
 /* Footer */
 div.footer {
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 2rem 0;
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /*****************************************************************************/
@@ -181,6 +212,9 @@ div.button_nav div {
 }
 div.button_nav div a {
   display: block;
+}
+div.button_nav div a span {
+  font-weight: bold;
 }
 div.button_nav div.left a {
   text-align: left;
