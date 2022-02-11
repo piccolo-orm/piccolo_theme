@@ -110,7 +110,7 @@ div.document div.admonition p {
   margin: 0;
 }
 div.document div.admonition code {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 div.document div.admonition p.admonition-title {
   color: white;
@@ -150,6 +150,10 @@ div.sphinxsidebar {
   top: 0;
   bottom: 0;
   width: 20rem;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper {
+  height: 100%;
+  overflow-y: auto;
 }
 div.sphinxsidebar a {
   color: white;
