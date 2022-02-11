@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+$sidebarWidth: 20rem;
+
 /*****************************************************************************/
 /* Typography */
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 body {
   font-family: "OpenSans", sans-serif;
@@ -36,7 +38,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  margin-left: @sidebarWidth;
+  margin-left: $sidebarWidth;
 }
 
 /*****************************************************************************/
@@ -60,8 +62,6 @@ div.related {
 }
 
 /*****************************************************************************/
-
-@sidebarWidth: 20rem;
 
 div.document {
   flex-grow: 1;
@@ -162,7 +162,7 @@ div.sphinxsidebar {
   left: 0;
   top: 0;
   bottom: 0;
-  width: @sidebarWidth;
+  width: $sidebarWidth;
 
   a {
     color: white;

@@ -2,3 +2,4 @@ node_modules/
 *.pyc
 .vscode
 .nvmrc
+piccolo_theme.egg-info/

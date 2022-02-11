@@ -1,10 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 /*****************************************************************************/
 /* Typography */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
+}
 body {
   font-family: "OpenSans", sans-serif;
 }
-
 h1,
 h2,
 h3,
@@ -12,30 +34,25 @@ h4,
 span.caption-text {
   font-weight: normal !important;
 }
-
 a {
   color: #2980b9;
   text-decoration: none;
 }
-
 /*****************************************************************************/
 html {
   height: 100%;
 }
-
 html,
 body {
   padding: 0;
   margin: 0;
   min-height: 100%;
 }
-
 body {
   display: flex;
   flex-direction: column;
   margin-left: 20rem;
 }
-
 /*****************************************************************************/
 div.related {
   box-sizing: border-box;
@@ -51,7 +68,6 @@ div.related ul li {
 div.related ul li.right {
   float: right;
 }
-
 /*****************************************************************************/
 div.document {
   flex-grow: 1;
@@ -87,10 +103,14 @@ div.document div.admonition p.admonition-title {
   font-weight: bolder;
   letter-spacing: 0.01rem;
 }
-div.document div.admonition.hint p.admonition-title, div.document div.admonition.important p.admonition-title, div.document div.admonition.tip p.admonition-title {
+div.document div.admonition.hint p.admonition-title,
+div.document div.admonition.important p.admonition-title,
+div.document div.admonition.tip p.admonition-title {
   background-color: #56b79c;
 }
-div.document div.admonition.hint p, div.document div.admonition.important p, div.document div.admonition.tip p {
+div.document div.admonition.hint p,
+div.document div.admonition.important p,
+div.document div.admonition.tip p {
   background-color: #ddf4ef;
 }
 div.document div.admonition.note p.admonition-title {
@@ -99,19 +119,24 @@ div.document div.admonition.note p.admonition-title {
 div.document div.admonition.note p {
   background-color: #e9f2f9;
 }
-div.document div.admonition.danger p.admonition-title, div.document div.admonition.error p.admonition-title {
+div.document div.admonition.danger p.admonition-title,
+div.document div.admonition.error p.admonition-title {
   background-color: #e6a39a;
 }
-div.document div.admonition.danger p, div.document div.admonition.error p {
+div.document div.admonition.danger p,
+div.document div.admonition.error p {
   background-color: #fbf3f2;
 }
-div.document div.admonition.attention p.admonition-title, div.document div.admonition.caution p.admonition-title, div.document div.admonition.warning p.admonition-title {
+div.document div.admonition.attention p.admonition-title,
+div.document div.admonition.caution p.admonition-title,
+div.document div.admonition.warning p.admonition-title {
   background-color: #e7b486;
 }
-div.document div.admonition.attention p, div.document div.admonition.caution p, div.document div.admonition.warning p {
+div.document div.admonition.attention p,
+div.document div.admonition.caution p,
+div.document div.admonition.warning p {
   background-color: #fcedd0;
 }
-
 /*****************************************************************************/
 div.sphinxsidebar {
   background-color: #333548;
@@ -132,10 +157,6 @@ div.sphinxsidebar ul {
 div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
 }
-div.sphinxsidebar p.logo img {
-  max-width: 100%;
-  margin: 0 auto;
-}
 div.sphinxsidebar div#searchbox h3#searchlabel {
   display: none;
 }
@@ -146,18 +167,55 @@ div.sphinxsidebar div#searchbox input {
 div.sphinxsidebar p.caption {
   color: rgba(255, 255, 255, 0.6);
 }
-
 /*****************************************************************************/
 div.sphinxsidebar,
 div.documentwrapper {
   box-sizing: border-box;
   padding: 1rem;
 }
-
 div.documentwrapper {
   flex-grow: 1;
 }
+/*****************************************************************************/
+/* Side Nav */
+/* div.wy-side-nav-search {
+    background: none;
+}
 
+nav.wy-nav-side {
+    background: #333548 !important;
+}
+
+.wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
+    background: #333548;
+    color: white;
+}
+
+.wy-menu-vertical li.toctree-l1.current>a {
+    border: none;
+    border-left: 5px solid #1a90e7;
+}
+
+.wy-menu-vertical li.current ul {
+    background-color: #222532;
+}
+
+.wy-menu-vertical li.current a {
+    border: none;
+}
+
+.wy-menu-vertical li.current ul li a {
+    color: white;
+}
+
+.wy-menu-vertical li.current ul li a:hover {
+    background-color: #222532;
+} */
+/*****************************************************************************/
+/* Top Nav */
+div[role="navigation"] hr {
+  border: none;
+}
 /*****************************************************************************/
 /* Footer */
 div.footer {
@@ -167,26 +225,9 @@ div.footer {
   text-align: center;
   text-transform: uppercase;
 }
-
 /*****************************************************************************/
 /* Buttons */
-div.button_nav {
-  display: flex;
-  flex-direction: row;
+.btn {
+  box-shadow: none !important;
+  background-color: white !important;
 }
-div.button_nav div {
-  box-sizing: border-box;
-  padding: 1rem;
-  flex: 50%;
-}
-div.button_nav div a {
-  display: block;
-}
-div.button_nav div.left a {
-  text-align: left;
-}
-div.button_nav div.right a {
-  text-align: right;
-}
-
-/*# sourceMappingURL=basic_mod.css.map */
