@@ -299,16 +299,16 @@ div.sphinxsidebar {
     list-style: none;
 
     li {
-      box-sizing: border-box;
-      padding: 0 0.2rem;
       line-height: 2;
-
-      &:hover {
-        background-color: rgba(255,255,255,0.1);
-      }
 
       a {
         display: block;
+        box-sizing: border-box;
+        padding: 0 0.2rem;
+
+        &:hover {
+          background-color: rgba(255,255,255,0.1);
+        }
       }
     }
 
