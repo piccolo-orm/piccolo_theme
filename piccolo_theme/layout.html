@@ -8,9 +8,18 @@
     {{ sidebar() }}
 {% endblock %}
 
+
 {%- block sidebar2 %}{% endblock %}
 
+
 {%- block relbar1 %}{% endblock %}
+
+
+{%- block scripts %}
+    {{- script() }}
+    <script src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+{%- endblock %}
+
 
 {%- block relbar2 %}
     <div class="button_nav">
