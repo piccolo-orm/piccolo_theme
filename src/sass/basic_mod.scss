@@ -4,6 +4,8 @@ $sidebarWidth: 20rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
 
+$sidebarColor: #333548;
+
 /*****************************************************************************/
 /* Typography */
 
@@ -212,6 +214,7 @@ p#toggle_sidebar {
   letter-spacing: -0.1rem;
 
   a {
+    color: $sidebarColor;
     font-weight: bold;
   }
 
@@ -221,7 +224,7 @@ p#toggle_sidebar {
 }
 
 div.sphinxsidebar {
-  background-color: #333548;
+  background-color: $sidebarColor;
   position: fixed;
   left: 0;
   top: 0;

@@ -160,6 +160,7 @@ p#toggle_sidebar {
   letter-spacing: -0.1rem;
 }
 p#toggle_sidebar a {
+  color: #333548;
   font-weight: bold;
 }
 @media (min-width: 50rem) {
