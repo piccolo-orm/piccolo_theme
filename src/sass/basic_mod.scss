@@ -133,6 +133,57 @@ div.document {
     margin: 2rem 0;
   }
 
+  // Autodoc ------------------------------------------------------------------
+
+  dl.py {
+    margin-bottom: 2rem;
+
+    dt.sig {
+      background-color: rgba(0,0,0,0.05);
+      box-sizing: border-box;
+      padding: 1rem
+    }
+
+    // e.g. `class`, or `def`
+    em.property {
+      color: $sidebarColor;
+      font-weight: bold;
+    }
+
+    // e.g. `MyClass`
+    span.sig-name {
+      color: $sidebarColor;
+      font-weight: bold;
+    }
+
+    // e.g classmethod
+    em.property {
+      color: #ed5656;
+    }
+
+    em.sig-param {
+      margin-left: 2rem;
+      color: rgba(0,0,0,0.8);
+
+      span.default_value {
+        color: green;
+      }
+    }
+
+    span.sig-return {
+      span.sig-return-typehint {
+        color: rgba(0,0,0,0.8);
+      }
+    }
+
+    // The parameter name:
+    em.sig-param >  span:first-child {
+      font-weight: bold;
+    }
+  }
+
+  // Admonitions --------------------------------------------------------------
+
   div.admonition {
     margin: 1rem 0;
 
@@ -212,14 +263,12 @@ p#toggle_sidebar {
   padding: 1rem;
   transform: rotate(90deg);
   letter-spacing: -0.1rem;
+  z-index: 100;
+  background-color: rgba(255,255,255,0.5);
 
   a {
     color: $sidebarColor;
     font-weight: bold;
-  }
-
-  @media(min-width: $mobileTransition) {
-    display: none;
   }
 }
 

@@ -106,6 +106,38 @@ div.document hr {
   background-color: rgba(0, 0, 0, 0.08);
   margin: 2rem 0;
 }
+div.document dl.py {
+  margin-bottom: 2rem;
+}
+div.document dl.py dt.sig {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  padding: 1rem;
+}
+div.document dl.py em.property {
+  color: #333548;
+  font-weight: bold;
+}
+div.document dl.py span.sig-name {
+  color: #333548;
+  font-weight: bold;
+}
+div.document dl.py em.property {
+  color: #ed5656;
+}
+div.document dl.py em.sig-param {
+  margin-left: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+div.document dl.py em.sig-param span.default_value {
+  color: green;
+}
+div.document dl.py span.sig-return span.sig-return-typehint {
+  color: rgba(0, 0, 0, 0.8);
+}
+div.document dl.py em.sig-param > span:first-child {
+  font-weight: bold;
+}
 div.document div.admonition {
   margin: 1rem 0;
 }
@@ -158,15 +190,12 @@ p#toggle_sidebar {
   padding: 1rem;
   transform: rotate(90deg);
   letter-spacing: -0.1rem;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 p#toggle_sidebar a {
   color: #333548;
   font-weight: bold;
-}
-@media (min-width: 50rem) {
-  p#toggle_sidebar {
-    display: none;
-  }
 }
 
 div.sphinxsidebar {
