@@ -63,6 +63,7 @@ div.related {
 
 div.document {
   flex-grow: 1;
+  margin-top: 5rem;
   margin-bottom: 5rem;
 
   img {
@@ -199,6 +200,19 @@ div.document {
 
 /*****************************************************************************/
 // Sidebar
+
+p#toggle_sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+
+  @media(min-width: $mobileTransition) {
+    display: none;
+  }
+}
 
 div.sphinxsidebar {
   background-color: #333548;

@@ -52,6 +52,7 @@ div.related ul li.right {
 /*****************************************************************************/
 div.document {
   flex-grow: 1;
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 div.document img {
@@ -148,6 +149,20 @@ div.document div.admonition.attention p, div.document div.admonition.caution p, 
 }
 
 /*****************************************************************************/
+p#toggle_sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+}
+@media (min-width: 50rem) {
+  p#toggle_sidebar {
+    display: none;
+  }
+}
+
 div.sphinxsidebar {
   background-color: #333548;
   position: fixed;
