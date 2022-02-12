@@ -215,6 +215,31 @@ div.sphinxsidebar div.sphinxsidebarwrapper {
   height: 100%;
   overflow-y: auto;
 }
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox h3#searchlabel {
+  display: none;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search {
+  display: flex;
+  flex-direction: row;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  color: #333548;
+  border-radius: 0.2rem;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=text] {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  flex-grow: 1;
+  margin-right: 0.2rem;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=submit] {
+  flex-grow: 0;
+  border: none;
+  background-color: white;
+}
 div.sphinxsidebar a {
   color: white;
   text-decoration: none;
@@ -243,13 +268,6 @@ div.sphinxsidebar ul li > ul {
 div.sphinxsidebar p.logo img {
   max-width: 100%;
   margin: 0 auto;
-}
-div.sphinxsidebar div#searchbox h3#searchlabel {
-  display: none;
-}
-div.sphinxsidebar div#searchbox input {
-  display: block;
-  width: 100%;
 }
 div.sphinxsidebar p.caption {
   color: rgba(255, 255, 255, 0.6);

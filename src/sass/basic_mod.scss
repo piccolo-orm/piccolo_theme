@@ -287,6 +287,38 @@ div.sphinxsidebar {
   div.sphinxsidebarwrapper {
     height: 100%;
     overflow-y: auto;
+
+    div#searchbox {
+      h3#searchlabel {
+        display: none;
+      }
+
+      form.search {
+        display: flex;
+        flex-direction: row;
+
+        input {
+          display: block;
+          box-sizing: border-box;
+          padding: 0.3rem;
+          color: $sidebarColor;
+          border-radius: 0.2rem;
+        }
+
+        input[type=text] {
+          border: none;
+          background-color: rgba(255,255,255,0.6);
+          flex-grow:1;
+          margin-right: 0.2rem;
+        }
+
+        input[type=submit] {
+          flex-grow: 0;
+          border: none;
+          background-color: white;
+        }
+      }
+    }
   }
 
   a {
@@ -325,17 +357,6 @@ div.sphinxsidebar {
     img {
       max-width: 100%;
       margin: 0 auto;
-    }
-  }
-
-  div#searchbox {
-    h3#searchlabel {
-      display: none;
-    }
-
-    input {
-      display: block;
-      width: 100%;
     }
   }
 
