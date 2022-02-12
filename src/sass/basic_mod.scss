@@ -2,6 +2,7 @@
 
 $sidebarWidth: 20rem;
 $contentWidth: 45rem;
+$mobileTransition: 50rem;
 
 /*****************************************************************************/
 /* Typography */
@@ -32,6 +33,10 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: $sidebarWidth;
+
+  @media(max-width: $mobileTransition) {
+    margin-left: 0px;
+  }
 }
 
 /*****************************************************************************/
@@ -202,6 +207,10 @@ div.sphinxsidebar {
   top: 0;
   bottom: 0;
   width: $sidebarWidth;
+
+  @media(max-width: $mobileTransition) {
+    display: none;
+  }
 
   div.sphinxsidebarwrapper {
     height: 100%;

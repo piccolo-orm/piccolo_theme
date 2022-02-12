@@ -27,6 +27,11 @@ body {
   flex-direction: column;
   margin-left: 20rem;
 }
+@media (max-width: 50rem) {
+  body {
+    margin-left: 0px;
+  }
+}
 
 /*****************************************************************************/
 div.related {
@@ -150,6 +155,11 @@ div.sphinxsidebar {
   top: 0;
   bottom: 0;
   width: 20rem;
+}
+@media (max-width: 50rem) {
+  div.sphinxsidebar {
+    display: none;
+  }
 }
 div.sphinxsidebar div.sphinxsidebarwrapper {
   height: 100%;
