@@ -27,9 +27,18 @@ function setupSearchSidebar() {
     document.querySelector('form.search input[type=submit]').value = 'Search'
 }
 
+function setupSidebarToggle() {
+    const sidebar = document.querySelector('.sphinxsidebar')
+    document.querySelector('#toggle_sidebar a').onclick = () => {
+        console.log("Toggling")
+        sidebar.style.display = sidebar.style.display == 'none' ? 'block' : 'none'
+    }
+}
+
 window.onload = function() {
     console.log("custom theme loaded")
 
     setupAutodoc()
     setupSearchSidebar()
+    setupSidebarToggle()
 }
