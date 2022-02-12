@@ -231,6 +231,9 @@ div.sphinxsidebar ul li a {
   box-sizing: border-box;
   padding: 0 0.2rem;
 }
+div.sphinxsidebar ul li a.current:last-of-type {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 div.sphinxsidebar ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
