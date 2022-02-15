@@ -1,11 +1,21 @@
 {% extends "basic/layout.html" %}
 
-{%- block sidebar1 %}
+
+{%- block header %}
+<nav id="top_nav">
     <p id="toggle_sidebar">
         <a href="#">|||</a>
     </p>
+    <h1><a href="/">Piccolo</a></h1>
 
+    {% include "basic/searchbox.html" %}
+</nav>
+{% endblock %}
+
+
+{%- block sidebar1 %}
     {{ sidebar() }}
+    {%- block sidebarlogo %}{% endblock %}
 {% endblock %}
 
 

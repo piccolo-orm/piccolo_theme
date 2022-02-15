@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+$linkColor: #2980b9;
+$dividerColor: rgba(0, 0, 0, 0.08);
+
+$borderRadius: 0.2rem;
 $sidebarWidth: 20rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
@@ -17,7 +21,7 @@ body {
 }
 
 a {
-  color: #2980b9;
+  color: $linkColor;
   text-decoration: none;
 }
 
@@ -41,6 +45,85 @@ body {
 
   @media(max-width: $mobileTransition) {
     margin-left: 0px;
+  }
+}
+
+/*****************************************************************************/
+
+div#searchbox {
+  h3#searchlabel {
+    display: none;
+  }
+
+  form.search {
+    display: flex;
+    flex-direction: row;
+
+    input {
+      display: block;
+      box-sizing: border-box;
+      padding: 0.3rem;
+      color: $linkColor;
+      border-radius: $borderRadius;
+    }
+
+    input[type=text] {
+      border: none;
+      background-color: rgba(255,255,255,0.6);
+      flex-grow: 1;
+      margin-right: 0.2rem;
+
+      &::placeholder {
+        color: rgba(0,0,0,0.6);
+      }
+    }
+
+    input[type=submit] {
+      cursor: pointer;
+      flex-grow: 0;
+      border: none;
+      background-color: white;
+    }
+  }
+}
+
+nav#top_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #3889ce;
+  color: white;
+  z-index: 100;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h1 {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0 0 0 0.8rem;
+    line-height: 1;
+
+    a {
+      color: white;
+    }
+  }
+
+  p#toggle_sidebar {
+    transform: rotate(90deg);
+    letter-spacing: 0.1rem;
+    flex-grow: 0;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: $toggleSidebarColor;
+      font-weight: bold;
+    }
   }
 }
 
@@ -78,7 +161,7 @@ div.document {
   code {
     padding: 2px 4px;
     background-color: $inlineCodeBgColor;
-    border-radius: 4px;
+    border-radius: $borderRadius;
     font-family: $codeFont;
   }
 
@@ -91,7 +174,7 @@ div.document {
     box-sizing: border-box;
     padding: 0.2rem 1rem;
     margin: 0.5rem 0;
-    border-radius: 0.2rem;
+    border-radius: $borderRadius;
     font-size: 0.9rem;
 
     pre {
@@ -137,7 +220,7 @@ div.document {
   hr {
     border: none;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: $dividerColor;
     margin: 2rem 0;
   }
 
@@ -194,7 +277,9 @@ div.document {
   // Admonitions --------------------------------------------------------------
 
   div.admonition {
+    border-radius: $borderRadius;
     margin: 1rem 0;
+    overflow: hidden;
 
     p {
       box-sizing: border-box;
@@ -262,25 +347,9 @@ div.document {
 /*****************************************************************************/
 // Sidebar
 
-p#toggle_sidebar {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 1rem;
-  transform: rotate(90deg);
-  letter-spacing: -0.1rem;
-  z-index: 100;
-
-  a {
-    color: $toggleSidebarColor;
-    font-weight: bold;
-  }
-}
-
 div.sphinxsidebar {
   background-color: $sidebarColor;
+  border-right: 1px solid $dividerColor;
   position: fixed;
   left: 0;
   top: 0;
@@ -294,47 +363,15 @@ div.sphinxsidebar {
   div.sphinxsidebarwrapper {
     height: 100%;
     overflow-y: auto;
-
-    div#searchbox {
-      h3#searchlabel {
-        display: none;
-      }
-
-      form.search {
-        display: flex;
-        flex-direction: row;
-
-        input {
-          display: block;
-          box-sizing: border-box;
-          padding: 0.3rem;
-          color: $sidebarColor;
-          border-radius: 0.2rem;
-        }
-
-        input[type=text] {
-          border: none;
-          background-color: rgba(255,255,255,0.6);
-          flex-grow:1;
-          margin-right: 0.2rem;
-
-          &::placeholder {
-            color: rgba(0,0,0,0.6);
-          }
-        }
-
-        input[type=submit] {
-          flex-grow: 0;
-          border: none;
-          background-color: white;
-        }
-      }
-    }
   }
 
   a {
-    color: white;
+    color: $fontColor;
     text-decoration: none;
+
+    &:hover {
+      color: $linkColor;
+    }
   }
 
   ul {
