@@ -278,6 +278,9 @@ div.sphinxsidebar a {
   color: #252630;
   text-decoration: none;
 }
+div.sphinxsidebar a.current {
+  color: #2980b9;
+}
 div.sphinxsidebar a:hover {
   color: #2980b9;
 }

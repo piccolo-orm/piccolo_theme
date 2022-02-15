@@ -369,6 +369,10 @@ div.sphinxsidebar {
     color: $fontColor;
     text-decoration: none;
 
+    &.current {
+      color: $linkColor;
+    }
+
     &:hover {
       color: $linkColor;
     }
