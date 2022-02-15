@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import './color_scheme/black.scss';
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
@@ -323,19 +324,26 @@ div.document {
       }
 
       p {
-        background-color: #fbf3f2;
+        $color: #fbf3f2;
+
+        background-color: $color;
       }
     }
 
     &.attention,
     &.caution,
     &.warning {
+      $headingBgColor: #e7b486;
+      $bodyBgColor: #fcedd0;
+
       p.admonition-title {
-        background-color: #e7b486;
+        background-color: $headingBgColor;
+        color: white;
       }
 
       p {
         background-color: #fcedd0;
+        color: color.scale($headingBgColor, $lightness: -30%);
       }
     }
   }

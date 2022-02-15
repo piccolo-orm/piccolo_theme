@@ -248,9 +248,11 @@ div.document div.admonition.danger p, div.document div.admonition.error p {
 }
 div.document div.admonition.attention p.admonition-title, div.document div.admonition.caution p.admonition-title, div.document div.admonition.warning p.admonition-title {
   background-color: #e7b486;
+  color: white;
 }
 div.document div.admonition.attention p, div.document div.admonition.caution p, div.document div.admonition.warning p {
   background-color: #fcedd0;
+  color: #d57b2b;
 }
 
 /*****************************************************************************/
