@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 /*****************************************************************************/
 /* Typography */
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: Roboto, "OpenSans", sans-serif;
+  color: #252630;
 }
 
 a {
@@ -60,8 +63,9 @@ div.document img {
 }
 div.document code {
   padding: 2px 4px;
-  background-color: #f0f7fd;
+  background-color: #f8f8f8;
   border-radius: 4px;
+  font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
 }
 div.document div.documentwrapper {
   max-width: 45rem;
@@ -70,6 +74,15 @@ div.document div.documentwrapper {
 div.document div.highlight {
   box-sizing: border-box;
   padding: 0.2rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+}
+div.document div.highlight pre {
+  font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
+}
+div.document div[class*=highlight] {
+  overflow-x: auto;
 }
 div.document a.headerlink {
   font-size: 0.6em;
@@ -77,16 +90,11 @@ div.document a.headerlink {
   padding-left: 0.5rem;
   vertical-align: middle;
 }
-div.document div[class*=highlight] {
-  font-size: 0.9rem;
-  overflow-x: auto;
-}
 div.document h1 {
   font-weight: normal;
 }
 div.document h1, div.document h2, div.document h3, div.document h4, div.document h5, div.document h6, div.document str, div.document b {
   font-weight: 700;
-  color: #293c4d;
 }
 div.document h1:hover a.headerlink,
 div.document h2:hover a.headerlink,
@@ -96,7 +104,6 @@ div.document h4:hover a.headerlink {
 }
 div.document p,
 div.document li {
-  color: #293c4d;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -112,25 +119,25 @@ div.document dl.py {
 div.document dl.py dt.sig {
   background-color: rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+  font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
   padding: 1rem;
 }
 div.document dl.py em.property {
-  color: #333548;
+  color: #252630;
   font-weight: bold;
 }
 div.document dl.py span.sig-name {
-  color: #333548;
+  color: #d2a55e;
   font-weight: bold;
 }
 div.document dl.py em.property {
-  color: #9299c3;
+  color: #AC6E3B;
 }
 div.document dl.py em.sig-param {
   margin-left: 2rem;
-  color: rgba(0, 0, 0, 0.8);
 }
 div.document dl.py em.sig-param span.default_value {
-  color: green;
+  color: #ABC06D;
 }
 div.document dl.py span.sig-return span.sig-return-typehint {
   color: rgba(0, 0, 0, 0.8);
@@ -143,7 +150,6 @@ div.document div.admonition {
 }
 div.document div.admonition p {
   box-sizing: border-box;
-  font-size: 0.9rem;
   padding: 0.3rem 0.5rem 0.5rem;
   margin: 0;
 }
@@ -189,17 +195,16 @@ p#toggle_sidebar {
   margin: 0;
   padding: 1rem;
   transform: rotate(90deg);
-  letter-spacing: -0.1rem;
+  letter-spacing: 0.1rem;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 p#toggle_sidebar a {
-  color: #333548;
+  color: white;
   font-weight: bold;
 }
 
 div.sphinxsidebar {
-  background-color: #333548;
+  background-color: #252630;
   position: fixed;
   left: 0;
   top: 0;
@@ -226,7 +231,7 @@ div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input {
   display: block;
   box-sizing: border-box;
   padding: 0.3rem;
-  color: #333548;
+  color: #252630;
   border-radius: 0.2rem;
 }
 div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=text] {
@@ -234,6 +239,9 @@ div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=
   background-color: rgba(255, 255, 255, 0.6);
   flex-grow: 1;
   margin-right: 0.2rem;
+}
+div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=text]::placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 div.sphinxsidebar div.sphinxsidebarwrapper div#searchbox form.search input[type=submit] {
   flex-grow: 0;
@@ -249,6 +257,7 @@ div.sphinxsidebar ul {
   list-style: none;
 }
 div.sphinxsidebar ul li {
+  font-size: 0.9rem;
   line-height: 2;
 }
 div.sphinxsidebar ul li a {

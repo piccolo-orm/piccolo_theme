@@ -1,16 +1,19 @@
+@import './color_scheme/black.scss';
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 $sidebarWidth: 20rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
 
-$sidebarColor: #333548;
-
 /*****************************************************************************/
 /* Typography */
 
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: Roboto, "OpenSans", sans-serif;
+  color: $fontColor;
 }
 
 a {
@@ -74,8 +77,9 @@ div.document {
 
   code {
     padding: 2px 4px;
-    background-color: #f0f7fd;
+    background-color: $inlineCodeBgColor;
     border-radius: 4px;
+    font-family: $codeFont;
   }
 
   div.documentwrapper {
@@ -86,6 +90,18 @@ div.document {
   div.highlight {
     box-sizing: border-box;
     padding: 0.2rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+
+    pre {
+      font-family: $codeFont;
+    }
+  }
+
+  // This is a code block:
+  div[class*="highlight"] {
+    overflow-x: auto;
   }
 
   a.headerlink {
@@ -95,19 +111,12 @@ div.document {
     vertical-align: middle;
   }
 
-  // This is a code block:
-  div[class*="highlight"] {
-    font-size: 0.9rem;
-    overflow-x: auto;
-  }
-
   h1 {
     font-weight: normal;
   }
 
   h1,h2,h3,h4,h5,h6,str,b {
     font-weight: 700;
-    color: #293c4d;
   }
 
   h1:hover,
@@ -121,7 +130,6 @@ div.document {
 
   p,
   li {
-    color: #293c4d;
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -141,7 +149,9 @@ div.document {
     dt.sig {
       background-color: rgba(0,0,0,0.05);
       box-sizing: border-box;
-      padding: 1rem
+      font-family: $codeFont;
+      padding: 1rem;
+      // color: white;
     }
 
     // e.g. `class`, or `def`
@@ -152,21 +162,20 @@ div.document {
 
     // e.g. `MyClass`
     span.sig-name {
-      color: $sidebarColor;
+      color: #d2a55e;
       font-weight: bold;
     }
 
     // e.g classmethod
     em.property {
-      color: #9299c3;
+      color: #AC6E3B;
     }
 
     em.sig-param {
       margin-left: 2rem;
-      color: rgba(0,0,0,0.8);
 
       span.default_value {
-        color: green;
+        color: #ABC06D;
       }
     }
 
@@ -189,7 +198,6 @@ div.document {
 
     p {
       box-sizing: border-box;
-      font-size: 0.9rem;
       padding: 0.3rem 0.5rem 0.5rem;
       margin: 0;
     }
@@ -264,10 +272,9 @@ p#toggle_sidebar {
   transform: rotate(90deg);
   letter-spacing: -0.1rem;
   z-index: 100;
-  background-color: rgba(255,255,255,0.5);
 
   a {
-    color: $sidebarColor;
+    color: $toggleSidebarColor;
     font-weight: bold;
   }
 }
@@ -310,6 +317,10 @@ div.sphinxsidebar {
           background-color: rgba(255,255,255,0.6);
           flex-grow:1;
           margin-right: 0.2rem;
+
+          &::placeholder {
+            color: rgba(0,0,0,0.6);
+          }
         }
 
         input[type=submit] {
@@ -331,6 +342,7 @@ div.sphinxsidebar {
     list-style: none;
 
     li {
+      font-size: 0.9rem;
       line-height: 2;
 
       a {

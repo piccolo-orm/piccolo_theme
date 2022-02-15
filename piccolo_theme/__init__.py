@@ -1,7 +1,10 @@
 import os
+import typing as t
+
+from sphinx.application import Sphinx
 
 
-def setup(app):
+def setup(app: Sphinx):
     """
     :param app:
         Passed by Sphinx.
