@@ -6,7 +6,7 @@
     <p id="toggle_sidebar">
         <a href="#" title="Toggle sidebar">|||</a>
     </p>
-    <h1><a href="/" title="Go to homepage">Piccolo</a></h1>
+    <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">Piccolo</a></h1>
 
     {% include "basic/searchbox.html" %}
 </nav>
@@ -19,7 +19,11 @@
 {% endblock %}
 
 
-{%- block sidebar2 %}{% endblock %}
+{%- block sidebar2 %}
+    <div id="page_contents">
+        {{ toc }}
+    </div>
+{% endblock %}
 
 
 {%- block relbar1 %}{% endblock %}

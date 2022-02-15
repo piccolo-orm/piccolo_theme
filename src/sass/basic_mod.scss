@@ -387,14 +387,6 @@ div.sphinxsidebar {
         display: block;
         box-sizing: border-box;
         padding: 0 0.2rem;
-
-        &.current:last-of-type {
-          background-color: rgba(255,255,255,0.1);
-        }
-
-        &:hover {
-          background-color: rgba(255,255,255,0.1);
-        }
       }
     }
 
@@ -414,6 +406,18 @@ div.sphinxsidebar {
   p.caption {
     color: rgba(255, 255, 255, 0.6);
   }
+}
+
+/*****************************************************************************/
+// The right sidebar, showing the table of contents for the current page.
+
+div#page_contents {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  padding-top: 5rem;
 }
 
 /*****************************************************************************/

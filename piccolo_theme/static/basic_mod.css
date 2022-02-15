@@ -295,12 +295,6 @@ div.sphinxsidebar ul li a {
   box-sizing: border-box;
   padding: 0 0.2rem;
 }
-div.sphinxsidebar ul li a.current:last-of-type {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-div.sphinxsidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
 }
@@ -310,6 +304,16 @@ div.sphinxsidebar p.logo img {
 }
 div.sphinxsidebar p.caption {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/*****************************************************************************/
+div#page_contents {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  padding-top: 5rem;
 }
 
 /*****************************************************************************/
