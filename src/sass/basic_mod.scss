@@ -241,7 +241,7 @@ div.document {
       box-sizing: border-box;
       font-family: $codeFont;
       padding: 1rem;
-      // color: white;
+      border-left: 5px solid rgba(0,0,0,0.1);
     }
 
     // e.g. `class`, or `def`

@@ -192,6 +192,7 @@ div.document dl.py dt.sig {
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
   padding: 1rem;
+  border-left: 5px solid rgba(0, 0, 0, 0.1);
 }
 div.document dl.py em.property {
   color: white;
