@@ -198,17 +198,17 @@ div.document dl.py em.property {
   font-weight: bold;
 }
 div.document dl.py span.sig-name {
-  color: #d2a55e;
+  color: #0000FF;
   font-weight: bold;
 }
 div.document dl.py em.property {
-  color: #AC6E3B;
+  color: #008000;
 }
 div.document dl.py em.sig-param {
   margin-left: 2rem;
 }
 div.document dl.py em.sig-param span.default_value {
-  color: #ABC06D;
+  color: #008000;
 }
 div.document dl.py span.sig-return span.sig-return-typehint {
   color: rgba(0, 0, 0, 0.8);

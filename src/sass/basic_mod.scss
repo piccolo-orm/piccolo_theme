@@ -252,20 +252,20 @@ div.document {
 
     // e.g. `MyClass`
     span.sig-name {
-      color: #d2a55e;
+      color: #0000FF;
       font-weight: bold;
     }
 
     // e.g classmethod
     em.property {
-      color: #AC6E3B;
+      color: #008000;
     }
 
     em.sig-param {
       margin-left: 2rem;
 
       span.default_value {
-        color: #ABC06D;
+        color: #008000;
       }
     }
 
