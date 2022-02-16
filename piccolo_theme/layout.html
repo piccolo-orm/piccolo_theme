@@ -21,7 +21,9 @@
 
 {%- block sidebar2 %}
     <div id="page_contents">
-        {{ toc }}
+        {% if display_toc %}
+            {{ toc }}
+        {% endif %}
     </div>
 {% endblock %}
 

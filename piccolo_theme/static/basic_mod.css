@@ -16,6 +16,7 @@ a {
 /*****************************************************************************/
 html {
   height: 100%;
+  scroll-padding-top: 5rem;
 }
 
 html,
@@ -29,10 +30,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 20rem;
+  margin-right: 20rem;
 }
 @media (max-width: 50rem) {
   body {
     margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -274,16 +277,6 @@ div.sphinxsidebar div.sphinxsidebarwrapper {
   height: 100%;
   overflow-y: auto;
 }
-div.sphinxsidebar a {
-  color: #252630;
-  text-decoration: none;
-}
-div.sphinxsidebar a.current {
-  color: #2980b9;
-}
-div.sphinxsidebar a:hover {
-  color: #2980b9;
-}
 div.sphinxsidebar ul {
   padding-left: 0rem;
   list-style: none;
@@ -296,16 +289,20 @@ div.sphinxsidebar ul li a {
   display: block;
   box-sizing: border-box;
   padding: 0 0.2rem;
+  color: #252630;
+  text-decoration: none;
+}
+div.sphinxsidebar ul li a.current {
+  color: #2980b9;
+}
+div.sphinxsidebar ul li a:hover {
+  color: #2980b9;
 }
 div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
 }
-div.sphinxsidebar p.logo img {
-  max-width: 100%;
-  margin: 0 auto;
-}
 div.sphinxsidebar p.caption {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /*****************************************************************************/
@@ -316,6 +313,30 @@ div#page_contents {
   z-index: 50;
   background-color: white;
   padding-top: 5rem;
+}
+div#page_contents ul {
+  padding-left: 0rem;
+  list-style: none;
+}
+div#page_contents ul li {
+  font-size: 0.9rem;
+  line-height: 2;
+}
+div#page_contents ul li a {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  color: #252630;
+  text-decoration: none;
+}
+div#page_contents ul li a.current {
+  color: #2980b9;
+}
+div#page_contents ul li a:hover {
+  color: #2980b9;
+}
+div#page_contents ul li > ul {
+  padding-left: 1rem;
 }
 
 /*****************************************************************************/

@@ -30,6 +30,8 @@ a {
 
 html {
   height: 100%;
+  // So anchor elements aren't hidden behind the main nav bar:
+  scroll-padding-top: 5rem;
 }
 
 html,
@@ -43,9 +45,11 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: $sidebarWidth;
+  margin-right: $sidebarWidth;
 
   @media(max-width: $mobileTransition) {
     margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -352,6 +356,38 @@ div.document {
 /*****************************************************************************/
 // Sidebar
 
+@mixin sidebar_list {
+  ul {
+    padding-left: 0rem;
+    list-style: none;
+
+    li {
+      font-size: 0.9rem;
+      line-height: 2;
+
+      a {
+        display: block;
+        box-sizing: border-box;
+        padding: 0 0.2rem;
+        color: $fontColor;
+        text-decoration: none;
+
+        &.current {
+          color: $linkColor;
+        }
+
+        &:hover {
+          color: $linkColor;
+        }
+      }
+    }
+
+    li > ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
 div.sphinxsidebar {
   background-color: $sidebarColor;
   border-right: 1px solid $dividerColor;
@@ -370,49 +406,11 @@ div.sphinxsidebar {
     overflow-y: auto;
   }
 
-  a {
-    color: $fontColor;
-    text-decoration: none;
-
-    &.current {
-      color: $linkColor;
-    }
-
-    &:hover {
-      color: $linkColor;
-    }
-  }
-
-  ul {
-    padding-left: 0rem;
-    list-style: none;
-
-    li {
-      font-size: 0.9rem;
-      line-height: 2;
-
-      a {
-        display: block;
-        box-sizing: border-box;
-        padding: 0 0.2rem;
-      }
-    }
-
-    li > ul {
-      padding-left: 1rem;
-    }
-  }
-
-  p.logo {
-    img {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-  }
+  @include sidebar_list;
 
   // TOC
   p.caption {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -426,6 +424,8 @@ div#page_contents {
   z-index: 50;
   background-color: white;
   padding-top: 5rem;
+
+  @include sidebar_list;
 }
 
 /*****************************************************************************/
