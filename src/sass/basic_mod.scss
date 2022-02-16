@@ -170,6 +170,7 @@ div.document {
     background-color: $inlineCodeBgColor;
     border-radius: $borderRadius;
     font-family: $codeFont;
+    font-size: 0.9rem;
   }
 
   div.documentwrapper {
@@ -237,9 +238,10 @@ div.document {
     margin-bottom: 2rem;
 
     dt.sig {
-      background-color: rgba(0,0,0,0.05);
+      background-color: #f8f8f8;
       box-sizing: border-box;
       font-family: $codeFont;
+      font-size: 0.9rem;
       padding: 1rem;
       border-left: 5px solid rgba(0,0,0,0.1);
     }
@@ -290,6 +292,7 @@ div.document {
 
     p {
       box-sizing: border-box;
+      font-size: 0.9rem;
       padding: 0.5rem;
       margin: 0;
     }
@@ -329,9 +332,7 @@ div.document {
       }
 
       p {
-        $color: #fbf3f2;
-
-        background-color: $color;
+        background-color: #fbf3f2;
       }
     }
 
