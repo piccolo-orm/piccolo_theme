@@ -20,11 +20,12 @@
 
 
 {%- block sidebar2 %}
-    <div id="page_contents">
-        {% if display_toc %}
-            {{ toc }}
-        {% endif %}
+{% if display_toc %}
+    <div id="right_sidebar">
+        <p>Page contents:</p>
+        {{ toc }}
     </div>
+    {% endif %}
 {% endblock %}
 
 

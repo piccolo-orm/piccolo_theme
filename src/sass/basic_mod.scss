@@ -12,6 +12,7 @@ $borderRadius: 0.2rem;
 $sidebarWidth: 15rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
+$navbarHeight: 3rem;
 
 /*****************************************************************************/
 /* Typography */
@@ -31,7 +32,7 @@ a {
 html {
   height: 100%;
   // So anchor elements aren't hidden behind the main nav bar:
-  scroll-padding-top: 5rem;
+  scroll-padding-top: $navbarHeight;
 }
 
 html,
@@ -106,6 +107,7 @@ nav#top_nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: $navbarHeight;
 
   h1 {
     flex-grow: 1;
@@ -396,6 +398,8 @@ div.sphinxsidebar {
   top: 0;
   bottom: 0;
   width: $sidebarWidth;
+  box-sizing: border-box;
+  padding: $navbarHeight 1rem 1rem;
 
   @media(max-width: $mobileTransition) {
     display: none;
@@ -408,8 +412,7 @@ div.sphinxsidebar {
 
   @include sidebar_list;
 
-  // TOC
-  p.caption {
+  p {
     color: rgba(0, 0, 0, 0.6);
   }
 }
@@ -417,27 +420,31 @@ div.sphinxsidebar {
 /*****************************************************************************/
 // The right sidebar, showing the table of contents for the current page.
 
-div#page_contents {
+div#right_sidebar {
   position: fixed;
   right: 0;
   top: 0;
   z-index: 50;
   background-color: white;
-  padding-top: 5rem;
+  width: $sidebarWidth;
+  border-left: 1px solid $dividerColor;
+  box-sizing: border-box;
+  padding: $navbarHeight 1rem 1rem;
+  height: 100%;
 
   @include sidebar_list;
+
+  p {
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 /*****************************************************************************/
 
-div.sphinxsidebar,
-div.documentwrapper {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-
 div.documentwrapper {
   flex-grow: 1;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 /*****************************************************************************/
