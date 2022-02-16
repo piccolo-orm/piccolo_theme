@@ -390,6 +390,12 @@ div.document {
   }
 }
 
+@mixin sidebar_p {
+  p {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
 div.sphinxsidebar {
   background-color: $sidebarColor;
   border-right: 1px solid $dividerColor;
@@ -411,10 +417,7 @@ div.sphinxsidebar {
   }
 
   @include sidebar_list;
-
-  p {
-    color: rgba(0, 0, 0, 0.6);
-  }
+  @include sidebar_p;
 }
 
 /*****************************************************************************/
@@ -433,10 +436,7 @@ div#right_sidebar {
   height: 100%;
 
   @include sidebar_list;
-
-  p {
-    color: rgba(0, 0, 0, 0.6);
-  }
+  @include sidebar_p;
 }
 
 /*****************************************************************************/
