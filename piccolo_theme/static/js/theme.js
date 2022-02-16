@@ -37,11 +37,11 @@ function setupSidebarToggle() {
 }
 
 function setupRightSidebarToggle() {
-    const rightSidebar = document.querySelector('#right_sidebar')
+    const sidebar = document.querySelector('#right_sidebar .page_toc')
     document.querySelector('#toggle_right_sidebar').onclick = (event) => {
         console.log("Toggling right sidebar")
         event.preventDefault()
-        rightSidebar.style.display = 'none'
+        sidebar.style.display = sidebar.style.display == 'none' ? 'block' : 'none'
     }
 }
 
