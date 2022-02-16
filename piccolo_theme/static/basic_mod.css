@@ -29,8 +29,8 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 20rem;
-  margin-right: 20rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 @media (max-width: 50rem) {
   body {
@@ -266,7 +266,7 @@ div.sphinxsidebar {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 20rem;
+  width: 15rem;
 }
 @media (max-width: 50rem) {
   div.sphinxsidebar {
@@ -283,12 +283,12 @@ div.sphinxsidebar ul {
 }
 div.sphinxsidebar ul li {
   font-size: 0.9rem;
-  line-height: 2;
+  line-height: 1.2;
 }
 div.sphinxsidebar ul li a {
   display: block;
   box-sizing: border-box;
-  padding: 0 0.2rem;
+  padding: 0 0.2rem 0.6rem;
   color: #252630;
   text-decoration: none;
 }
@@ -320,12 +320,12 @@ div#page_contents ul {
 }
 div#page_contents ul li {
   font-size: 0.9rem;
-  line-height: 2;
+  line-height: 1.2;
 }
 div#page_contents ul li a {
   display: block;
   box-sizing: border-box;
-  padding: 0 0.2rem;
+  padding: 0 0.2rem 0.6rem;
   color: #252630;
   text-decoration: none;
 }

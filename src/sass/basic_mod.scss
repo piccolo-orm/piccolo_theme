@@ -9,7 +9,7 @@ $linkColor: #2980b9;
 $dividerColor: rgba(0, 0, 0, 0.08);
 
 $borderRadius: 0.2rem;
-$sidebarWidth: 20rem;
+$sidebarWidth: 15rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
 
@@ -363,12 +363,12 @@ div.document {
 
     li {
       font-size: 0.9rem;
-      line-height: 2;
+      line-height: 1.2;
 
       a {
         display: block;
         box-sizing: border-box;
-        padding: 0 0.2rem;
+        padding: 0 0.2rem 0.6rem;
         color: $fontColor;
         text-decoration: none;
 
