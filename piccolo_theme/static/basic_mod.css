@@ -349,6 +349,11 @@ div#right_sidebar ul li > ul {
 div#right_sidebar p {
   color: rgba(0, 0, 0, 0.6);
 }
+div#right_sidebar a#toggle_right_sidebar {
+  display: inline-block;
+  transform: rotate(90deg);
+  letter-spacing: 0.05rem;
+}
 
 /*****************************************************************************/
 div.documentwrapper {

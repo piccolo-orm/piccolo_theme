@@ -438,6 +438,12 @@ div#right_sidebar {
 
   @include sidebar_list;
   @include sidebar_p;
+
+  a#toggle_right_sidebar {
+    display: inline-block;
+    transform: rotate(90deg);
+    letter-spacing: 0.05rem;
+  }
 }
 
 /*****************************************************************************/

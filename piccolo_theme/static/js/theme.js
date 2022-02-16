@@ -29,9 +29,19 @@ function setupSearchSidebar() {
 
 function setupSidebarToggle() {
     const sidebar = document.querySelector('.sphinxsidebar')
-    document.querySelector('#toggle_sidebar a').onclick = () => {
-        console.log("Toggling")
+    document.querySelector('#toggle_sidebar a').onclick = (event) => {
+        console.log("Toggling sidebar")
+        event.preventDefault()
         sidebar.style.display = sidebar.style.display == 'none' ? 'block' : 'none'
+    }
+}
+
+function setupRightSidebarToggle() {
+    const rightSidebar = document.querySelector('#right_sidebar')
+    document.querySelector('#toggle_right_sidebar').onclick = (event) => {
+        console.log("Toggling right sidebar")
+        event.preventDefault()
+        rightSidebar.style.display = 'none'
     }
 }
 
@@ -41,4 +51,5 @@ window.onload = function() {
     setupAutodoc()
     setupSearchSidebar()
     setupSidebarToggle()
+    setupRightSidebarToggle()
 }
