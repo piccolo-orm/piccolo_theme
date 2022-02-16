@@ -137,7 +137,7 @@ div.document code {
   background-color: #f8f8f8;
   border-radius: 0.2rem;
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 div.document div.documentwrapper {
   max-width: 45rem;
