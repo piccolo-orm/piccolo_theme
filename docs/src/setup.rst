@@ -53,6 +53,6 @@ To serve these files using Python, you can use:
 
 .. code-block:: bash
 
-    python -m http.server --directory docs/_build/html/
+    python -m http.server --directory _build/html/
 
 Now open up http://localhost:8000 in your browser to see your beautiful docs!

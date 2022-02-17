@@ -6,6 +6,7 @@ Piccolo Theme
    :caption: Contents:
 
    ./setup.rst
-   ./contributing.rst
    ./help.rst
    ./support_us.rst
+   ./about.rst
+   ./contributing.rst
