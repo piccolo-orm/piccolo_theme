@@ -3,3 +3,4 @@ node_modules/
 .vscode
 .nvmrc
 piccolo_theme.egg-info/
+build/
