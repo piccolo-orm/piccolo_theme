@@ -44,6 +44,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: Implementation :: CPython",
+        "Framework :: Sphinx :: Theme"
     ],
     entry_points={
         "sphinx.html_themes": [
