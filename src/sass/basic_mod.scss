@@ -25,6 +25,18 @@ body {
   color: $fontColor;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
 a {
   color: $linkColor;
   text-decoration: none;
@@ -204,10 +216,6 @@ div.document {
     display: none;
     padding-left: 0.5rem;
     vertical-align: middle;
-  }
-
-  h1 {
-    font-weight: normal;
   }
 
   h1,h2,h3,h4,h5,h6,str,b {

@@ -7,6 +7,18 @@ body {
   color: #252630;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
 a {
   color: #2980b9;
   text-decoration: none;
@@ -161,9 +173,6 @@ div.document a.headerlink {
   display: none;
   padding-left: 0.5rem;
   vertical-align: middle;
-}
-div.document h1 {
-  font-weight: normal;
 }
 div.document h1, div.document h2, div.document h3, div.document h4, div.document h5, div.document h6, div.document str, div.document b {
   font-weight: 700;
