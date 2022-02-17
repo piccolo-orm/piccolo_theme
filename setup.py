@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import typing as t
 
 from setuptools import find_packages, setup
 
@@ -30,7 +31,7 @@ setup(
     url="https://github.com/piccolo-orm/piccolo_theme",
     packages=find_packages(),
     package_data={
-        "piccolo_theme": ["theme.conf", "static/*"],
+        "piccolo_theme": ["*.html", "theme.conf", "static/**/*"],
     },
     install_requires=parse_requirement("requirements.txt"),
     license="MIT",
