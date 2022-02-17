@@ -37,12 +37,17 @@ function setupSidebarToggle() {
 }
 
 function setupRightSidebarToggle() {
-    const sidebar = document.querySelector('#right_sidebar .page_toc')
-    document.querySelector('#toggle_right_sidebar').onclick = (event) => {
-        console.log("Toggling right sidebar")
-        event.preventDefault()
-        sidebar.style.display = window.getComputedStyle(sidebar, null).display == 'none' ? 'block' : 'none'
-    }
+    const sidebar = document.querySelector('#right_sidebar')
+
+    const links = document.querySelectorAll('a.toggle_right_sidebar')
+
+    Array(...links).forEach((element) => {
+        element.onclick = (event) => {
+            console.log("Toggling right sidebar")
+            event.preventDefault()
+            sidebar.style.display = window.getComputedStyle(sidebar, null).display == 'none' ? 'block' : 'none'
+        }
+    })
 }
 
 window.onload = function() {

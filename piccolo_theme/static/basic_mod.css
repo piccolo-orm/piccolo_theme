@@ -327,6 +327,20 @@ div.sphinxsidebar p {
 }
 
 /*****************************************************************************/
+div#show_right_sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  background-color: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 3rem 1rem 0rem;
+}
+div#show_right_sidebar p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 div#right_sidebar {
   position: fixed;
   right: 0;
@@ -367,10 +381,13 @@ div#right_sidebar ul li > ul {
 div#right_sidebar p {
   color: rgba(0, 0, 0, 0.6);
 }
-div#right_sidebar a#toggle_right_sidebar {
-  display: inline-block;
-  transform: rotate(90deg);
-  letter-spacing: 0.05rem;
+div#right_sidebar a.toggle_right_sidebar {
+  font-weight: bold;
+}
+@media (max-width: 50rem) {
+  div#right_sidebar {
+    display: none;
+  }
 }
 
 /*****************************************************************************/

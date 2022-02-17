@@ -436,6 +436,19 @@ div.sphinxsidebar {
 /*****************************************************************************/
 // The right sidebar, showing the table of contents for the current page.
 
+div#show_right_sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  background-color: white;
+  border-left: 1px solid $dividerColor;
+  border-bottom: 1px solid $dividerColor;
+  padding: $navbarHeight 1rem 0rem;
+
+  @include sidebar_p;
+}
+
 div#right_sidebar {
   position: fixed;
   right: 0;
@@ -452,10 +465,12 @@ div#right_sidebar {
   @include sidebar_list;
   @include sidebar_p;
 
-  a#toggle_right_sidebar {
-    display: inline-block;
-    transform: rotate(90deg);
-    letter-spacing: 0.05rem;
+  a.toggle_right_sidebar {
+    font-weight: bold;
+  }
+
+  @media(max-width: $mobileTransition) {
+    display: none;
   }
 }
 

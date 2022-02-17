@@ -21,8 +21,12 @@
 
 {%- block sidebar2 %}
 {% if display_toc %}
+    <div id="show_right_sidebar">
+        <p><a class="toggle_right_sidebar" href="#"><</a> Page contents</p>
+    </div>
+
     <div id="right_sidebar">
-        <p><a id="toggle_right_sidebar" href="#">|||</a> Page contents:</p>
+        <p><a class="toggle_right_sidebar" href="#">></a> Page contents:</p>
         <div class="page_toc">
             {{ toc }}
         </div>
