@@ -32,7 +32,7 @@ function setupSidebarToggle() {
     document.querySelector('#toggle_sidebar a').onclick = (event) => {
         console.log("Toggling sidebar")
         event.preventDefault()
-        sidebar.style.display = sidebar.style.display == 'none' ? 'block' : 'none'
+        sidebar.style.display = window.getComputedStyle(sidebar, null).display == 'none' ? 'block' : 'none'
     }
 }
 
@@ -41,7 +41,7 @@ function setupRightSidebarToggle() {
     document.querySelector('#toggle_right_sidebar').onclick = (event) => {
         console.log("Toggling right sidebar")
         event.preventDefault()
-        sidebar.style.display = sidebar.style.display == 'none' ? 'block' : 'none'
+        sidebar.style.display = window.getComputedStyle(sidebar, null).display == 'none' ? 'block' : 'none'
     }
 }
 
