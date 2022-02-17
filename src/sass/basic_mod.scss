@@ -1,11 +1,15 @@
 @use 'sass:color';
-@import './color_scheme/black.scss';
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 $linkColor: #2980b9;
 $dividerColor: rgba(0, 0, 0, 0.08);
+$sidebarColor: white;
+$fontColor: #252630;
+$toggleSidebarColor: white;
+$codeBackgroundColor: #f8f8f8;
+$codeFont: 'Roboto Mono', monospace, Monaco, Consolas, Andale Mono;
 
 $borderRadius: 0.2rem;
 $sidebarWidth: 15rem;
@@ -167,7 +171,7 @@ div.document {
 
   code {
     padding: 2px 4px;
-    background-color: $inlineCodeBgColor;
+    background-color: $codeBackgroundColor;
     border-radius: $borderRadius;
     font-family: $codeFont;
     font-size: 0.9em;
