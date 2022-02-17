@@ -28,14 +28,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 15rem;
-  margin-right: 15rem;
-}
-@media (max-width: 50rem) {
-  body {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
 
 /*****************************************************************************/
@@ -128,6 +120,14 @@ div.document {
   flex-grow: 1;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+@media (max-width: 50rem) {
+  div.document {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 div.document img {
   max-width: 100%;
@@ -220,6 +220,7 @@ div.document dl.py em.sig-param > span:first-child {
   font-weight: bold;
 }
 div.document div.admonition {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   border-radius: 0.2rem;
   margin: 1rem 0;
   overflow: hidden;
@@ -230,36 +231,41 @@ div.document div.admonition p {
   padding: 0.5rem;
   margin: 0;
 }
+div.document div.admonition p:first-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+div.document div.admonition p + p {
+  padding-top: 0.2rem;
+}
 div.document div.admonition p.admonition-title {
   color: white;
   font-weight: bolder;
   letter-spacing: 0.01rem;
 }
-div.document div.admonition.hint p.admonition-title, div.document div.admonition.important p.admonition-title, div.document div.admonition.tip p.admonition-title {
-  background-color: #56b79c;
+div.document div.admonition.hint, div.document div.admonition.important, div.document div.admonition.tip {
+  border-left: 5px solid #56b79c;
 }
-div.document div.admonition.hint p, div.document div.admonition.important p, div.document div.admonition.tip p {
-  background-color: #ddf4ef;
+div.document div.admonition.hint p.admonition-title, div.document div.admonition.important p.admonition-title, div.document div.admonition.tip p.admonition-title {
+  color: #56b79c;
+}
+div.document div.admonition.note {
+  border-left: 5px solid #587f9f;
 }
 div.document div.admonition.note p.admonition-title {
-  background-color: #587f9f;
+  color: #587f9f;
 }
-div.document div.admonition.note p {
-  background-color: #e9f2f9;
+div.document div.admonition.danger, div.document div.admonition.error {
+  border-left: 5px solid #e6a39a;
 }
 div.document div.admonition.danger p.admonition-title, div.document div.admonition.error p.admonition-title {
-  background-color: #e6a39a;
+  color: #e6a39a;
 }
-div.document div.admonition.danger p, div.document div.admonition.error p {
-  background-color: #fbf3f2;
+div.document div.admonition.attention, div.document div.admonition.caution, div.document div.admonition.warning {
+  border-left: 5px solid #e7b486;
 }
 div.document div.admonition.attention p.admonition-title, div.document div.admonition.caution p.admonition-title, div.document div.admonition.warning p.admonition-title {
-  background-color: #e7b486;
-  color: white;
-}
-div.document div.admonition.attention p, div.document div.admonition.caution p, div.document div.admonition.warning p {
-  background-color: #fcedd0;
-  color: #d57b2b;
+  color: #e7b486;
 }
 
 /*****************************************************************************/

@@ -44,13 +44,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  margin-left: $sidebarWidth;
-  margin-right: $sidebarWidth;
-
-  @media(max-width: $mobileTransition) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
 
 /*****************************************************************************/
@@ -160,6 +153,13 @@ div.document {
   flex-grow: 1;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: $sidebarWidth;
+  margin-right: $sidebarWidth;
+
+  @media(max-width: $mobileTransition) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   img {
     max-width: 100%;
@@ -286,6 +286,7 @@ div.document {
   // Admonitions --------------------------------------------------------------
 
   div.admonition {
+    box-shadow: 0px 0px 0px 1px $dividerColor;
     border-radius: $borderRadius;
     margin: 1rem 0;
     overflow: hidden;
@@ -297,6 +298,15 @@ div.document {
       margin: 0;
     }
 
+    p:first-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    p + p {
+      padding-top: 0.2rem;
+    }
+
     p.admonition-title {
       color: white;
       font-weight: bolder;
@@ -306,50 +316,41 @@ div.document {
     &.hint,
     &.important,
     &.tip {
-      p.admonition-title {
-        background-color: #56b79c;
-      }
+      $color: #56b79c;
+      border-left: 5px solid $color;
 
-      p {
-        background-color: #ddf4ef;
+      p.admonition-title {
+        color: $color;
       }
     }
 
     &.note {
-      p.admonition-title {
-        background-color: #587f9f;
-      }
+      $color: #587f9f;
+      border-left: 5px solid $color;
 
-      p {
-        background-color: #e9f2f9;
+      p.admonition-title {
+        color: $color;
       }
     }
 
     &.danger,
     &.error {
-      p.admonition-title {
-        background-color: #e6a39a;
-      }
+      $color: #e6a39a;
+      border-left: 5px solid $color;
 
-      p {
-        background-color: #fbf3f2;
+      p.admonition-title {
+        color: $color;
       }
     }
 
     &.attention,
     &.caution,
     &.warning {
-      $headingBgColor: #e7b486;
-      $bodyBgColor: #fcedd0;
+      $color: #e7b486;
+      border-left: 5px solid $color;
 
       p.admonition-title {
-        background-color: $headingBgColor;
-        color: white;
-      }
-
-      p {
-        background-color: #fcedd0;
-        color: color.scale($headingBgColor, $lightness: -30%);
+        color: $color;
       }
     }
   }
