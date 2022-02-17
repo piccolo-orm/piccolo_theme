@@ -3,6 +3,11 @@
 A clean and modern Sphinx theme.
 
 ![Screenshot](./docs/screenshots/docs.png)
+
+## Docs
+
+See [Read the docs](https://piccolo-theme.readthedocs.io/en/latest/).
+
 ## Typography
 
 Roboto is used for the body copy, and Roboto Mono for code snippets. As these
