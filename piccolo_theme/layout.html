@@ -8,7 +8,11 @@
     </p>
     <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">{{ project }}</a></h1>
 
-    {% include "basic/searchbox.html" %}
+    <p class="mobile_search_link"><a href="{{ pathto('search') }}">Search</a></p>
+
+    <div class="searchbox_wrapper">
+        {% include "basic/searchbox.html" %}
+    </div>
 </nav>
 {% endblock %}
 

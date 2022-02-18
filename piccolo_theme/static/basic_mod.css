@@ -110,6 +110,19 @@ nav#top_nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
+@media (min-width: 50rem) {
+  nav#top_nav p.mobile_search_link {
+    display: none;
+  }
+}
+nav#top_nav p.mobile_search_link a {
+  color: white;
+}
+@media (max-width: 50rem) {
+  nav#top_nav div.searchbox_wrapper {
+    display: none;
+  }
+}
 
 /*****************************************************************************/
 div.related {

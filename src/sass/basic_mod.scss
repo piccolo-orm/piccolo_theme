@@ -141,6 +141,24 @@ nav#top_nav {
       font-weight: bold;
     }
   }
+
+  // Displayed on mobile devices instead of the search bar
+  p.mobile_search_link {
+    @media(min-width: $mobileTransition) {
+      display: none;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  // Contains the search bar
+  div.searchbox_wrapper {
+    @media(max-width: $mobileTransition) {
+      display: none;
+    }
+  }
 }
 
 /*****************************************************************************/
