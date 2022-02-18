@@ -353,6 +353,9 @@ div#show_right_sidebar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 3rem 1rem 0rem;
 }
+div#show_right_sidebar p {
+  font-size: 0.9em;
+}
 div#show_right_sidebar p span {
   color: rgba(0, 0, 0, 0.6);
 }
