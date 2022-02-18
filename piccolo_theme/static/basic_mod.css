@@ -118,6 +118,9 @@ nav#top_nav p#toggle_sidebar a {
 nav#top_nav p.mobile_search_link a {
   color: white;
 }
+nav#top_nav p.mobile_search_link a svg {
+  height: 1rem;
+}
 @media (max-width: 50rem) {
   nav#top_nav div.searchbox_wrapper {
     display: none;
