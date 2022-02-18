@@ -21,7 +21,7 @@ def parse_requirement(req_path: str) -> t.List[str]:
 
 setup(
     name="piccolo_theme",
-    version="0.2.0",
+    version="0.2.2",
     description="A modern Sphinx theme.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
@@ -31,7 +31,7 @@ setup(
     url="https://github.com/piccolo-orm/piccolo_theme",
     packages=find_packages(),
     package_data={
-        "piccolo_theme": ["*.html", "theme.conf", "static/**/*"],
+        "piccolo_theme": ["*.html", "theme.conf", "static/*", "static/**/*"],
     },
     install_requires=parse_requirement("requirements.txt"),
     license="MIT",
