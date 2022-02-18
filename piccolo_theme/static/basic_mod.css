@@ -110,6 +110,22 @@ nav#top_nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
+@media (min-width: 50rem) {
+  nav#top_nav p.mobile_search_link {
+    display: none;
+  }
+}
+nav#top_nav p.mobile_search_link a {
+  color: white;
+}
+nav#top_nav p.mobile_search_link a svg {
+  height: 1rem;
+}
+@media (max-width: 50rem) {
+  nav#top_nav div.searchbox_wrapper {
+    display: none;
+  }
+}
 
 /*****************************************************************************/
 div.related {
@@ -337,7 +353,7 @@ div#show_right_sidebar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 3rem 1rem 0rem;
 }
-div#show_right_sidebar p {
+div#show_right_sidebar p span {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -381,8 +397,8 @@ div#right_sidebar ul li > ul {
 div#right_sidebar p {
   color: rgba(0, 0, 0, 0.6);
 }
-div#right_sidebar a.toggle_right_sidebar {
-  font-weight: bold;
+div#right_sidebar p span {
+  color: rgba(0, 0, 0, 0.6);
 }
 @media (max-width: 50rem) {
   div#right_sidebar {
