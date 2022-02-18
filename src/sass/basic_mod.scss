@@ -468,7 +468,11 @@ div#show_right_sidebar {
   border-bottom: 1px solid $dividerColor;
   padding: $navbarHeight 1rem 0rem;
 
-  @include sidebar_p;
+  p {
+    span {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
 }
 
 div#right_sidebar {
@@ -487,8 +491,10 @@ div#right_sidebar {
   @include sidebar_list;
   @include sidebar_p;
 
-  a.toggle_right_sidebar {
-    font-weight: bold;
+  p {
+    span {
+      color: rgba(0, 0, 0, 0.6);
+    }
   }
 
   @media(max-width: $mobileTransition) {
