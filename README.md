@@ -2,7 +2,7 @@
 
 A clean and modern Sphinx theme.
 
-![Screenshot](./docs/screenshots/docs.png)
+![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/docs.png)
 
 ## Docs
 
@@ -20,7 +20,7 @@ We use bold, easy to read headers.
 
 We make your autodoc code snippets nice and legible:
 
-![Screenshot](./docs/screenshots/api_docs.png)
+![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/api_docs.png)
 
 ## Other design features
 
