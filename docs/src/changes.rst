@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.2.4
+-----
+
+Added missing ``requirements.txt`` file to manifest. Thanks to @moorepants for
+reporting this.
+
+-------------------------------------------------------------------------------
+
 0.2.3
 -----
 Make the ``page contents`` text smaller when the right hand sidebar is hidden.
