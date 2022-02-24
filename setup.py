@@ -21,7 +21,7 @@ def parse_requirement(req_path: str) -> t.List[str]:
 
 setup(
     name="piccolo_theme",
-    version="0.2.4",
+    version="0.2.5",
     description="A modern Sphinx theme.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
