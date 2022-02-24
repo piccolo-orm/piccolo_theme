@@ -3,8 +3,31 @@
 /*****************************************************************************/
 /* Typography */
 body {
+  --fontColor: #252630;
+  --faintFontColor: rgba(0, 0, 0, 0.4);
+  --mainBackgroundColor: white;
+  --sidebarColor: white;
+  --codeBackgroundColor: #f8f8f8;
+  --dividerColor: rgba(0, 0, 0, 0.08);
+  --searchHighlightColor: #fff150;
   font-family: Roboto, "OpenSans", sans-serif;
-  color: #252630;
+  color: var(--fontColor);
+  background-color: var(--mainBackgroundColor);
+}
+body[data-mode=jet] {
+  --mainBackgroundColor: black;
+  --sidebarColor: black;
+}
+body[data-mode=dark] {
+  --mainBackgroundColor: #141416;
+  --sidebarColor: #141416;
+}
+body[data-mode=dark], body[data-mode=jet] {
+  --fontColor: white;
+  --faintFontColor: rgba(255, 255, 255, 0.4);
+  --codeBackgroundColor: rgba(255,255,255,0.15);
+  --dividerColor: rgba(255, 255, 255, 0.08);
+  --searchHighlightColor: #fe8e04;
 }
 
 h1 {
@@ -54,7 +77,7 @@ div#searchbox form.search input {
   display: block;
   box-sizing: border-box;
   padding: 0.3rem;
-  color: #252630;
+  color: var(--fontColor);
   border-radius: 0.2rem;
 }
 div#searchbox form.search input[type=text] {
@@ -176,7 +199,7 @@ div.document img {
 }
 div.document code {
   padding: 2px 4px;
-  background-color: #f8f8f8;
+  background-color: var(--codeBackgroundColor);
   border-radius: 0.2rem;
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
   font-size: 0.9em;
@@ -191,6 +214,7 @@ div.document div.highlight {
   margin: 0.5rem 0;
   border-radius: 0.2rem;
   font-size: 0.9rem;
+  background-color: var(--codeBackgroundColor);
 }
 div.document div.highlight pre {
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
@@ -221,11 +245,12 @@ div.document li {
 div.document hr {
   border: none;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: var(--dividerColor);
   margin: 2rem 0;
 }
 div.document span.highlighted {
-  background-color: #fff150;
+  background-color: var(--searchHighlightColor);
+  padding: 0 0.1em;
 }
 div.document div#search-results {
   padding-top: 2rem;
@@ -238,7 +263,7 @@ div.document div#search-results ul.search {
   padding-left: 0;
 }
 div.document div#search-results ul.search li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--dividerColor);
   margin: 1rem 0;
 }
 div.document dl.py {
@@ -253,7 +278,7 @@ div.document dl.py dt.sig {
   border-left: 5px solid rgba(0, 0, 0, 0.1);
 }
 div.document dl.py em.property {
-  color: white;
+  color: var(--sidebarColor);
   font-weight: bold;
 }
 div.document dl.py span.sig-name {
@@ -276,7 +301,7 @@ div.document dl.py em.sig-param > span:first-child {
   font-weight: bold;
 }
 div.document div.admonition {
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 0px 1px var(--dividerColor);
   border-radius: 0.2rem;
   margin: 1rem 0;
   overflow: hidden;
@@ -326,8 +351,8 @@ div.document div.admonition.attention p.admonition-title, div.document div.admon
 
 /*****************************************************************************/
 div.sphinxsidebar {
-  background-color: white;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--sidebarColor);
+  border-right: 1px solid var(--dividerColor);
   position: fixed;
   left: 0;
   top: 0;
@@ -357,7 +382,7 @@ div.sphinxsidebar ul li a {
   display: block;
   box-sizing: border-box;
   padding: 0 0.2rem 0.6rem;
-  color: #252630;
+  color: var(--fontColor);
   text-decoration: none;
 }
 div.sphinxsidebar ul li a.current {
@@ -379,9 +404,9 @@ div#show_right_sidebar {
   right: 0;
   top: 0;
   z-index: 20;
-  background-color: white;
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--sidebarColor);
+  border-left: 1px solid var(--dividerColor);
+  border-bottom: 1px solid var(--dividerColor);
   padding: 3rem 1rem 0rem;
 }
 div#show_right_sidebar p {
@@ -396,9 +421,9 @@ div#right_sidebar {
   right: 0;
   top: 0;
   z-index: 50;
-  background-color: white;
+  background-color: var(--sidebarColor);
   width: 15rem;
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
   padding: 3rem 1rem 1rem;
   height: 100%;
@@ -416,7 +441,7 @@ div#right_sidebar ul li a {
   display: block;
   box-sizing: border-box;
   padding: 0 0.2rem 0.6rem;
-  color: #252630;
+  color: var(--fontColor);
   text-decoration: none;
 }
 div#right_sidebar ul li a.current {
@@ -455,7 +480,7 @@ div.footer {
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--faintFontColor);
 }
 
 /*****************************************************************************/

@@ -4,12 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 $linkColor: #2980b9;
-$dividerColor: rgba(0, 0, 0, 0.08);
-$sidebarColor: white;
-$fontColor: #252630;
-$searchHighlightColor: #fff150;
+
 $toggleSidebarColor: white;
-$codeBackgroundColor: #f8f8f8;
 $codeFont: 'Roboto Mono', monospace, Monaco, Consolas, Andale Mono;
 
 $borderRadius: 0.2rem;
@@ -22,8 +18,35 @@ $navbarHeight: 3rem;
 /* Typography */
 
 body {
+  --fontColor: #252630;
+  --faintFontColor: rgba(0, 0, 0, 0.4);
+  --mainBackgroundColor: white;
+  --sidebarColor: white;
+  --codeBackgroundColor: #f8f8f8;
+  --dividerColor: rgba(0, 0, 0, 0.08);
+  --searchHighlightColor: #fff150;
+
+  &[data-mode="jet"] {
+    --mainBackgroundColor: black;
+    --sidebarColor: black;
+  }
+
+  &[data-mode="dark"] {
+    --mainBackgroundColor: #141416;
+    --sidebarColor: #141416;
+  }
+
+  &[data-mode="dark"], &[data-mode="jet"] {
+    --fontColor: white;
+    --faintFontColor: rgba(255, 255, 255, 0.4);
+    --codeBackgroundColor: rgba(255,255,255,0.15);
+    --dividerColor: rgba(255, 255, 255, 0.08);
+    --searchHighlightColor: #fe8e04;
+  }
+
   font-family: Roboto, "OpenSans", sans-serif;
-  color: $fontColor;
+  color: var(--fontColor);
+  background-color: var(--mainBackgroundColor);
 }
 
 h1 {
@@ -78,7 +101,7 @@ div#searchbox {
       display: block;
       box-sizing: border-box;
       padding: 0.3rem;
-      color: $fontColor;
+      color: var(--fontColor);
       border-radius: $borderRadius;
     }
 
@@ -225,7 +248,7 @@ div.document {
 
   code {
     padding: 2px 4px;
-    background-color: $codeBackgroundColor;
+    background-color: var(--codeBackgroundColor);
     border-radius: $borderRadius;
     font-family: $codeFont;
     font-size: 0.9em;
@@ -242,6 +265,7 @@ div.document {
     margin: 0.5rem 0;
     border-radius: $borderRadius;
     font-size: 0.9rem;
+    background-color: var(--codeBackgroundColor);
 
     pre {
       font-family: $codeFont;
@@ -282,7 +306,7 @@ div.document {
   hr {
     border: none;
     height: 1px;
-    background-color: $dividerColor;
+    background-color: var(--dividerColor);
     margin: 2rem 0;
   }
 
@@ -290,7 +314,8 @@ div.document {
 
   // After clicking on a search result, it highlights any results on the page:
   span.highlighted {
-    background-color: $searchHighlightColor;
+    background-color: var(--searchHighlightColor);
+    padding: 0 0.1em;
   }
 
   div#search-results {
@@ -305,7 +330,7 @@ div.document {
       padding-left: 0;
 
       li {
-        border-bottom: 1px solid $dividerColor;
+        border-bottom: 1px solid var(--dividerColor);
         margin: 1rem 0;
       }
     }
@@ -327,7 +352,7 @@ div.document {
 
     // e.g. `class`, or `def`
     em.property {
-      color: $sidebarColor;
+      color: var(--sidebarColor);
       font-weight: bold;
     }
 
@@ -365,7 +390,7 @@ div.document {
   // Admonitions --------------------------------------------------------------
 
   div.admonition {
-    box-shadow: 0px 0px 0px 1px $dividerColor;
+    box-shadow: 0px 0px 0px 1px var(--dividerColor);
     border-radius: $borderRadius;
     margin: 1rem 0;
     overflow: hidden;
@@ -451,7 +476,7 @@ div.document {
         display: block;
         box-sizing: border-box;
         padding: 0 0.2rem 0.6rem;
-        color: $fontColor;
+        color: var(--fontColor);
         text-decoration: none;
 
         &.current {
@@ -477,8 +502,8 @@ div.document {
 }
 
 div.sphinxsidebar {
-  background-color: $sidebarColor;
-  border-right: 1px solid $dividerColor;
+  background-color: var(--sidebarColor);
+  border-right: 1px solid var(--dividerColor);
   position: fixed;
   left: 0;
   top: 0;
@@ -508,9 +533,9 @@ div#show_right_sidebar {
   right: 0;
   top: 0;
   z-index: 20;
-  background-color: white;
-  border-left: 1px solid $dividerColor;
-  border-bottom: 1px solid $dividerColor;
+  background-color: var(--sidebarColor);
+  border-left: 1px solid var(--dividerColor);
+  border-bottom: 1px solid var(--dividerColor);
   padding: $navbarHeight 1rem 0rem;
 
   p {
@@ -527,9 +552,9 @@ div#right_sidebar {
   right: 0;
   top: 0;
   z-index: 50;
-  background-color: white;
+  background-color: var(--sidebarColor);
   width: $sidebarWidth;
-  border-left: 1px solid $dividerColor;
+  border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
   padding: $navbarHeight 1rem 1rem;
   height: 100%;
@@ -566,7 +591,7 @@ div.footer {
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--faintFontColor);
 }
 
 /*****************************************************************************/
