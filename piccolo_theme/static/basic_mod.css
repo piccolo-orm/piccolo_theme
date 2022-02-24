@@ -126,6 +126,20 @@ nav#top_nav p.mobile_search_link a svg {
     display: none;
   }
 }
+nav#top_nav div.searchbox_wrapper div#searchbox {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8em;
+  padding-right: 0.5rem;
+  text-decoration: underline;
+}
+nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
+  color: white;
+}
 
 /*****************************************************************************/
 div.related {
@@ -209,6 +223,23 @@ div.document hr {
   height: 1px;
   background-color: rgba(0, 0, 0, 0.08);
   margin: 2rem 0;
+}
+div.document span.highlighted {
+  background-color: #fff150;
+}
+div.document div#search-results {
+  padding-top: 2rem;
+}
+div.document div#search-results p.search-summary {
+  font-size: 0.8em;
+}
+div.document div#search-results ul.search {
+  list-style: none;
+  padding-left: 0;
+}
+div.document div#search-results ul.search li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 1rem 0;
 }
 div.document dl.py {
   margin-bottom: 2rem;

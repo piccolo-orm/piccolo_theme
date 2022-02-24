@@ -4,7 +4,7 @@ Contributing
 We use `Sass <https://sass-lang.com/>`_ as a CSS preprocessor. The styles live
 in ``src/sass``.
 
-To modify the styles, first install SASS:
+To modify the styles, first install Sass:
 
 .. code-block:: bash
 
