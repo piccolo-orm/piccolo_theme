@@ -7,6 +7,7 @@ $linkColor: #2980b9;
 $dividerColor: rgba(0, 0, 0, 0.08);
 $sidebarColor: white;
 $fontColor: #252630;
+$searchHighlightColor: #fff150;
 $toggleSidebarColor: white;
 $codeBackgroundColor: #f8f8f8;
 $codeFont: 'Roboto Mono', monospace, Monaco, Consolas, Andale Mono;
@@ -162,6 +163,25 @@ nav#top_nav {
     @media(max-width: $mobileTransition) {
       display: none;
     }
+
+    div#searchbox {
+      align-items: center;
+      display: flex;
+      flex-direction: row-reverse;
+
+      p.highlight-link {
+        a {
+          color: rgba(255,255,255,0.8);
+          font-size: 0.8em;
+          padding-right: 0.5rem;
+          text-decoration: underline;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -264,6 +284,31 @@ div.document {
     height: 1px;
     background-color: $dividerColor;
     margin: 2rem 0;
+  }
+
+  // Search -------------------------------------------------------------------
+
+  // After clicking on a search result, it highlights any results on the page:
+  span.highlighted {
+    background-color: $searchHighlightColor;
+  }
+
+  div#search-results {
+    padding-top: 2rem;
+
+    p.search-summary {
+      font-size: 0.8em;
+    }
+
+    ul.search {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        border-bottom: 1px solid $dividerColor;
+        margin: 1rem 0;
+      }
+    }
   }
 
   // Autodoc ------------------------------------------------------------------
