@@ -4,7 +4,7 @@
 /* Typography */
 body {
   --fontColor: #252630;
-  --faintFontColor: rgba(0, 0, 0, 0.4);
+  --faintFontColor: rgba(0, 0, 0, 0.6);
   --mainBackgroundColor: white;
   --sidebarColor: white;
   --codeBackgroundColor: #f8f8f8;
@@ -24,7 +24,7 @@ body[data-mode=dark] {
 }
 body[data-mode=dark], body[data-mode=jet] {
   --fontColor: white;
-  --faintFontColor: rgba(255, 255, 255, 0.4);
+  --faintFontColor: rgba(255, 255, 255, 0.6);
   --codeBackgroundColor: rgba(255,255,255,0.15);
   --dividerColor: rgba(255, 255, 255, 0.08);
   --searchHighlightColor: #fe8e04;
@@ -133,6 +133,15 @@ nav#top_nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
+nav#top_nav a#mode_toggle {
+  margin-right: 1rem;
+  display: block;
+  flex-grow: 0;
+}
+nav#top_nav a#mode_toggle svg {
+  height: 1.3rem;
+  vertical-align: middle;
+}
 @media (min-width: 50rem) {
   nav#top_nav p.mobile_search_link {
     display: none;
@@ -143,6 +152,7 @@ nav#top_nav p.mobile_search_link a {
 }
 nav#top_nav p.mobile_search_link a svg {
   height: 1rem;
+  vertical-align: middle;
 }
 @media (max-width: 50rem) {
   nav#top_nav div.searchbox_wrapper {
@@ -395,7 +405,7 @@ div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
 }
 div.sphinxsidebar p {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--faintFontColor);
 }
 
 /*****************************************************************************/
@@ -413,7 +423,7 @@ div#show_right_sidebar p {
   font-size: 0.9em;
 }
 div#show_right_sidebar p span {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--faintFontColor);
 }
 
 div#right_sidebar {
@@ -454,10 +464,10 @@ div#right_sidebar ul li > ul {
   padding-left: 1rem;
 }
 div#right_sidebar p {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--faintFontColor);
 }
 div#right_sidebar p span {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--faintFontColor);
 }
 @media (max-width: 50rem) {
   div#right_sidebar {

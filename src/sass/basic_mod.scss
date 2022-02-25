@@ -19,7 +19,7 @@ $navbarHeight: 3rem;
 
 body {
   --fontColor: #252630;
-  --faintFontColor: rgba(0, 0, 0, 0.4);
+  --faintFontColor: rgba(0, 0, 0, 0.6);
   --mainBackgroundColor: white;
   --sidebarColor: white;
   --codeBackgroundColor: #f8f8f8;
@@ -38,7 +38,7 @@ body {
 
   &[data-mode="dark"], &[data-mode="jet"] {
     --fontColor: white;
-    --faintFontColor: rgba(255, 255, 255, 0.4);
+    --faintFontColor: rgba(255, 255, 255, 0.6);
     --codeBackgroundColor: rgba(255,255,255,0.15);
     --dividerColor: rgba(255, 255, 255, 0.08);
     --searchHighlightColor: #fe8e04;
@@ -166,6 +166,18 @@ nav#top_nav {
     }
   }
 
+  // Toggles light mode / dark mode
+  a#mode_toggle {
+    margin-right: 1rem;
+    display: block;
+    flex-grow: 0;
+
+     svg {
+      height: 1.3rem;
+      vertical-align: middle;
+    }
+  }
+
   // Displayed on mobile devices instead of the search bar
   p.mobile_search_link {
     @media(min-width: $mobileTransition) {
@@ -177,6 +189,7 @@ nav#top_nav {
 
       svg {
         height: 1rem;
+        vertical-align: middle;
       }
     }
   }
@@ -497,7 +510,7 @@ div.document {
 
 @mixin sidebar_p {
   p {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--faintFontColor);
   }
 }
 
@@ -542,7 +555,7 @@ div#show_right_sidebar {
     font-size: 0.9em;
 
     span {
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--faintFontColor);
     }
   }
 }
@@ -565,7 +578,7 @@ div#right_sidebar {
 
   p {
     span {
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--faintFontColor);
     }
   }
 

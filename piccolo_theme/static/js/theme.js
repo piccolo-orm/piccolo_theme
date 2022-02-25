@@ -53,7 +53,7 @@ function setupRightSidebarToggle() {
 function toggleDarkMode() {
     const body = document.querySelector('body');
 
-    body.dataset.mode = 'dark'
+    body.dataset.mode = body.dataset.mode == 'dark' ? 'light' : 'dark'
 }
 
 window.onload = function() {
@@ -68,4 +68,10 @@ window.onload = function() {
 // Don't wait for the page to finish loading - we only need the body element.
 document.addEventListener("DOMContentLoaded", function(){
     toggleDarkMode()
+
+    const modeToggle = document.querySelector('#mode_toggle')
+    modeToggle.addEventListener("click", (event) => {
+        event.preventDefault()
+        toggleDarkMode()
+    })
 });
