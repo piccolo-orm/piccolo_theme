@@ -14,7 +14,7 @@ body {
   color: var(--fontColor);
   background-color: var(--mainBackgroundColor);
 }
-body[data-mode=jet] {
+body[data-mode=darkest] {
   --mainBackgroundColor: black;
   --sidebarColor: black;
 }
@@ -22,7 +22,7 @@ body[data-mode=dark] {
   --mainBackgroundColor: #141416;
   --sidebarColor: #141416;
 }
-body[data-mode=dark], body[data-mode=jet] {
+body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
   --faintFontColor: rgba(255, 255, 255, 0.6);
   --codeBackgroundColor: rgba(255,255,255,0.15);
@@ -77,7 +77,7 @@ div#searchbox form.search input {
   display: block;
   box-sizing: border-box;
   padding: 0.3rem;
-  color: var(--fontColor);
+  color: rgba(0, 0, 0, 0.7);
   border-radius: 0.2rem;
 }
 div#searchbox form.search input[type=text] {

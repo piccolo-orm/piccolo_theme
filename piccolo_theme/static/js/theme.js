@@ -53,7 +53,15 @@ function setupRightSidebarToggle() {
 function toggleDarkMode() {
     const body = document.querySelector('body');
 
-    body.dataset.mode = body.dataset.mode == 'dark' ? 'light' : 'dark'
+    const currentMode = body.dataset.mode ?? 'light'
+
+    if (currentMode == 'light') {
+        body.dataset.mode = 'dark'
+    } else if (currentMode == 'dark') {
+        body.dataset.mode = 'darkest'
+    } else if (currentMode == 'darkest') {
+        body.dataset.mode = 'light'
+    }
 }
 
 window.onload = function() {
