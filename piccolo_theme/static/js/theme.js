@@ -50,19 +50,6 @@ function setupRightSidebarToggle() {
     })
 }
 
-function toggleDarkMode() {
-    const body = document.querySelector('body');
-
-    const currentMode = body.dataset.mode ?? 'light'
-
-    if (currentMode == 'light') {
-        body.dataset.mode = 'dark'
-    } else if (currentMode == 'dark') {
-        body.dataset.mode = 'darkest'
-    } else if (currentMode == 'darkest') {
-        body.dataset.mode = 'light'
-    }
-}
 
 window.onload = function() {
     console.log("custom theme loaded")
@@ -72,14 +59,3 @@ window.onload = function() {
     setupSidebarToggle()
     setupRightSidebarToggle()
 }
-
-// Don't wait for the page to finish loading - we only need the body element.
-document.addEventListener("DOMContentLoaded", function(){
-    toggleDarkMode()
-
-    const modeToggle = document.querySelector('#mode_toggle')
-    modeToggle.addEventListener("click", (event) => {
-        event.preventDefault()
-        toggleDarkMode()
-    })
-});
