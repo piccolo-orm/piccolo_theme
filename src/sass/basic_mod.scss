@@ -2,8 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap?family=Roboto+Mono&display=swap");
 
-$linkColor: #2980b9;
-
 $toggleSidebarColor: white;
 $codeFont: 'Roboto Mono', monospace, Monaco, Consolas, Andale Mono;
 
@@ -17,6 +15,7 @@ $navbarHeight: 3rem;
 /* Typography */
 
 body {
+  --mainNavColor: #3889ce;
   --fontColor: #252630;
   --faintFontColor: rgba(0, 0, 0, 0.6);
   --mainBackgroundColor: white;
@@ -24,6 +23,7 @@ body {
   --codeBackgroundColor: #f8f8f8;
   --dividerColor: rgba(0, 0, 0, 0.08);
   --searchHighlightColor: #fff150;
+  --linkColor: #2980b9;
 
   &[data-mode="darkest"] {
     --mainBackgroundColor: black;
@@ -31,8 +31,8 @@ body {
   }
 
   &[data-mode="dark"] {
-    --mainBackgroundColor: #141416;
-    --sidebarColor: #141416;
+    --mainBackgroundColor: #242429;
+    --sidebarColor: #242429;
   }
 
   &[data-mode="dark"], &[data-mode="darkest"] {
@@ -41,6 +41,7 @@ body {
     --codeBackgroundColor: rgba(255,255,255,0.15);
     --dividerColor: rgba(255, 255, 255, 0.08);
     --searchHighlightColor: #fe8e04;
+    --linkColor: #319be0;
   }
 
   font-family: Roboto, "OpenSans", sans-serif;
@@ -61,7 +62,7 @@ h3 {
 }
 
 a {
-  color: $linkColor;
+  color: var(--linkColor);
   text-decoration: none;
 }
 
@@ -117,7 +118,7 @@ div#searchbox {
 
     input[type=submit] {
       cursor: pointer;
-      color: $linkColor;
+      color: var(--mainNavColor);
       flex-grow: 0;
       border: none;
       background-color: white;
@@ -130,7 +131,7 @@ nav#top_nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #3889ce;
+  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
   box-sizing: border-box;
@@ -492,11 +493,11 @@ div.document {
         text-decoration: none;
 
         &.current {
-          color: $linkColor;
+          color: var(--linkColor);
         }
 
         &:hover {
-          color: $linkColor;
+          color: var(--linkColor);
         }
       }
     }

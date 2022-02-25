@@ -2,6 +2,7 @@
 /*****************************************************************************/
 /* Typography */
 body {
+  --mainNavColor: #3889ce;
   --fontColor: #252630;
   --faintFontColor: rgba(0, 0, 0, 0.6);
   --mainBackgroundColor: white;
@@ -9,6 +10,7 @@ body {
   --codeBackgroundColor: #f8f8f8;
   --dividerColor: rgba(0, 0, 0, 0.08);
   --searchHighlightColor: #fff150;
+  --linkColor: #2980b9;
   font-family: Roboto, "OpenSans", sans-serif;
   color: var(--fontColor);
   background-color: var(--mainBackgroundColor);
@@ -18,8 +20,8 @@ body[data-mode=darkest] {
   --sidebarColor: black;
 }
 body[data-mode=dark] {
-  --mainBackgroundColor: #141416;
-  --sidebarColor: #141416;
+  --mainBackgroundColor: #242429;
+  --sidebarColor: #242429;
 }
 body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
@@ -27,6 +29,7 @@ body[data-mode=dark], body[data-mode=darkest] {
   --codeBackgroundColor: rgba(255,255,255,0.15);
   --dividerColor: rgba(255, 255, 255, 0.08);
   --searchHighlightColor: #fe8e04;
+  --linkColor: #319be0;
 }
 
 h1 {
@@ -42,7 +45,7 @@ h3 {
 }
 
 a {
-  color: #2980b9;
+  color: var(--linkColor);
   text-decoration: none;
 }
 
@@ -90,7 +93,7 @@ div#searchbox form.search input[type=text]::placeholder {
 }
 div#searchbox form.search input[type=submit] {
   cursor: pointer;
-  color: #2980b9;
+  color: var(--mainNavColor);
   flex-grow: 0;
   border: none;
   background-color: white;
@@ -101,7 +104,7 @@ nav#top_nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #3889ce;
+  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
   box-sizing: border-box;
@@ -395,10 +398,10 @@ div.sphinxsidebar ul li a {
   text-decoration: none;
 }
 div.sphinxsidebar ul li a.current {
-  color: #2980b9;
+  color: var(--linkColor);
 }
 div.sphinxsidebar ul li a:hover {
-  color: #2980b9;
+  color: var(--linkColor);
 }
 div.sphinxsidebar ul li > ul {
   padding-left: 1rem;
@@ -454,10 +457,10 @@ div#right_sidebar ul li a {
   text-decoration: none;
 }
 div#right_sidebar ul li a.current {
-  color: #2980b9;
+  color: var(--linkColor);
 }
 div#right_sidebar ul li a:hover {
-  color: #2980b9;
+  color: var(--linkColor);
 }
 div#right_sidebar ul li > ul {
   padding-left: 1rem;
