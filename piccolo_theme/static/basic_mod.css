@@ -2,15 +2,17 @@
 /*****************************************************************************/
 /* Typography */
 body {
-  --mainNavColor: #3889ce;
-  --fontColor: #252630;
-  --faintFontColor: rgba(0, 0, 0, 0.6);
-  --mainBackgroundColor: white;
-  --sidebarColor: white;
   --codeBackgroundColor: #f8f8f8;
+  --codeBlue: #0000FF;
+  --codeGreen: #008000;
   --dividerColor: rgba(0, 0, 0, 0.08);
-  --searchHighlightColor: #fff150;
+  --faintFontColor: rgba(0, 0, 0, 0.6);
+  --fontColor: #252630;
   --linkColor: #2980b9;
+  --mainBackgroundColor: white;
+  --mainNavColor: #3889ce;
+  --searchHighlightColor: #fff150;
+  --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
   color: var(--fontColor);
   background-color: var(--mainBackgroundColor);
@@ -24,12 +26,14 @@ body[data-mode=dark] {
   --sidebarColor: #242429;
 }
 body[data-mode=dark], body[data-mode=darkest] {
-  --fontColor: white;
-  --faintFontColor: rgba(255, 255, 255, 0.6);
-  --codeBackgroundColor: rgba(255,255,255,0.15);
+  --codeBackgroundColor: rgba(255,255,255,0.1);
+  --codeBlue: #5f81ff;
+  --codeGreen: #0bb30b;
   --dividerColor: rgba(255, 255, 255, 0.08);
-  --searchHighlightColor: #fe8e04;
+  --faintFontColor: rgba(255, 255, 255, 0.6);
+  --fontColor: white;
   --linkColor: #319be0;
+  --searchHighlightColor: #fe8e04;
 }
 
 h1 {
@@ -282,7 +286,7 @@ div.document dl.py {
   margin-bottom: 2rem;
 }
 div.document dl.py dt.sig {
-  background-color: #f8f8f8;
+  background-color: var(--codeBackgroundColor);
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
   font-size: 0.9rem;
@@ -294,17 +298,17 @@ div.document dl.py em.property {
   font-weight: bold;
 }
 div.document dl.py span.sig-name {
-  color: #0000FF;
+  color: var(--codeBlue);
   font-weight: bold;
 }
 div.document dl.py em.property {
-  color: #008000;
+  color: var(--codeGreen);
 }
 div.document dl.py em.sig-param {
   margin-left: 2rem;
 }
 div.document dl.py em.sig-param span.default_value {
-  color: #008000;
+  color: var(--codeGreen);
 }
 div.document dl.py span.sig-return span.sig-return-typehint {
   color: rgba(0, 0, 0, 0.8);
