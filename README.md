@@ -24,12 +24,12 @@ We make your autodoc code snippets nice and legible:
 
 ## Dark mode, and darkest mode!
 
-We have a gorgeous dark mode 🧛‍♂️:
+We have a gorgeous dark mode 🥷:
 
 ![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/dark_mode.png)
 
 And for users with OLED displays, we have the 'darkest' mode - where the
-backgrounds are pure black.
+backgrounds are pure black 🧛‍♂️:
 
 ![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/darkest_mode.png)
 
