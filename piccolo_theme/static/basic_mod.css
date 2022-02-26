@@ -162,6 +162,7 @@ nav#top_nav a#mode_toggle {
 }
 nav#top_nav a#mode_toggle svg {
   height: 1.3rem;
+  width: 1.3rem;
   vertical-align: middle;
 }
 @media (min-width: 50rem) {
