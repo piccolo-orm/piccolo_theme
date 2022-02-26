@@ -8,6 +8,8 @@
     </p>
     <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">{{ project }}</a></h1>
 
+    {% include "./components/dark_mode_toggle.html" %}
+
     {%- if pagename != "search" %}
         <p class="mobile_search_link">
             <a href="{{ pathto('search') }}" title="Search">

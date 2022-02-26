@@ -1,29 +1,73 @@
-@use 'sass:color';
+@use "sass:color";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap?family=Roboto+Mono&display=swap");
 
-$linkColor: #2980b9;
-$dividerColor: rgba(0, 0, 0, 0.08);
-$sidebarColor: white;
-$fontColor: #252630;
-$searchHighlightColor: #fff150;
 $toggleSidebarColor: white;
-$codeBackgroundColor: #f8f8f8;
-$codeFont: 'Roboto Mono', monospace, Monaco, Consolas, Andale Mono;
+$codeFont: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
 
 $borderRadius: 0.2rem;
-$sidebarWidth: 15rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
 $navbarHeight: 3rem;
+$sidebarWidth: 15rem;
 
 /*****************************************************************************/
 /* Typography */
 
 body {
+  --codeBackgroundColor: #f8f8f8;
+  --inlineCodeBackgroundColor: #f8f8f8;
+  --codeBlue: #0000ff;
+  --codeGreen: #008000;
+  --dividerColor: rgba(0, 0, 0, 0.08);
+  --faintFontColor: rgba(0, 0, 0, 0.6);
+  --fontColor: #252630;
+  --linkColor: #2980b9;
+  --mainBackgroundColor: white;
+  --mainNavColor: #3889ce;
+  --searchHighlightColor: #fff150;
+  --sidebarColor: white;
+
+  &[data-mode="darkest"] {
+    --mainBackgroundColor: black;
+    --sidebarColor: black;
+    --codeBackgroundColor: rgba(255, 255, 255, 0.1);
+    --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.1);
+  }
+
+  &[data-mode="dark"] {
+    --mainBackgroundColor: #242429;
+    --sidebarColor: #242429;
+    --codeBackgroundColor: rgba(0, 0, 0, 0.1);
+    --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.06);
+  }
+
+  &[data-mode="dark"],
+  &[data-mode="darkest"] {
+    --codeBlue: #77baff;
+    --codeGreen: #38c038;
+    --dividerColor: rgba(255, 255, 255, 0.1);
+    --faintFontColor: rgba(255, 255, 255, 0.6);
+    --fontColor: white;
+    --linkColor: #319be0;
+    --searchHighlightColor: #fe8e04;
+  }
+
   font-family: Roboto, "OpenSans", sans-serif;
-  color: $fontColor;
+  background-color: var(--mainBackgroundColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+code,
+table,
+dd {
+  color: var(--fontColor);
 }
 
 h1 {
@@ -39,7 +83,7 @@ h3 {
 }
 
 a {
-  color: $linkColor;
+  color: var(--linkColor);
   text-decoration: none;
 }
 
@@ -78,24 +122,24 @@ div#searchbox {
       display: block;
       box-sizing: border-box;
       padding: 0.3rem;
-      color: $fontColor;
+      color: rgba(0, 0, 0, 0.7);
       border-radius: $borderRadius;
     }
 
-    input[type=text] {
+    input[type="text"] {
       border: none;
-      background-color: rgba(255,255,255,0.6);
+      background-color: rgba(255, 255, 255, 0.6);
       flex-grow: 1;
       margin-right: 0.2rem;
 
       &::placeholder {
-        color: rgba(0,0,0,0.6);
+        color: rgba(0, 0, 0, 0.6);
       }
     }
 
-    input[type=submit] {
+    input[type="submit"] {
       cursor: pointer;
-      color: $linkColor;
+      color: var(--mainNavColor);
       flex-grow: 0;
       border: none;
       background-color: white;
@@ -108,7 +152,7 @@ nav#top_nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #3889ce;
+  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
   box-sizing: border-box;
@@ -143,9 +187,22 @@ nav#top_nav {
     }
   }
 
+  // Toggles light mode / dark mode
+  a#mode_toggle {
+    margin-right: 1rem;
+    display: block;
+    flex-grow: 0;
+
+    svg {
+      height: 1.3rem;
+      width: 1.3rem;
+      vertical-align: middle;
+    }
+  }
+
   // Displayed on mobile devices instead of the search bar
   p.mobile_search_link {
-    @media(min-width: $mobileTransition) {
+    @media (min-width: $mobileTransition) {
       display: none;
     }
 
@@ -154,13 +211,14 @@ nav#top_nav {
 
       svg {
         height: 1rem;
+        vertical-align: middle;
       }
     }
   }
 
   // Contains the search bar
   div.searchbox_wrapper {
-    @media(max-width: $mobileTransition) {
+    @media (max-width: $mobileTransition) {
       display: none;
     }
 
@@ -171,7 +229,7 @@ nav#top_nav {
 
       p.highlight-link {
         a {
-          color: rgba(255,255,255,0.8);
+          color: rgba(255, 255, 255, 0.8);
           font-size: 0.8em;
           padding-right: 0.5rem;
           text-decoration: underline;
@@ -214,7 +272,7 @@ div.document {
   margin-left: $sidebarWidth;
   margin-right: $sidebarWidth;
 
-  @media(max-width: $mobileTransition) {
+  @media (max-width: $mobileTransition) {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -225,7 +283,7 @@ div.document {
 
   code {
     padding: 2px 4px;
-    background-color: $codeBackgroundColor;
+    background-color: var(--inlineCodeBackgroundColor);
     border-radius: $borderRadius;
     font-family: $codeFont;
     font-size: 0.9em;
@@ -242,6 +300,10 @@ div.document {
     margin: 0.5rem 0;
     border-radius: $borderRadius;
     font-size: 0.9rem;
+
+    // Some Pygments themes leave some elements unstyled - we don't want
+    // our dark mode styles to turn the text which for example.
+    color: var(--fontColor);
 
     pre {
       font-family: $codeFont;
@@ -260,7 +322,14 @@ div.document {
     vertical-align: middle;
   }
 
-  h1,h2,h3,h4,h5,h6,str,b {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  str,
+  b {
     font-weight: 700;
   }
 
@@ -282,7 +351,7 @@ div.document {
   hr {
     border: none;
     height: 1px;
-    background-color: $dividerColor;
+    background-color: var(--dividerColor);
     margin: 2rem 0;
   }
 
@@ -290,7 +359,8 @@ div.document {
 
   // After clicking on a search result, it highlights any results on the page:
   span.highlighted {
-    background-color: $searchHighlightColor;
+    background-color: var(--searchHighlightColor);
+    padding: 0 0.1em;
   }
 
   div#search-results {
@@ -305,7 +375,7 @@ div.document {
       padding-left: 0;
 
       li {
-        border-bottom: 1px solid $dividerColor;
+        border-bottom: 1px solid var(--dividerColor);
         margin: 1rem 0;
       }
     }
@@ -317,47 +387,53 @@ div.document {
     margin-bottom: 2rem;
 
     dt.sig {
-      background-color: #f8f8f8;
+      background-color: var(--codeBackgroundColor);
+      color: var(--fontColor);
       box-sizing: border-box;
       font-family: $codeFont;
       font-size: 0.9rem;
       padding: 1rem;
-      border-left: 5px solid rgba(0,0,0,0.1);
+      border-left: 5px solid rgba(0, 0, 0, 0.1);
+      border-radius: $borderRadius;
     }
 
     // e.g. `class`, or `def`
     em.property {
-      color: $sidebarColor;
+      color: var(--sidebarColor);
       font-weight: bold;
     }
 
     // e.g. `MyClass`
     span.sig-name {
-      color: #0000FF;
+      color: var(--codeBlue);
       font-weight: bold;
     }
 
     // e.g classmethod
     em.property {
-      color: #008000;
+      color: var(--codeGreen);
     }
 
     em.sig-param {
       margin-left: 2rem;
 
       span.default_value {
-        color: #008000;
+        color: var(--codeGreen);
       }
     }
 
     span.sig-return {
       span.sig-return-typehint {
-        color: rgba(0,0,0,0.8);
+        color: var(--fontColor);
+
+        pre {
+          color: var(--fontColor);
+        }
       }
     }
 
     // The parameter name:
-    em.sig-param >  span:first-child {
+    em.sig-param > span:first-child {
       font-weight: bold;
     }
   }
@@ -365,7 +441,7 @@ div.document {
   // Admonitions --------------------------------------------------------------
 
   div.admonition {
-    box-shadow: 0px 0px 0px 1px $dividerColor;
+    box-shadow: 0px 0px 0px 1px var(--dividerColor);
     border-radius: $borderRadius;
     margin: 1rem 0;
     overflow: hidden;
@@ -451,15 +527,15 @@ div.document {
         display: block;
         box-sizing: border-box;
         padding: 0 0.2rem 0.6rem;
-        color: $fontColor;
+        color: var(--fontColor);
         text-decoration: none;
 
         &.current {
-          color: $linkColor;
+          color: var(--linkColor);
         }
 
         &:hover {
-          color: $linkColor;
+          color: var(--linkColor);
         }
       }
     }
@@ -472,13 +548,13 @@ div.document {
 
 @mixin sidebar_p {
   p {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--faintFontColor);
   }
 }
 
 div.sphinxsidebar {
-  background-color: $sidebarColor;
-  border-right: 1px solid $dividerColor;
+  background-color: var(--sidebarColor);
+  border-right: 1px solid var(--dividerColor);
   position: fixed;
   left: 0;
   top: 0;
@@ -487,7 +563,7 @@ div.sphinxsidebar {
   box-sizing: border-box;
   padding: $navbarHeight 1rem 1rem;
 
-  @media(max-width: $mobileTransition) {
+  @media (max-width: $mobileTransition) {
     display: none;
   }
 
@@ -508,16 +584,16 @@ div#show_right_sidebar {
   right: 0;
   top: 0;
   z-index: 20;
-  background-color: white;
-  border-left: 1px solid $dividerColor;
-  border-bottom: 1px solid $dividerColor;
+  background-color: var(--sidebarColor);
+  border-left: 1px solid var(--dividerColor);
+  border-bottom: 1px solid var(--dividerColor);
   padding: $navbarHeight 1rem 0rem;
 
   p {
     font-size: 0.9em;
 
     span {
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--faintFontColor);
     }
   }
 }
@@ -527,9 +603,9 @@ div#right_sidebar {
   right: 0;
   top: 0;
   z-index: 50;
-  background-color: white;
+  background-color: var(--sidebarColor);
   width: $sidebarWidth;
-  border-left: 1px solid $dividerColor;
+  border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
   padding: $navbarHeight 1rem 1rem;
   height: 100%;
@@ -540,11 +616,11 @@ div#right_sidebar {
 
   p {
     span {
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--faintFontColor);
     }
   }
 
-  @media(max-width: $mobileTransition) {
+  @media (max-width: $mobileTransition) {
     display: none;
   }
 }
@@ -566,7 +642,7 @@ div.footer {
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--faintFontColor);
 }
 
 /*****************************************************************************/
@@ -603,5 +679,284 @@ div.button_nav {
         text-align: right;
       }
     }
+  }
+}
+
+/*****************************************************************************/
+// Pygments overrides in dark mode
+// Sphinx and Pygments don't officially support dark mode, so this is a bit
+// of a hack.
+
+body[data-mode="dark"],
+body[data-mode="darkest"] {
+  .highlight {
+    --black: #000000;
+    --red: #ff9393;
+    --darkBlue: #3a37ff;
+    --grey: #a8a8a8;
+    --pink: #ff99d8;
+    --torquoise: #68e9e9;
+    --brown: #d48a00;
+    --purple: #ce04e9;
+    --paleYellow: #ffffc0;
+
+    background: var(--codeBackgroundColor);
+    color: var(--fontColor);
+
+    pre {
+      line-height: 125%;
+    }
+
+    td.linenos .normal {
+      color: inherit;
+      background-color: transparent;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    span.linenos {
+      color: inherit;
+      background-color: transparent;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    td.linenos .special {
+      color: var(--black);
+      background-color: var(--paleYellow);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    span.linenos.special {
+      color: var(--black);
+      background-color: var(--paleYellow);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .hll {
+      background-color: var(--paleYellow);
+    }
+    .c {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment */
+    .err {
+      border: 1px solid var(--red);
+    } /* Error */
+    .k {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Keyword */
+    .o {
+      color: var(--grey);
+    } /* Operator */
+    .ch {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment.Hashbang */
+    .cm {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment.Multiline */
+    .cp {
+      color: var(--brown);
+    } /* Comment.Preproc */
+    .cpf {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment.PreprocFile */
+    .c1 {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment.Single */
+    .cs {
+      color: var(--torquoise);
+      font-style: italic;
+    } /* Comment.Special */
+    .gd {
+      color: var(--red);
+    } /* Generic.Deleted */
+    .ge {
+      font-style: italic;
+    } /* Generic.Emph */
+    .gr {
+      color: var(--red);
+    } /* Generic.Error */
+    .gh {
+      color: var(--codeBlue);
+      font-weight: bold;
+    } /* Generic.Heading */
+    .gi {
+      color: var(--codeGreen);
+    } /* Generic.Inserted */
+    .go {
+      color: var(--grey);
+    } /* Generic.Output */
+    .gp {
+      color: var(--codeBlue);
+      font-weight: bold;
+    } /* Generic.Prompt */
+    .gs {
+      font-weight: bold;
+    } /* Generic.Strong */
+    .gu {
+      color: var(--purple);
+      font-weight: bold;
+    } /* Generic.Subheading */
+    .gt {
+      color: var(--codeBlue);
+    } /* Generic.Traceback */
+    .kc {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Keyword.Constant */
+    .kd {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Keyword.Declaration */
+    .kn {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Keyword.Namespace */
+    .kp {
+      color: var(--codeGreen);
+    } /* Keyword.Pseudo */
+    .kr {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Keyword.Reserved */
+    .kt {
+      color: var(--red);
+    } /* Keyword.Type */
+    .m {
+      color: var(--grey);
+    } /* Literal.Number */
+    .s {
+      color: var(--red);
+    } /* Literal.String */
+    .na {
+      color: var(--codeGreen);
+    } /* Name.Attribute */
+    .nb {
+      color: var(--codeGreen);
+    } /* Name.Builtin */
+    .nc {
+      color: var(--codeBlue);
+      font-weight: bold;
+    } /* Name.Class */
+    .no {
+      color: var(--red);
+    } /* Name.Constant */
+    .nd {
+      color: var(--purple);
+    } /* Name.Decorator */
+    .ni {
+      color: var(--grey);
+      font-weight: bold;
+    } /* Name.Entity */
+    .ne {
+      color: var(--red);
+      font-weight: bold;
+    } /* Name.Exception */
+    .nf {
+      color: var(--codeBlue);
+    } /* Name.Function */
+    .nl {
+      color: var(--codeGreen);
+    } /* Name.Label */
+    .nn {
+      color: var(--codeBlue);
+      font-weight: bold;
+    } /* Name.Namespace */
+    .nt {
+      color: var(--codeGreen);
+      font-weight: bold;
+    } /* Name.Tag */
+    .nv {
+      color: var(--darkBlue);
+    } /* Name.Variable */
+    .ow {
+      color: var(--pink);
+      font-weight: bold;
+    } /* Operator.Word */
+    .w {
+      color: var(--grey);
+    } /* Text.Whitespace */
+    .mb {
+      color: var(--grey);
+    } /* Literal.Number.Bin */
+    .mf {
+      color: var(--grey);
+    } /* Literal.Number.Float */
+    .mh {
+      color: var(--grey);
+    } /* Literal.Number.Hex */
+    .mi {
+      color: var(--grey);
+    } /* Literal.Number.Integer */
+    .mo {
+      color: var(--grey);
+    } /* Literal.Number.Oct */
+    .sa {
+      color: var(--red);
+    } /* Literal.String.Affix */
+    .sb {
+      color: var(--red);
+    } /* Literal.String.Backtick */
+    .sc {
+      color: var(--red);
+    } /* Literal.String.Char */
+    .dl {
+      color: var(--red);
+    } /* Literal.String.Delimiter */
+    .sd {
+      color: var(--red);
+      font-style: italic;
+    } /* Literal.String.Doc */
+    .s2 {
+      color: var(--red);
+    } /* Literal.String.Double */
+    .se {
+      color: var(--brown);
+      font-weight: bold;
+    } /* Literal.String.Escape */
+    .sh {
+      color: var(--red);
+    } /* Literal.String.Heredoc */
+    .si {
+      color: var(--pink);
+      font-weight: bold;
+    } /* Literal.String.Interpol */
+    .sx {
+      color: var(--codeGreen);
+    } /* Literal.String.Other */
+    .sr {
+      color: var(--pink);
+    } /* Literal.String.Regex */
+    .s1 {
+      color: var(--red);
+    } /* Literal.String.Single */
+    .ss {
+      color: var(--darkBlue);
+    } /* Literal.String.Symbol */
+    .bp {
+      color: var(--codeGreen);
+    } /* Name.Builtin.Pseudo */
+    .fm {
+      color: var(--codeBlue);
+    } /* Name.Function.Magic */
+    .vc {
+      color: var(--darkBlue);
+    } /* Name.Variable.Class */
+    .vg {
+      color: var(--darkBlue);
+    } /* Name.Variable.Global */
+    .vi {
+      color: var(--darkBlue);
+    } /* Name.Variable.Instance */
+    .vm {
+      color: var(--darkBlue);
+    } /* Name.Variable.Magic */
+    .il {
+      color: var(--grey);
+    } /* Literal.Number.Integer.Long */
   }
 }

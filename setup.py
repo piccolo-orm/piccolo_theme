@@ -31,7 +31,13 @@ setup(
     url="https://github.com/piccolo-orm/piccolo_theme",
     packages=find_packages(),
     package_data={
-        "piccolo_theme": ["*.html", "theme.conf", "static/*", "static/**/*"],
+        "piccolo_theme": [
+            "*.html",
+            "**/*.html",
+            "theme.conf",
+            "static/*",
+            "static/**/*"
+        ],
     },
     install_requires=parse_requirement("requirements.txt"),
     license="MIT",
