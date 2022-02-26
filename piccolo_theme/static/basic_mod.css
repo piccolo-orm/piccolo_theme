@@ -14,7 +14,6 @@ body {
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
-  color: var(--fontColor);
   background-color: var(--mainBackgroundColor);
 }
 body[data-mode=darkest] {
@@ -26,14 +25,18 @@ body[data-mode=dark] {
   --sidebarColor: #242429;
 }
 body[data-mode=dark], body[data-mode=darkest] {
-  --codeBackgroundColor: rgba(255,255,255,0.1);
-  --codeBlue: #5f81ff;
-  --codeGreen: #0bb30b;
-  --dividerColor: rgba(255, 255, 255, 0.08);
+  --codeBackgroundColor: rgba(255,255,255,0.15);
+  --codeBlue: #77baff;
+  --codeGreen: #29ce29;
+  --dividerColor: rgba(255, 255, 255, 0.1);
   --faintFontColor: rgba(255, 255, 255, 0.6);
   --fontColor: white;
   --linkColor: #319be0;
   --searchHighlightColor: #fe8e04;
+}
+
+h1, h2, h3, h4, h5, p, li, code, table, dd {
+  color: var(--fontColor);
 }
 
 h1 {
@@ -230,7 +233,7 @@ div.document div.highlight {
   margin: 0.5rem 0;
   border-radius: 0.2rem;
   font-size: 0.9rem;
-  background-color: var(--codeBackgroundColor);
+  color: #252630;
 }
 div.document div.highlight pre {
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
@@ -287,11 +290,13 @@ div.document dl.py {
 }
 div.document dl.py dt.sig {
   background-color: var(--codeBackgroundColor);
+  color: var(--fontColor);
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
   font-size: 0.9rem;
   padding: 1rem;
   border-left: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
 }
 div.document dl.py em.property {
   color: var(--sidebarColor);
