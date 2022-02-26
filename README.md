@@ -24,8 +24,8 @@ We make your autodoc code snippets nice and legible:
 
 ## Dark mode, and darkest mode!
 
-The Piccolo theme has a gorgeous dark mode. And for users with OLED displays,
-we have the 'darkest' mode - where the backgrounds are pure black.
+We have a gorgeous dark mode. And for users with OLED displays, we have the
+'darkest' mode - where the backgrounds are pure black.
 
 ![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/dark_mode.png)
 
