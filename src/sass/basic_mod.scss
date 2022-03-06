@@ -381,7 +381,7 @@ div.document {
     }
   }
 
-  // Autodoc ------------------------------------------------------------------
+  // Autodoc - py -------------------------------------------------------------
 
   dl.py {
     margin-bottom: 2rem;
@@ -434,6 +434,56 @@ div.document {
 
     // The parameter name:
     em.sig-param > span:first-child {
+      font-weight: bold;
+    }
+  }
+
+  // Autodoc - cpp --------------------------------------------------------------
+
+  dl:not(.cpp) dt.cpp.sig {
+    // section titles
+    em {
+      color: var(--fontColor);
+    }
+    span.descname {
+      color: var(--fontColor);
+    }
+  }
+
+  dl.cpp {
+    margin-bottom: 1rem;
+
+    dt.sig {
+      background-color: var(--codeBackgroundColor);
+      color: var(--fontColor);
+      box-sizing: border-box;
+      font-family: $codeFont;
+      font-size: 0.9rem;
+      padding: 1rem;
+      border-left: 5px solid rgba(0, 0, 0, 0.1);
+      border-radius: $borderRadius;
+      line-height: 1.4;
+    }
+
+    // e.g. `MyClass`
+    span.sig-name {
+      color: var(--codeBlue);
+      font-weight: bold;
+    }
+
+    // e.g classmethod
+
+    span.sig-indent {
+      margin-left: 2rem;
+    }
+
+    // return type
+    span.target + span {
+      color: var(--codeGreen);
+    }
+
+    // The parameter name:
+    span.sig-param > span:first-child {
       font-weight: bold;
     }
   }

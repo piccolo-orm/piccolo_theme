@@ -11,3 +11,12 @@ Autodoc
 .. currentmodule:: piccolo_theme.snippets
 
 .. autoclass:: Column
+
+
+Breathe
+-------
+
+.. doxygenclass:: CppClass
+    :members:
+
+.. doxygenfunction:: cpp_function
