@@ -4,7 +4,7 @@ Changes
 0.4.0
 -----
 
-Improved the appearance of autodoc output for C and C++ files (when using
+Improved the appearance of autodoc output for C++ files (when using
 `breathe <https://breathe.readthedocs.io/en/latest/>`_). Courtesy @thijsmie.
 
 -------------------------------------------------------------------------------
