@@ -16,6 +16,10 @@ also highly legible on small screens.
 
 We use bold, easy to read headers.
 
+**Note** - this isn't a Material Design theme. The aim is to create a nice
+theme, with our own aesthetic preferences, rather than implementing Google's
+Material Design spec.
+
 ## Code docs
 
 We make your autodoc code snippets nice and legible:
