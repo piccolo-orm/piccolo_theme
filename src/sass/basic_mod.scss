@@ -108,6 +108,7 @@ body {
 }
 
 /*****************************************************************************/
+/* Top nav */
 
 div#searchbox {
   h3#searchlabel {
@@ -174,6 +175,7 @@ nav#top_nav {
     }
   }
 
+  // Toggles the left sidebar
   p#toggle_sidebar {
     transform: rotate(90deg);
     letter-spacing: 0.1rem;
@@ -244,26 +246,7 @@ nav#top_nav {
 }
 
 /*****************************************************************************/
-
-div.related {
-  box-sizing: border-box;
-  padding: 1rem;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-
-      &.right {
-        float: right;
-      }
-    }
-  }
-}
-
-/*****************************************************************************/
+/* Main content */
 
 div.document {
   flex-grow: 1;
@@ -292,6 +275,9 @@ div.document {
   div.documentwrapper {
     max-width: $contentWidth;
     margin: 0 auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 1rem;
   }
 
   div.highlight {
@@ -302,7 +288,7 @@ div.document {
     font-size: 0.9rem;
 
     // Some Pygments themes leave some elements unstyled - we don't want
-    // our dark mode styles to turn the text which for example.
+    // our dark mode styles to turn the text white for example.
     color: var(--fontColor);
 
     pre {
@@ -355,12 +341,32 @@ div.document {
     margin: 2rem 0;
   }
 
+  table.docutils {
+    border-collapse: collapse;
+    th, td {
+      border: 1px solid var(--dividerColor);
+      box-sizing: border-box;
+      padding: 0.5rem 1rem;
+
+      p, ul {
+        margin: 0.3rem 0;
+      }
+      ul {
+        padding-left: 1rem;
+      }
+    }
+  }
+
   // Search -------------------------------------------------------------------
 
   // After clicking on a search result, it highlights any results on the page:
   span.highlighted {
     background-color: var(--searchHighlightColor);
     padding: 0 0.1em;
+  }
+
+  span#search-progress {
+    color: var(--fontColor);
   }
 
   div#search-results {
@@ -382,6 +388,12 @@ div.document {
   }
 
   // Autodoc - py -------------------------------------------------------------
+
+  dd {
+    ul {
+      padding-left: 0.5rem;
+    }
+  }
 
   dl.py {
     margin-bottom: 2rem;
@@ -438,7 +450,7 @@ div.document {
     }
   }
 
-  // Autodoc - cpp --------------------------------------------------------------
+  // Autodoc - cpp ------------------------------------------------------------
 
   dl:not(.cpp) dt.cpp.sig {
     // section titles
@@ -472,7 +484,6 @@ div.document {
     }
 
     // e.g classmethod
-
     span.sig-indent {
       margin-left: 2rem;
     }
@@ -562,7 +573,7 @@ div.document {
 }
 
 /*****************************************************************************/
-// Sidebar
+/* Sidebar */
 
 @mixin sidebar_list {
   ul {
@@ -627,7 +638,7 @@ div.sphinxsidebar {
 }
 
 /*****************************************************************************/
-// The right sidebar, showing the table of contents for the current page.
+/* The right sidebar, showing the table of contents for the current page. */
 
 div#show_right_sidebar {
   position: fixed;
@@ -673,14 +684,6 @@ div#right_sidebar {
   @media (max-width: $mobileTransition) {
     display: none;
   }
-}
-
-/*****************************************************************************/
-
-div.documentwrapper {
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding: 1rem;
 }
 
 /*****************************************************************************/
@@ -733,7 +736,8 @@ div.button_nav {
 }
 
 /*****************************************************************************/
-// Pygments overrides in dark mode
+/* Pygments overrides in dark mode */
+
 // Sphinx and Pygments don't officially support dark mode, so this is a bit
 // of a hack.
 
