@@ -1,6 +1,10 @@
-import os
+from __future__ import annotations
 
-from sphinx.application import Sphinx
+import os
+import typing as t
+
+if t.TYPE_CHECKING:
+    from sphinx.application import Sphinx
 
 
 __VERSION__ = "0.5.0"
