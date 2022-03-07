@@ -1,7 +1,9 @@
 import os
-import typing as t
 
 from sphinx.application import Sphinx
+
+
+__VERSION__ = "0.5.0"
 
 
 def setup(app: Sphinx):

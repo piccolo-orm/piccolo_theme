@@ -6,6 +6,8 @@ import typing as t
 
 from setuptools import find_packages, setup
 
+from piccolo_theme import __VERSION__ as VERSION
+
 directory = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -21,7 +23,7 @@ def parse_requirement(req_path: str) -> t.List[str]:
 
 setup(
     name="piccolo_theme",
-    version="0.4.0",
+    version=VERSION,
     description="A modern Sphinx theme.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
