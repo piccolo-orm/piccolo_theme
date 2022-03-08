@@ -55,18 +55,6 @@ body {
 
   font-family: Roboto, "OpenSans", sans-serif;
   background-color: var(--mainBackgroundColor);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-code,
-table,
-dd {
   color: var(--fontColor);
 }
 
@@ -363,10 +351,6 @@ div.document {
   span.highlighted {
     background-color: var(--searchHighlightColor);
     padding: 0 0.1em;
-  }
-
-  span#search-progress {
-    color: var(--fontColor);
   }
 
   div#search-results {
