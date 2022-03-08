@@ -1,6 +1,21 @@
 Changes
 =======
 
+0.5.1
+-----
+
+Fixed dark mode styles - some elements weren't visible. Thanks to @alorence for
+reporting this issue.
+
+-------------------------------------------------------------------------------
+
+0.5.0
+-----
+
+Added table styles.
+
+-------------------------------------------------------------------------------
+
 0.4.0
 -----
 
