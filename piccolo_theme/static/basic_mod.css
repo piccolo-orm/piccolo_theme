@@ -16,6 +16,7 @@ body {
   --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
   background-color: var(--mainBackgroundColor);
+  color: var(--fontColor);
 }
 body[data-mode=darkest] {
   --mainBackgroundColor: black;
@@ -37,19 +38,6 @@ body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
   --linkColor: #319be0;
   --searchHighlightColor: #fe8e04;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-code,
-table,
-dd {
-  color: var(--fontColor);
 }
 
 h1 {
@@ -271,6 +259,12 @@ div.document li {
   font-size: 1rem;
   line-height: 1.5;
 }
+div.document ul, div.document ol {
+  padding-left: 2rem;
+}
+div.document dd {
+  margin-left: 1.5rem;
+}
 div.document hr {
   border: none;
   height: 1px;
@@ -295,9 +289,6 @@ div.document span.highlighted {
   background-color: var(--searchHighlightColor);
   padding: 0 0.1em;
 }
-div.document span#search-progress {
-  color: var(--fontColor);
-}
 div.document div#search-results {
   padding-top: 2rem;
 }
@@ -312,8 +303,8 @@ div.document div#search-results ul.search li {
   border-bottom: 1px solid var(--dividerColor);
   margin: 1rem 0;
 }
-div.document dd ul {
-  padding-left: 0.5rem;
+div.document dd ul, div.document dd ol {
+  padding-left: 1rem;
 }
 div.document dl.py {
   margin-bottom: 2rem;
