@@ -322,6 +322,14 @@ div.document {
     line-height: 1.5;
   }
 
+  ul, ol {
+    padding-left: 2rem;
+  }
+
+  dd {
+    margin-left: 1.5rem;
+  }
+
   hr {
     border: none;
     height: 1px;
@@ -374,8 +382,8 @@ div.document {
   // Autodoc - py -------------------------------------------------------------
 
   dd {
-    ul {
-      padding-left: 0.5rem;
+    ul, ol {
+      padding-left: 1rem;
     }
   }
 
