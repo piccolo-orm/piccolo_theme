@@ -54,3 +54,46 @@ Table 2
 +------------+ span rows. | - contain |
 | body row 4 |            | - blocks. |
 +------------+------------+-----------+
+
+-------------------------------------------------------------------------------
+
+Data definitions
+----------------
+
+Python
+  A great programming language.
+
+Sphinx
+  A powerful documentation tool.
+
+-------------------------------------------------------------------------------
+
+Lists
+-----
+
+Unordered List
+~~~~~~~~~~~~~~
+
+* Python
+* Rust
+* Javascript
+
+Ordered List
+~~~~~~~~~~~~
+
+1. Python
+2. Rust
+3. Javascript
+
+-------------------------------------------------------------------------------
+
+Admonitions
+-----------
+
+.. warning:: This is a warning!
+
+.. error:: This is an error!
+
+.. hint:: This is a hint!
+
+.. note:: This is a note!

@@ -55,18 +55,6 @@ body {
 
   font-family: Roboto, "OpenSans", sans-serif;
   background-color: var(--mainBackgroundColor);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-li,
-code,
-table,
-dd {
   color: var(--fontColor);
 }
 
@@ -334,6 +322,14 @@ div.document {
     line-height: 1.5;
   }
 
+  ul, ol {
+    padding-left: 2rem;
+  }
+
+  dd {
+    margin-left: 1.5rem;
+  }
+
   hr {
     border: none;
     height: 1px;
@@ -365,10 +361,6 @@ div.document {
     padding: 0 0.1em;
   }
 
-  span#search-progress {
-    color: var(--fontColor);
-  }
-
   div#search-results {
     padding-top: 2rem;
 
@@ -390,8 +382,8 @@ div.document {
   // Autodoc - py -------------------------------------------------------------
 
   dd {
-    ul {
-      padding-left: 0.5rem;
+    ul, ol {
+      padding-left: 1rem;
     }
   }
 
