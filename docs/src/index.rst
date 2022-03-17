@@ -8,6 +8,7 @@ A clean and modern theme for `Sphinx <https://www.sphinx-doc.org/en/master/>`_.
    :caption: Contents:
 
    ./setup.rst
+   ./configuration.rst
    ./help.rst
    ./support_us.rst
    ./about.rst
