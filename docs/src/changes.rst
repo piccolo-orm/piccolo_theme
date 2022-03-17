@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.6.0
+-----
+
+If ``html_short_title`` is in ``conf.py`` then this is used in the nav bar
+instead of the full project title.
+
+-------------------------------------------------------------------------------
+
 0.5.1
 -----
 
