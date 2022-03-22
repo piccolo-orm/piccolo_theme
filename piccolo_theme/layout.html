@@ -5,10 +5,7 @@
 
 <div id="top_nav">
     {% if theme_banner_text and theme_banner_text != 'false' %}
-        <div class="banner">
-            <p>{{ theme_banner_text | safe }}</p>
-            <a href="#" class="close">x</a>
-        </div>
+        {% include "./components/notification_banner.html" %}
     {% endif %}
 
     <nav>
@@ -65,6 +62,7 @@
 {%- block scripts %}
     {{- script() }}
     <script src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+    <script src="{{ pathto('_static/js/petite-vue.js', 1) }}"></script>
 {%- endblock %}
 
 

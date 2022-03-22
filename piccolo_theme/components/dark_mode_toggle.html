@@ -12,9 +12,8 @@
     </template>
 </a>
 
-<script src="{{ pathto('_static/js/petite-vue.js', 1) }}"></script>
-
 <script>
+(function() {
     const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
 
     var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
@@ -56,4 +55,5 @@
             console.log(this.mode)
         }
     }).mount('#mode_toggle')
+})()
 </script>

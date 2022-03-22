@@ -12,7 +12,7 @@ body {
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
-  --mainBannerColor: #3172A7;
+  --mainBannerColor: #282828;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
@@ -118,29 +118,43 @@ div#top_nav {
   z-index: 100;
   height: 3rem;
 }
-div#top_nav div.banner {
+div#top_nav div#notification_banner {
   background-color: var(--mainBannerColor);
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 0.1rem 1rem;
+  position: relative;
 }
-div#top_nav div.banner a {
+div#top_nav div#notification_banner a.close {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  background-color: var(--mainBannerColor);
+  width: 8rem;
+  transform: translateX(4rem);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0rem 0.5rem 0.2rem;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+}
+div#top_nav div#notification_banner a.close:hover {
   color: white;
-  text-decoration: underline;
 }
-div#top_nav div.banner p {
+div#top_nav div#notification_banner p {
   margin: 0;
   text-align: center;
   font-size: 0.9rem;
   flex-grow: 1;
   line-height: 1.2;
+  padding: 0.4rem 0;
 }
-div#top_nav div.banner a.close {
-  display: block;
-  flex-grow: 0;
-  text-decoration: none;
+div#top_nav div#notification_banner p a {
+  color: white;
+  text-decoration: underline;
 }
 div#top_nav nav {
   background-color: var(--mainNavColor);

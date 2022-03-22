@@ -25,7 +25,7 @@ body {
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
-  --mainBannerColor: #3172A7;
+  --mainBannerColor: #282828;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
 
@@ -146,17 +146,33 @@ div#top_nav {
   z-index: 100;
   height: $navbarHeight;
 
-  div.banner {
+  div#notification_banner {
     background-color: var(--mainBannerColor);
     box-sizing: border-box;
-    padding: 0.5rem 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    padding: 0.1rem 1rem;
+    position: relative;
 
-    a {
-      color: white;
-      text-decoration: underline;
+    a.close {
+      color: rgba(255,255,255,0.6);
+      // color: rgba(0,0,0,0.4);
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      background-color: var(--mainBannerColor);
+      width: 8rem;
+      transform: translateX(4rem);
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0rem 0.5rem 0.2rem;
+      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
     }
 
     p {
@@ -165,12 +181,13 @@ div#top_nav {
       font-size: 0.9rem;
       flex-grow: 1;
       line-height: 1.2;
-    }
+      padding: 0.4rem 0;
 
-    a.close {
-      display: block;
-      flex-grow: 0;
-      text-decoration: none;
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+
     }
   }
 

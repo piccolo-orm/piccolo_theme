@@ -1,0 +1,14 @@
+<div id="notification_banner">
+    <p v-if="visible">{{ theme_banner_text | safe }}</p>
+    <a class="close" href="#" @click.prevent="visible = !visible">[[ visible ? '&#x25B2; HIDE BANNER' : '&#x25BC; SHOW BANNER' ]]</a>
+</div>
+
+<script>
+(function() {
+    // I should add cache busting to the static assets ...
+    PetiteVue.createApp({
+        visible: true,
+        $delimiters: ['[[', ']]']
+    }).mount('#notification_banner')
+})()
+</script>
