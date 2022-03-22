@@ -12,6 +12,7 @@ body {
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
+  --mainBannerColor: #3172A7;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
   font-family: Roboto, "OpenSans", sans-serif;
@@ -108,81 +109,107 @@ div#searchbox form.search input[type=submit] {
   background-color: white;
 }
 
-nav#top_nav {
+div#top_nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
+  height: 3rem;
+}
+div#top_nav div.banner {
+  background-color: var(--mainBannerColor);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div#top_nav div.banner a {
+  color: white;
+  text-decoration: underline;
+}
+div#top_nav div.banner p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  flex-grow: 1;
+  line-height: 1.2;
+}
+div#top_nav div.banner a.close {
+  display: block;
+  flex-grow: 0;
+  text-decoration: none;
+}
+div#top_nav nav {
+  background-color: var(--mainNavColor);
   box-sizing: border-box;
   padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 3rem;
 }
-nav#top_nav h1 {
+div#top_nav nav h1 {
   flex-grow: 1;
   font-size: 1.2rem;
   margin: 0;
   padding: 0 0 0 0.8rem;
   line-height: 1;
 }
-nav#top_nav h1 a {
+div#top_nav nav h1 a {
   color: white;
 }
-nav#top_nav p#toggle_sidebar {
+div#top_nav nav p#toggle_sidebar {
   transform: rotate(90deg);
   letter-spacing: 0.1rem;
   flex-grow: 0;
   margin: 0;
   padding: 0;
 }
-nav#top_nav p#toggle_sidebar a {
+div#top_nav nav p#toggle_sidebar a {
   color: white;
   font-weight: bold;
 }
-nav#top_nav a#mode_toggle {
+div#top_nav nav a#mode_toggle {
   margin-right: 1rem;
   display: block;
   flex-grow: 0;
 }
-nav#top_nav a#mode_toggle svg {
+div#top_nav nav a#mode_toggle svg {
   height: 1.3rem;
   width: 1.3rem;
   vertical-align: middle;
 }
 @media (min-width: 50rem) {
-  nav#top_nav p.mobile_search_link {
+  div#top_nav nav p.mobile_search_link {
     display: none;
   }
 }
-nav#top_nav p.mobile_search_link a {
+div#top_nav nav p.mobile_search_link a {
   color: white;
 }
-nav#top_nav p.mobile_search_link a svg {
+div#top_nav nav p.mobile_search_link a svg {
   height: 1rem;
   vertical-align: middle;
 }
 @media (max-width: 50rem) {
-  nav#top_nav div.searchbox_wrapper {
+  div#top_nav nav div.searchbox_wrapper {
     display: none;
   }
 }
-nav#top_nav div.searchbox_wrapper div#searchbox {
+div#top_nav nav div.searchbox_wrapper div#searchbox {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
 }
-nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a {
+div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.8em;
   padding-right: 0.5rem;
   text-decoration: underline;
 }
-nav#top_nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
+div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
   color: white;
 }
 

@@ -25,6 +25,7 @@ body {
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
+  --mainBannerColor: #3172A7;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
 
@@ -136,96 +137,127 @@ div#searchbox {
   }
 }
 
-nav#top_nav {
+div#top_nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--mainNavColor);
   color: white;
   z-index: 100;
-  box-sizing: border-box;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   height: $navbarHeight;
 
-  h1 {
-    flex-grow: 1;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0 0 0 0.8rem;
-    line-height: 1;
+  div.banner {
+    background-color: var(--mainBannerColor);
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     a {
       color: white;
+      text-decoration: underline;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 0.9rem;
+      flex-grow: 1;
+      line-height: 1.2;
+    }
+
+    a.close {
+      display: block;
+      flex-grow: 0;
+      text-decoration: none;
     }
   }
 
-  // Toggles the left sidebar
-  p#toggle_sidebar {
-    transform: rotate(90deg);
-    letter-spacing: 0.1rem;
-    flex-grow: 0;
-    margin: 0;
-    padding: 0;
+  nav {
+    background-color: var(--mainNavColor);
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    a {
-      color: $toggleSidebarColor;
-      font-weight: bold;
-    }
-  }
+    h1 {
+      flex-grow: 1;
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0 0 0 0.8rem;
+      line-height: 1;
 
-  // Toggles light mode / dark mode
-  a#mode_toggle {
-    margin-right: 1rem;
-    display: block;
-    flex-grow: 0;
-
-    svg {
-      height: 1.3rem;
-      width: 1.3rem;
-      vertical-align: middle;
-    }
-  }
-
-  // Displayed on mobile devices instead of the search bar
-  p.mobile_search_link {
-    @media (min-width: $mobileTransition) {
-      display: none;
+      a {
+        color: white;
+      }
     }
 
-    a {
-      color: white;
+    // Toggles the left sidebar
+    p#toggle_sidebar {
+      transform: rotate(90deg);
+      letter-spacing: 0.1rem;
+      flex-grow: 0;
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: $toggleSidebarColor;
+        font-weight: bold;
+      }
+    }
+
+    // Toggles light mode / dark mode
+    a#mode_toggle {
+      margin-right: 1rem;
+      display: block;
+      flex-grow: 0;
 
       svg {
-        height: 1rem;
+        height: 1.3rem;
+        width: 1.3rem;
         vertical-align: middle;
       }
     }
-  }
 
-  // Contains the search bar
-  div.searchbox_wrapper {
-    @media (max-width: $mobileTransition) {
-      display: none;
+    // Displayed on mobile devices instead of the search bar
+    p.mobile_search_link {
+      @media (min-width: $mobileTransition) {
+        display: none;
+      }
+
+      a {
+        color: white;
+
+        svg {
+          height: 1rem;
+          vertical-align: middle;
+        }
+      }
     }
 
-    div#searchbox {
-      align-items: center;
-      display: flex;
-      flex-direction: row-reverse;
+    // Contains the search bar
+    div.searchbox_wrapper {
+      @media (max-width: $mobileTransition) {
+        display: none;
+      }
 
-      p.highlight-link {
-        a {
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 0.8em;
-          padding-right: 0.5rem;
-          text-decoration: underline;
+      div#searchbox {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
 
-          &:hover {
-            color: white;
+        p.highlight-link {
+          a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8em;
+            padding-right: 0.5rem;
+            text-decoration: underline;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
