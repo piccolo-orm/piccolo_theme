@@ -1,14 +1,24 @@
 <div id="notification_banner">
-    <p v-if="visible">{{ theme_banner_text | safe }}</p>
+    <p v-if="visible" id="content">{{ theme_banner_text | safe }}</p>
     <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE BANNER' : '&#x25BC; SHOW BANNER' ]]</a>
 </div>
 
 <script>
 (function() {
     const topNav = document.querySelector('#top_nav')
+    const notificationContent = document.querySelector('#notification_banner p#content').innerText
+    const localStorageKey = 'readNotification'
 
     function updateNavbarHeight() {
         document.documentElement.style.setProperty('--navbarHeight', topNav.clientHeight + "px");
+    }
+
+    function checkAlreadyRead() {
+        return localStorage.getItem(localStorageKey) == notificationContent
+    }
+
+    function setRead() {
+        localStorage.setItem(localStorageKey, notificationContent)
     }
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -28,10 +38,15 @@
     })
 
     PetiteVue.createApp({
-        visible: true,
+        visible: !(checkAlreadyRead()),
         $delimiters: ['[[', ']]'],
         toggleVisible() {
             this.visible = !this.visible
+
+            if (!this.visible) {
+                setRead()
+            }
+
             // Run this after Vue has had time to update the DOM:
             setTimeout(
                 updateNavbarHeight,
