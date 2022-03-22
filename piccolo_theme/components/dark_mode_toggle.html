@@ -12,9 +12,8 @@
     </template>
 </a>
 
-<script src="{{ pathto('_static/js/petite-vue.js', 1) }}"></script>
-
 <script>
+(function() {
     const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
 
     var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
@@ -35,7 +34,7 @@
         localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
     }
 
-    document.body.dataset.mode = initialMode
+    document.documentElement.dataset.mode = initialMode
 
     PetiteVue.createApp({
         'mode': initialMode,
@@ -50,10 +49,11 @@
                 this.mode = 'light'
             }
 
-            document.body.dataset.mode = this.mode
+            document.documentElement.dataset.mode = this.mode
             localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
 
             console.log(this.mode)
         }
     }).mount('#mode_toggle')
+})()
 </script>
