@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap?family=Roboto+Mono&display=swap");
 /*****************************************************************************/
 /* Typography */
-body {
+:root {
   --codeBackgroundColor: #f8f8f8;
   --inlineCodeBackgroundColor: #f8f8f8;
   --codeBlue: #0000ff;
@@ -15,23 +15,21 @@ body {
   --mainBannerColor: #282828;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
-  font-family: Roboto, "OpenSans", sans-serif;
-  background-color: var(--mainBackgroundColor);
-  color: var(--fontColor);
+  --navbarHeight: 4rem;
 }
-body[data-mode=darkest] {
+:root[data-mode=darkest] {
   --mainBackgroundColor: black;
   --sidebarColor: black;
   --codeBackgroundColor: rgba(255, 255, 255, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.1);
 }
-body[data-mode=dark] {
+:root[data-mode=dark] {
   --mainBackgroundColor: #242429;
   --sidebarColor: #242429;
   --codeBackgroundColor: rgba(0, 0, 0, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.06);
 }
-body[data-mode=dark], body[data-mode=darkest] {
+:root[data-mode=dark], :root[data-mode=darkest] {
   --codeBlue: #77baff;
   --codeGreen: #38c038;
   --dividerColor: rgba(255, 255, 255, 0.1);
@@ -39,6 +37,12 @@ body[data-mode=dark], body[data-mode=darkest] {
   --fontColor: white;
   --linkColor: #319be0;
   --searchHighlightColor: #fe8e04;
+}
+
+body {
+  font-family: Roboto, "OpenSans", sans-serif;
+  background-color: var(--mainBackgroundColor);
+  color: var(--fontColor);
 }
 
 h1 {
@@ -61,7 +65,7 @@ a {
 /*****************************************************************************/
 html {
   height: 100%;
-  scroll-padding-top: 3rem;
+  scroll-padding-top: var(--navbarHeight);
 }
 
 html,
@@ -116,26 +120,21 @@ div#top_nav {
   right: 0;
   color: white;
   z-index: 100;
-  height: 3rem;
 }
 div#top_nav div#notification_banner {
   background-color: var(--mainBannerColor);
   box-sizing: border-box;
   padding: 0.1rem 1rem;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
 }
 div#top_nav div#notification_banner a.close {
+  flex-grow: 0;
   color: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  top: 100%;
-  right: 50%;
-  background-color: var(--mainBannerColor);
   width: 8rem;
-  transform: translateX(4rem);
-  text-align: center;
-  box-sizing: border-box;
-  padding: 0rem 0.5rem 0.2rem;
-  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  text-align: right;
   font-size: 0.6rem;
   text-transform: uppercase;
   display: block;
@@ -145,6 +144,7 @@ div#top_nav div#notification_banner a.close:hover {
   color: white;
 }
 div#top_nav div#notification_banner p {
+  flex-grow: 1;
   margin: 0;
   text-align: center;
   font-size: 0.9rem;
@@ -195,6 +195,9 @@ div#top_nav nav a#mode_toggle svg {
   width: 1.3rem;
   vertical-align: middle;
 }
+div#top_nav nav p.mobile_search_link {
+  margin: 0;
+}
 @media (min-width: 50rem) {
   div#top_nav nav p.mobile_search_link {
     display: none;
@@ -231,10 +234,11 @@ div#top_nav nav div.searchbox_wrapper div#searchbox p.highlight-link a:hover {
 /* Main content */
 div.document {
   flex-grow: 1;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   margin-left: 15rem;
   margin-right: 15rem;
+  padding-top: var(--navbarHeight);
 }
 @media (max-width: 50rem) {
   div.document {
@@ -479,7 +483,7 @@ div.sphinxsidebar {
   bottom: 0;
   width: 15rem;
   box-sizing: border-box;
-  padding: 3rem 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
 }
 @media (max-width: 50rem) {
   div.sphinxsidebar {
@@ -528,7 +532,7 @@ div#show_right_sidebar {
   background-color: var(--sidebarColor);
   border-left: 1px solid var(--dividerColor);
   border-bottom: 1px solid var(--dividerColor);
-  padding: 3rem 1rem 0rem;
+  padding: var(--navbarHeight) 1rem 0rem;
 }
 div#show_right_sidebar p {
   font-size: 0.9em;
@@ -546,7 +550,7 @@ div#right_sidebar {
   width: 15rem;
   border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
-  padding: 3rem 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
   height: 100%;
   overflow-y: auto;
 }

@@ -50,7 +50,10 @@ html_theme = 'piccolo_theme'
 html_short_title = 'Piccolo Theme'
 
 html_theme_options = {
-    "banner_text": "Example banner"
+    "banner_text": (
+        "This is an example notification banner - welcome to the Piccolo "
+        "Theme!"
+    )
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

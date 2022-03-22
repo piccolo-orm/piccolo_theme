@@ -8,13 +8,12 @@ $codeFont: "Roboto Mono", monospace, Monaco, Consolas, Andale Mono;
 $borderRadius: 0.2rem;
 $contentWidth: 45rem;
 $mobileTransition: 50rem;
-$navbarHeight: 3rem;
 $sidebarWidth: 15rem;
 
 /*****************************************************************************/
 /* Typography */
 
-body {
+:root {
   --codeBackgroundColor: #f8f8f8;
   --inlineCodeBackgroundColor: #f8f8f8;
   --codeBlue: #0000ff;
@@ -28,6 +27,7 @@ body {
   --mainBannerColor: #282828;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
+  --navbarHeight: 4rem;
 
   &[data-mode="darkest"] {
     --mainBackgroundColor: black;
@@ -53,7 +53,9 @@ body {
     --linkColor: #319be0;
     --searchHighlightColor: #fe8e04;
   }
+}
 
+body {
   font-family: Roboto, "OpenSans", sans-serif;
   background-color: var(--mainBackgroundColor);
   color: var(--fontColor);
@@ -81,7 +83,7 @@ a {
 html {
   height: 100%;
   // So anchor elements aren't hidden behind the main nav bar:
-  scroll-padding-top: $navbarHeight;
+  scroll-padding-top: var(--navbarHeight);
 }
 
 html,
@@ -144,27 +146,21 @@ div#top_nav {
   right: 0;
   color: white;
   z-index: 100;
-  height: $navbarHeight;
 
   div#notification_banner {
     background-color: var(--mainBannerColor);
     box-sizing: border-box;
     padding: 0.1rem 1rem;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
 
     a.close {
+      flex-grow: 0;
       color: rgba(255,255,255,0.6);
-      // color: rgba(0,0,0,0.4);
-      position: absolute;
-      top: 100%;
-      right: 50%;
-      background-color: var(--mainBannerColor);
       width: 8rem;
-      transform: translateX(4rem);
-      text-align: center;
-      box-sizing: border-box;
-      padding: 0rem 0.5rem 0.2rem;
-      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+      text-align: right;
       font-size: 0.6rem;
       text-transform: uppercase;
       display: block;
@@ -176,6 +172,7 @@ div#top_nav {
     }
 
     p {
+      flex-grow: 1;
       margin: 0;
       text-align: center;
       font-size: 0.9rem;
@@ -240,6 +237,8 @@ div#top_nav {
 
     // Displayed on mobile devices instead of the search bar
     p.mobile_search_link {
+      margin: 0;
+
       @media (min-width: $mobileTransition) {
         display: none;
       }
@@ -287,10 +286,11 @@ div#top_nav {
 
 div.document {
   flex-grow: 1;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   margin-left: $sidebarWidth;
   margin-right: $sidebarWidth;
+  padding-top: var(--navbarHeight);
 
   @media (max-width: $mobileTransition) {
     margin-left: 0px;
@@ -663,7 +663,7 @@ div.sphinxsidebar {
   bottom: 0;
   width: $sidebarWidth;
   box-sizing: border-box;
-  padding: $navbarHeight 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
 
   @media (max-width: $mobileTransition) {
     display: none;
@@ -689,7 +689,7 @@ div#show_right_sidebar {
   background-color: var(--sidebarColor);
   border-left: 1px solid var(--dividerColor);
   border-bottom: 1px solid var(--dividerColor);
-  padding: $navbarHeight 1rem 0rem;
+  padding: var(--navbarHeight) 1rem 0rem;
 
   p {
     font-size: 0.9em;
@@ -709,7 +709,7 @@ div#right_sidebar {
   width: $sidebarWidth;
   border-left: 1px solid var(--dividerColor);
   box-sizing: border-box;
-  padding: $navbarHeight 1rem 1rem;
+  padding: var(--navbarHeight) 1rem 1rem;
   height: 100%;
   overflow-y: auto;
 
