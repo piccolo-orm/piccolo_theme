@@ -82,3 +82,9 @@
         </div>
     </div>
 {% endblock %}
+
+{%- block footer %}
+{{ super() }}
+
+<p id="theme_credit">{% if theme_show_theme_credit %}Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a>{% endif %}</p>
+{%- endblock %}
