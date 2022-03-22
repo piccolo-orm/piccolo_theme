@@ -24,7 +24,7 @@ $sidebarWidth: 15rem;
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
-  --mainBannerColor: #282828;
+  --notificationBannerColor: #282828;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
   --navbarHeight: 4rem;
@@ -32,6 +32,7 @@ $sidebarWidth: 15rem;
   &[data-mode="darkest"] {
     --mainBackgroundColor: black;
     --sidebarColor: black;
+    --notificationBannerColor: black;
     --codeBackgroundColor: rgba(255, 255, 255, 0.1);
     --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.1);
   }
@@ -39,6 +40,7 @@ $sidebarWidth: 15rem;
   &[data-mode="dark"] {
     --mainBackgroundColor: #242429;
     --sidebarColor: #242429;
+    --notificationBannerColor: #242429;
     --codeBackgroundColor: rgba(0, 0, 0, 0.1);
     --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.06);
   }
@@ -148,7 +150,7 @@ div#top_nav {
   z-index: 100;
 
   div#notification_banner {
-    background-color: var(--mainBannerColor);
+    background-color: var(--notificationBannerColor);
     box-sizing: border-box;
     padding: 0.1rem 1rem;
     display: flex;
@@ -782,8 +784,8 @@ div.button_nav {
 // Sphinx and Pygments don't officially support dark mode, so this is a bit
 // of a hack.
 
-body[data-mode="dark"],
-body[data-mode="darkest"] {
+:root[data-mode="dark"],
+:root[data-mode="darkest"] {
   .highlight {
     --black: #000000;
     --red: #ff9393;

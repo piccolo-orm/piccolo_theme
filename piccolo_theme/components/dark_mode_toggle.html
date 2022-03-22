@@ -34,7 +34,7 @@
         localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
     }
 
-    document.body.dataset.mode = initialMode
+    document.documentElement.dataset.mode = initialMode
 
     PetiteVue.createApp({
         'mode': initialMode,
@@ -49,7 +49,7 @@
                 this.mode = 'light'
             }
 
-            document.body.dataset.mode = this.mode
+            document.documentElement.dataset.mode = this.mode
             localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
 
             console.log(this.mode)
