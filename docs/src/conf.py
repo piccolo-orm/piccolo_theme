@@ -53,7 +53,8 @@ html_theme_options = {
     "banner_text": (
         "This is an example notification banner - welcome to the Piccolo "
         "Theme!"
-    )
+    ),
+    "banner_hiding": "temporary"
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

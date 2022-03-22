@@ -1,6 +1,6 @@
-<div id="notification_banner">
+<div id="notification_banner" data-banner-hiding="{{ theme_banner_hiding }}" v-show="!permanentlyHidden">
     <p v-if="visible" id="content">{{ theme_banner_text | safe }}</p>
-    <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE BANNER' : '&#x25BC; SHOW BANNER' ]]</a>
+    <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE' : '&#x25BC; SHOW BANNER' ]]</a>
 </div>
 
 <script>
@@ -8,6 +8,7 @@
     const topNav = document.querySelector('#top_nav')
     const notificationContent = document.querySelector('#notification_banner p#content').innerText
     const localStorageKey = 'readNotification'
+    const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
 
     function updateNavbarHeight() {
         document.documentElement.style.setProperty('--navbarHeight', topNav.clientHeight + "px");
@@ -37,14 +38,22 @@
         }, 100)
     })
 
+    const alreadyRead = checkAlreadyRead()
+
     PetiteVue.createApp({
-        visible: !(checkAlreadyRead()),
+        visible: !alreadyRead,
+        permanentlyHidden: alreadyRead && bannerHiding == 'permanent',
+        bannerHiding: bannerHiding,
         $delimiters: ['[[', ']]'],
         toggleVisible() {
             this.visible = !this.visible
 
             if (!this.visible) {
                 setRead()
+            }
+
+            if (!this.visible && bannerHiding == 'permanent') {
+                this.permanentlyHidden = true
             }
 
             // Run this after Vue has had time to update the DOM:

@@ -158,13 +158,14 @@ div#top_nav {
 
     a.close {
       flex-grow: 0;
+      flex-shrink: 0;
       color: rgba(255,255,255,0.85);
-      width: 8rem;
       text-align: right;
       font-size: 0.6rem;
       text-transform: uppercase;
       display: block;
       text-decoration: none;
+      margin-left: 0.5rem;
 
       &:hover {
         color: white;
@@ -176,7 +177,6 @@ div#top_nav {
       margin: 0;
       text-align: center;
       font-size: 0.9rem;
-      flex-grow: 1;
       line-height: 1.2;
       padding: 0.4rem 0;
 
