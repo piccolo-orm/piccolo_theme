@@ -59,8 +59,8 @@ the user may need to refer to again. For example:
     }
 
 If ``'permanent'``, when a user hides the banner it disappears permanently. This is
-useful when the banner contains information which the user is unlikely to be
-needed again. For example:
+useful when the banner contains information which the user is unlikely to
+need again. For example:
 
 .. code-block:: python
 
