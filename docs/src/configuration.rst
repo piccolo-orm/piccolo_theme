@@ -74,3 +74,22 @@ need again. For example:
 .. note:: If you configure a different ``banner_text`` value in the future,
    then the banner will appear again, even if the user has previously hidden
    it.
+
+``show_theme_credit``
+~~~~~~~~~~~~~~~~~~~~~
+
+At the bottom of the page is a very small link which says ``Styled using the Piccolo Theme``.
+
+This helps grow awareness of the project, and attract new contributors.
+
+You can hide this if required:
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "show_theme_credit": False
+    }
+
+If hiding it, please consider :ref:`supporting us <SupportUs>` in a different way.

@@ -594,10 +594,17 @@ div#right_sidebar p span {
 /* Footer */
 div.footer {
   box-sizing: border-box;
-  padding: 2rem 0;
+  padding-top: 2rem;
   font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
+  color: var(--faintFontColor);
+}
+
+p#theme_credit {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  text-align: center;
   color: var(--faintFontColor);
 }
 
