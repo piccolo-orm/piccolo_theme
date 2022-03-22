@@ -12,7 +12,7 @@
   --linkColor: #2980b9;
   --mainBackgroundColor: white;
   --mainNavColor: #3889ce;
-  --notificationBannerColor: #282828;
+  --notificationBannerColor: #176bb0;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
   --navbarHeight: 4rem;
@@ -20,14 +20,12 @@
 :root[data-mode=darkest] {
   --mainBackgroundColor: black;
   --sidebarColor: black;
-  --notificationBannerColor: black;
   --codeBackgroundColor: rgba(255, 255, 255, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.1);
 }
 :root[data-mode=dark] {
   --mainBackgroundColor: #242429;
   --sidebarColor: #242429;
-  --notificationBannerColor: #242429;
   --codeBackgroundColor: rgba(0, 0, 0, 0.1);
   --inlineCodeBackgroundColor: rgba(255, 255, 255, 0.06);
 }
@@ -134,7 +132,7 @@ div#top_nav div#notification_banner {
 }
 div#top_nav div#notification_banner a.close {
   flex-grow: 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.85);
   width: 8rem;
   text-align: right;
   font-size: 0.6rem;
