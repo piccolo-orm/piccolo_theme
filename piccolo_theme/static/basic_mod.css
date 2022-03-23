@@ -238,7 +238,7 @@ div.document {
   margin-bottom: 5rem;
   margin-left: 15rem;
   margin-right: 15rem;
-  padding-top: var(--navbarHeight);
+  padding-top: 5rem;
 }
 @media (max-width: 50rem) {
   div.document {

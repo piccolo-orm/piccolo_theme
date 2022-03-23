@@ -9,10 +9,10 @@
     const notificationContent = document.querySelector('#notification_banner p#content').innerText
     const localStorageKey = 'readNotification'
     const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
+    const cssVariableName = '--navbarHeight'
 
-    function updateNavbarHeight() {
-        document.documentElement.style.setProperty('--navbarHeight', topNav.clientHeight + "px");
-    }
+    /*************************************************************************/
+    // Local storage for remembering if the user has read the notification.
 
     function checkAlreadyRead() {
         return localStorage.getItem(localStorageKey) == notificationContent
@@ -22,33 +22,71 @@
         localStorage.setItem(localStorageKey, notificationContent)
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        updateNavbarHeight()
-    });
-
-    var interval = undefined
-
-    window.addEventListener('resize', () => {
-        if (interval) {
-            clearTimeout(interval)
-        }
-        interval = setTimeout(() => {
-            console.log("Finished resizing")
-            updateNavbarHeight()
-        }, 100)
-    })
+    function clearRead() {
+        localStorage.removeItem(localStorageKey)
+    }
 
     const alreadyRead = checkAlreadyRead()
+    const permanentlyHidden = alreadyRead && bannerHiding == 'permanent'
+
+    /*************************************************************************/
+    // Updating a CSS variable so other elements adjust to the nav bar height.
+
+    function updateNavbarHeight() {
+        // Only update it if the delta is significant. Otherwise it causes
+        // unnecessary browser repaints.
+        const documentStyles = getComputedStyle(document.documentElement)
+        // We store the value in REM, so need to convert to pixels
+        const currentValue = parseFloat(
+            documentStyles.getPropertyValue(cssVariableName)
+        ) * parseFloat(documentStyles.fontSize)
+
+        const newValue = topNav.clientHeight
+        const delta = Math.abs(newValue - currentValue)
+
+        if (delta > 5) {
+            console.log(`Updating ${cssVariableName}; delta = ${delta}`)
+            document.documentElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        }
+    }
+
+    /*************************************************************************/
+    // After loading the page,  and resizing the window, recalculate the nav bar
+    // height.
+
+    if (!permanentlyHidden) {
+        document.addEventListener("DOMContentLoaded", function() {
+            updateNavbarHeight()
+        });
+
+        var interval = undefined
+
+        window.addEventListener('resize', () => {
+            if (interval) {
+                clearTimeout(interval)
+            }
+            interval = setTimeout(() => {
+                console.log("Finished resizing")
+                updateNavbarHeight()
+            }, 100)
+        })
+    }
+
+    /*************************************************************************/
 
     PetiteVue.createApp({
         visible: !alreadyRead,
-        permanentlyHidden: alreadyRead && bannerHiding == 'permanent',
+        permanentlyHidden: permanentlyHidden,
         bannerHiding: bannerHiding,
         $delimiters: ['[[', ']]'],
         toggleVisible() {
             this.visible = !this.visible
 
-            if (!this.visible) {
+            if (this.visible) {
+                clearRead()
+            } else {
                 setRead()
             }
 
