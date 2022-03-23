@@ -6,12 +6,6 @@
 <div id="top_nav">
     {% if theme_banner_text and theme_banner_text != 'false' %}
         {% include "./components/notification_banner.html" %}
-    {% else %}
-        <script>
-            document.documentElement.style.setProperty(
-                '--navbarHeight', "5rem"
-            );
-        </script>
     {% endif %}
 
     <nav>

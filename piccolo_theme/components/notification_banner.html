@@ -10,6 +10,7 @@
     const localStorageKey = 'readNotification'
     const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
     const cssVariableName = '--navbarHeight'
+    const rootElement = document.documentElement
 
     /*************************************************************************/
     // Local storage for remembering if the user has read the notification.
@@ -35,7 +36,7 @@
     function updateNavbarHeight() {
         // Only update it if the delta is significant. Otherwise it causes
         // unnecessary browser repaints.
-        const documentStyles = getComputedStyle(document.documentElement)
+        const documentStyles = getComputedStyle(rootElement)
         // We store the value in REM, so need to convert to pixels
         const currentValue = parseFloat(
             documentStyles.getPropertyValue(cssVariableName)
@@ -45,26 +46,28 @@
 
         if (newValue - 5 > currentValue) {
             console.log(`Updating ${cssVariableName} - overlapping`)
-            document.documentElement.style.setProperty(
+            rootElement.style.setProperty(
                 cssVariableName, newValue + "px"
             );
         } else if (currentValue - newValue >= 30) {
             console.log(`Updating ${cssVariableName} - gap too large`)
-            document.documentElement.style.setProperty(
+            rootElement.style.setProperty(
                 cssVariableName, newValue + "px"
             );
         }
     }
 
     /*************************************************************************/
-    // After loading the page,  and resizing the window, recalculate the nav bar
+    // After loading the page, and resizing the window, recalculate the nav bar
     // height.
 
-    if (permanentlyHidden) {
-        document.documentElement.style.setProperty(
-            cssVariableName, "4rem"
+    if (!permanentlyHidden) {
+        // This height is approximately correct when there's a banner, so
+        // shouldn't require any page reflow:
+        rootElement.style.setProperty(
+            '--navbarHeight', "5.5rem"
         );
-    } else {
+
         document.addEventListener("DOMContentLoaded", function() {
             updateNavbarHeight()
         });
