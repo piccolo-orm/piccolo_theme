@@ -749,35 +749,45 @@ p#theme_credit {
 /*****************************************************************************/
 /* Buttons */
 
-div.button_nav {
-  max-width: $contentWidth;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+div.button_nav_wrapper {
+  margin-left: $sidebarWidth;
+  margin-right: $sidebarWidth;
 
-  div {
-    box-sizing: border-box;
-    padding: 1rem;
-    flex: 50%;
+  @media (max-width: $mobileTransition) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
-    a {
-      display: block;
+  div.button_nav {
+    max-width: $contentWidth;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
-      span {
-        font-weight: bold;
-      }
-    }
+    div {
+      box-sizing: border-box;
+      padding: 1rem;
+      flex: 50%;
 
-    &.left {
       a {
-        text-align: left;
-      }
-    }
+        display: block;
 
-    &.right {
-      a {
-        text-align: right;
+        span {
+          font-weight: bold;
+        }
+      }
+
+      &.left {
+        a {
+          text-align: left;
+        }
+      }
+
+      &.right {
+        a {
+          text-align: right;
+        }
       }
     }
   }

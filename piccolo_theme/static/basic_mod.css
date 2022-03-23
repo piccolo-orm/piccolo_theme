@@ -610,28 +610,38 @@ p#theme_credit {
 
 /*****************************************************************************/
 /* Buttons */
-div.button_nav {
+div.button_nav_wrapper {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+@media (max-width: 50rem) {
+  div.button_nav_wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+div.button_nav_wrapper div.button_nav {
   max-width: 45rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-div.button_nav div {
+div.button_nav_wrapper div.button_nav div {
   box-sizing: border-box;
   padding: 1rem;
   flex: 50%;
 }
-div.button_nav div a {
+div.button_nav_wrapper div.button_nav div a {
   display: block;
 }
-div.button_nav div a span {
+div.button_nav_wrapper div.button_nav div a span {
   font-weight: bold;
 }
-div.button_nav div.left a {
+div.button_nav_wrapper div.button_nav div.left a {
   text-align: left;
 }
-div.button_nav div.right a {
+div.button_nav_wrapper div.button_nav div.right a {
   text-align: right;
 }
 
