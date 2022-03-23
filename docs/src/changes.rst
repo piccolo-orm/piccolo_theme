@@ -1,6 +1,24 @@
 Changes
 =======
 
+0.7.0
+-----
+
+A notification can now be shown at the top of each page.
+
+.. code-block:: python
+
+    # conf.py
+    html_theme_options = {
+        "banner_text": 'Welcome to our amazing documentation!',
+        "banner_hiding": "permanent"
+    }
+
+This involved quite a few CSS changes - please clear your browser cache if
+anything appears broken.
+
+-------------------------------------------------------------------------------
+
 0.6.0
 -----
 
