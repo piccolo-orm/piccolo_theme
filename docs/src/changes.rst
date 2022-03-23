@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.7.1
+-----
+
+Improvements to the notification feature - it was causing too many browser
+reflow operations.
+
+-------------------------------------------------------------------------------
+
 0.7.0
 -----
 
