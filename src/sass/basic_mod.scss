@@ -27,7 +27,7 @@ $sidebarWidth: 15rem;
   --notificationBannerColor: #176bb0;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
-  --navbarHeight: 4rem;
+  --navbarHeight: 5.5rem;
 
   &[data-mode="darkest"] {
     --mainBackgroundColor: black;
@@ -290,7 +290,7 @@ div.document {
   margin-bottom: 5rem;
   margin-left: $sidebarWidth;
   margin-right: $sidebarWidth;
-  padding-top: 5rem;
+  padding-top: var(--navbarHeight);
 
   @media (max-width: $mobileTransition) {
     margin-left: 0px;

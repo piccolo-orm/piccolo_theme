@@ -15,7 +15,7 @@
   --notificationBannerColor: #176bb0;
   --searchHighlightColor: #fff150;
   --sidebarColor: white;
-  --navbarHeight: 4rem;
+  --navbarHeight: 5.5rem;
 }
 :root[data-mode=darkest] {
   --mainBackgroundColor: black;
@@ -238,7 +238,7 @@ div.document {
   margin-bottom: 5rem;
   margin-left: 15rem;
   margin-right: 15rem;
-  padding-top: 5rem;
+  padding-top: var(--navbarHeight);
 }
 @media (max-width: 50rem) {
   div.document {

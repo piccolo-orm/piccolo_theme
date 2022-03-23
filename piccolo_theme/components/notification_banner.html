@@ -42,10 +42,14 @@
         ) * parseFloat(documentStyles.fontSize)
 
         const newValue = topNav.clientHeight
-        const delta = Math.abs(newValue - currentValue)
 
-        if (delta > 5) {
-            console.log(`Updating ${cssVariableName}; delta = ${delta}`)
+        if (newValue - 5 > currentValue) {
+            console.log(`Updating ${cssVariableName} - overlapping`)
+            document.documentElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        } else if (currentValue - newValue >= 30) {
+            console.log(`Updating ${cssVariableName} - gap too large`)
             document.documentElement.style.setProperty(
                 cssVariableName, newValue + "px"
             );
@@ -56,7 +60,11 @@
     // After loading the page,  and resizing the window, recalculate the nav bar
     // height.
 
-    if (!permanentlyHidden) {
+    if (permanentlyHidden) {
+        document.documentElement.style.setProperty(
+            cssVariableName, "4rem"
+        );
+    } else {
         document.addEventListener("DOMContentLoaded", function() {
             updateNavbarHeight()
         });
