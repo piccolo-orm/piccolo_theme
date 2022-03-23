@@ -290,7 +290,7 @@ div.document {
   margin-bottom: 5rem;
   margin-left: $sidebarWidth;
   margin-right: $sidebarWidth;
-  padding-top: 5rem;
+  padding-top: var(--navbarHeight);
 
   @media (max-width: $mobileTransition) {
     margin-left: 0px;
