@@ -239,12 +239,35 @@ div.document {
   margin-left: 15rem;
   margin-right: 15rem;
   padding-top: var(--navbarHeight);
+  /***************************************************************************/
+  /***************************************************************************/
 }
 @media (max-width: 50rem) {
   div.document {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+div.document section {
+  margin: 4rem 0;
+}
+div.document section:first-child {
+  margin-top: 0;
+}
+div.document section > section {
+  margin: 4rem 0;
+}
+div.document section > section > section {
+  margin: 2rem 0 0 0;
+}
+div.document section > section > section > section {
+  margin: 1.5rem 0 0 0;
+}
+div.document h1 + section {
+  margin-top: 2.5rem !important;
+}
+div.document h2 + section {
+  margin-top: 1.5rem !important;
 }
 div.document img {
   max-width: 100%;
@@ -292,6 +315,15 @@ div.document h6,
 div.document str,
 div.document b {
   font-weight: 700;
+}
+div.document h1 {
+  margin: 0.8rem 0 0.5rem 0;
+}
+div.document h2 {
+  margin: 0.8rem 0 0.5rem 0;
+}
+div.document h3, div.document h4 {
+  margin: 1rem 0 0.5rem 0;
 }
 div.document h1:hover a.headerlink,
 div.document h2:hover a.headerlink,

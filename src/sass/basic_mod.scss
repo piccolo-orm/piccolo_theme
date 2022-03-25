@@ -297,6 +297,54 @@ div.document {
     margin-right: 0px;
   }
 
+  /***************************************************************************/
+  // Sphinx wraps each heading and its child content in a section tag.
+  // For example:
+  // <section>
+  //     <h1>My Page</h1>
+  //     <section>
+  //         <h2>Sub heading</h2>
+  //         <p>Some content</p>
+  //     </section>
+  // </section>
+
+  // Wraps a h1
+  section {
+    margin: 4rem 0;
+
+    // We don't need extra space at the top of the page.
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // Wraps a h2
+  // By adding margin to the top and bottom of the section, any dividing lines
+  // (hr tags) the user puts between headings will appear centered.
+  section > section {
+    margin: 4rem 0;
+  }
+
+  // Wraps a h3
+  section > section > section {
+    margin: 2rem 0 0 0;
+  }
+
+  // Wraps a h4
+  section > section > section > section {
+    margin: 1.5rem 0 0 0;
+  }
+
+  h1 + section {
+    margin-top: 2.5rem !important;
+  }
+
+  h2 + section {
+    margin-top: 1.5rem !important;
+  }
+
+  /***************************************************************************/
+
   img {
     max-width: 100%;
   }
@@ -354,6 +402,18 @@ div.document {
   str,
   b {
     font-weight: 700;
+  }
+
+  h1 {
+    margin: 0.8rem 0 0.5rem 0;
+  }
+
+  h2 {
+    margin: 0.8rem 0 0.5rem 0;
+  }
+
+  h3, h4 {
+    margin: 1rem 0 0.5rem 0;
   }
 
   h1:hover,
