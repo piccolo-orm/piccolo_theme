@@ -248,25 +248,32 @@ div.document {
     margin-right: 0px;
   }
 }
-div.document section {
+div.document section,
+div.document div.section {
   margin: 4rem 0;
 }
-div.document section:first-child {
+div.document section:first-child,
+div.document div.section:first-child {
   margin-top: 0;
 }
-div.document section > section {
+div.document section > section,
+div.document div.section > div.section {
   margin: 4rem 0;
 }
-div.document section > section > section {
+div.document section > section > section,
+div.document div.section > div.section > div.section {
   margin: 2rem 0 0 0;
 }
-div.document section > section > section > section {
+div.document section > section > section > section,
+div.document div.section > div.section > div.section > div.section {
   margin: 1.5rem 0 0 0;
 }
-div.document h1 + section {
+div.document h1 + section,
+div.document h1 + div.section {
   margin-top: 2.5rem !important;
 }
-div.document h2 + section {
+div.document h2 + section,
+div.document h2 + div.section {
   margin-top: 1.5rem !important;
 }
 div.document img {
@@ -335,6 +342,9 @@ div.document p,
 div.document li {
   font-size: 1rem;
   line-height: 1.5;
+}
+div.document li p {
+  margin: 0;
 }
 div.document ul, div.document ol {
   padding-left: 2rem;
@@ -475,7 +485,6 @@ div.document div.admonition p + p {
   padding-top: 0.2rem;
 }
 div.document div.admonition p.admonition-title {
-  color: white;
   font-weight: bolder;
   letter-spacing: 0.01rem;
 }
