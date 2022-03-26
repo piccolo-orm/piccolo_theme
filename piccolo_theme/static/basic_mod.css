@@ -344,7 +344,7 @@ div.document li {
   line-height: 1.5;
 }
 div.document li p {
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
 div.document ul, div.document ol {
   padding-left: 2rem;
@@ -677,13 +677,23 @@ div.button_nav_wrapper div.button_nav div a {
   display: block;
 }
 div.button_nav_wrapper div.button_nav div a span {
+  vertical-align: middle;
+}
+div.button_nav_wrapper div.button_nav div a span.icon {
   font-weight: bold;
+  font-size: 0.6em;
 }
 div.button_nav_wrapper div.button_nav div.left a {
   text-align: left;
 }
+div.button_nav_wrapper div.button_nav div.left a span.icon {
+  padding-right: 0.4rem;
+}
 div.button_nav_wrapper div.button_nav div.right a {
   text-align: right;
+}
+div.button_nav_wrapper div.button_nav div.right a span.icon {
+  padding-left: 0.4rem;
 }
 
 /*****************************************************************************/

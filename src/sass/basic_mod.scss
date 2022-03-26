@@ -444,7 +444,7 @@ div.document {
     // * my list item
     // Is rendered as <li><p>My list item</p></li>
     p {
-      margin: 0;
+      margin: 0 0 0.5rem 0;
     }
   }
 
@@ -850,19 +850,32 @@ div.button_nav_wrapper {
         display: block;
 
         span {
+          vertical-align: middle;
+        }
+
+        span.icon {
           font-weight: bold;
+          font-size: 0.6em;
         }
       }
 
       &.left {
         a {
           text-align: left;
+
+          span.icon {
+            padding-right: 0.4rem;
+          }
         }
       }
 
       &.right {
         a {
           text-align: right;
+
+          span.icon {
+            padding-left: 0.4rem;
+          }
         }
       }
     }

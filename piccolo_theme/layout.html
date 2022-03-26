@@ -72,13 +72,13 @@
             <div class="left">
                 {% if prev %}
                 <a href="{{ prev.link }}">
-                    <span>&#9664;</span> {{ prev.title }}</a>
+                    <span class="icon">&#9664;</span><span>{{ prev.title }}</span></a>
                 {% endif %}
             </div>
 
             <div class="right">
                 {% if next %}
-                    <a href="{{ next.link }}">{{ next.title }} <span>&#9654;</span></a>
+                    <a href="{{ next.link }}"><span>{{ next.title }}</span><span class="icon">&#9654;</span></a>
                 {% endif %}
             </div>
         </div>
