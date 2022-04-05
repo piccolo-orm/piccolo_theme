@@ -1,6 +1,60 @@
 Changes
 =======
 
+0.8.0
+-----
+
+Added spacing between sections, so it's not necessary to add horizontal
+dividers any more.
+
+.. code-block:: rst
+
+    My Heading
+    ==========
+
+    Section 1
+    ---------
+
+    Some content
+
+    -------------------------------------------
+
+    Section 2
+    ---------
+
+    Some content
+
+We can now just do:
+
+.. code-block:: rst
+
+    My Heading
+    ==========
+
+    Section 1
+    ---------
+
+    Some content
+
+
+    Section 2
+    ---------
+
+    Some content
+
+Other minor changes:
+
+* Using unicode triangle character instead of < for some links
+* Plain admonitions are now styled properly:
+
+.. code-block:: rst
+
+  .. admonition:: A custom admonition
+
+     This is my custom admonition!
+
+-------------------------------------------------------------------------------
+
 0.7.1
 -----
 

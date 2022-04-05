@@ -7,7 +7,7 @@ if t.TYPE_CHECKING:
     from sphinx.application import Sphinx
 
 
-__VERSION__ = "0.7.1"
+__VERSION__ = "0.8.0"
 
 
 def setup(app: Sphinx):
