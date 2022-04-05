@@ -757,6 +757,21 @@ div.sphinxsidebar {
 /*****************************************************************************/
 /* The right sidebar, showing the table of contents for the current page. */
 
+
+@mixin sidebar_span {
+  span {
+    color: var(--faintFontColor);
+    vertical-align: middle;
+
+    &.icon {
+      color: var(--linkColor);
+      font-size: 0.7em;
+      padding-right: 0.2rem;
+    }
+  }
+}
+
+
 div#show_right_sidebar {
   position: fixed;
   right: 0;
@@ -770,9 +785,7 @@ div#show_right_sidebar {
   p {
     font-size: 0.9em;
 
-    span {
-      color: var(--faintFontColor);
-    }
+    @include sidebar_span;
   }
 }
 
@@ -789,14 +802,12 @@ div#right_sidebar {
   height: 100%;
   overflow-y: auto;
 
+  p {
+    @include sidebar_span;
+  }
+
   @include sidebar_list;
   @include sidebar_p;
-
-  p {
-    span {
-      color: var(--faintFontColor);
-    }
-  }
 
   @media (max-width: $mobileTransition) {
     display: none;
