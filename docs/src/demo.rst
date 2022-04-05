@@ -97,3 +97,7 @@ Admonitions
 .. hint:: This is a hint!
 
 .. note:: This is a note!
+
+.. admonition:: A custom admonition
+
+   This is my custom admonition!
