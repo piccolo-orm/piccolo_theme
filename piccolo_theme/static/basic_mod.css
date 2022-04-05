@@ -584,7 +584,7 @@ div#show_right_sidebar p span {
 }
 div#show_right_sidebar p span.icon {
   color: var(--linkColor);
-  font-size: 0.7em;
+  font-size: 0.9em;
   padding-right: 0.2rem;
 }
 
@@ -607,7 +607,7 @@ div#right_sidebar p span {
 }
 div#right_sidebar p span.icon {
   color: var(--linkColor);
-  font-size: 0.7em;
+  font-size: 0.9em;
   padding-right: 0.2rem;
 }
 div#right_sidebar ul {
@@ -693,7 +693,7 @@ div.button_nav_wrapper div.button_nav div a span {
 }
 div.button_nav_wrapper div.button_nav div a span.icon {
   font-weight: bold;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 div.button_nav_wrapper div.button_nav div.left a {
   text-align: left;
