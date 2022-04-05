@@ -1,5 +1,8 @@
 # Piccolo Theme
 
+[![Documentation Status](https://readthedocs.org/projects/piccolo-theme/badge/?version=latest)](https://piccolo-theme.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/piccolo-theme?color=%2334D058&label=pypi)](https://pypi.org/project/piccolo-theme/)
+
 A clean and modern Sphinx theme.
 
 ![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/docs.png)
