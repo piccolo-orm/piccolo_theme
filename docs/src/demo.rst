@@ -22,6 +22,9 @@ Breathe
 
 .. doxygenfunction:: cpp_function
 
+.. doxygenfunction:: c_function
+    :project: c_demo
+
 -------------------------------------------------------------------------------
 
 Tables

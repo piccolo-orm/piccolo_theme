@@ -64,6 +64,13 @@ html_theme_options = {
 html_static_path = []
 
 breathe_projects = {
-    "demo": "./breathe_demo"
+    "cpp_demo": "./cpp_breathe_demo",
+    "c_demo": "./c_breathe_demo"
 }
-breathe_default_project = "demo"
+breathe_default_project = "cpp_demo"
+breathe_domain_by_extension = {
+    "h" : "c",
+    "c" : "c",
+    "hpp" : "cpp",
+    "cpp" : "cpp"
+}

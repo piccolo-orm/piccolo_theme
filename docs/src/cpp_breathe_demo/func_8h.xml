@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="func_8h" kind="file" language="C++">
-    <compoundname>func.h</compoundname>
+    <compoundname>func.hpp</compoundname>
     <innerclass refid="class_cpp_class" prot="public">CppClass</innerclass>
       <sectiondef kind="func">
       <memberdef kind="function" id="func_8h_1a0b10437b2a2e3cfaf9eec911b525aad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="func.h" line="29" column="6" declfile="func.h" declline="29" declcolumn="6"/>
+        <location file="func.hpp" line="29" column="6" declfile="func.hpp" declline="29" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,6 +72,6 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cpp_function(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<sp/>b,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<sp/>c);</highlight></codeline>
     </programlisting>
-    <location file="func.h"/>
+    <location file="func.hpp"/>
   </compounddef>
 </doxygen>

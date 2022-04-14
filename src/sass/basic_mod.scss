@@ -568,19 +568,9 @@ div.document {
     }
   }
 
-  // Autodoc - cpp ------------------------------------------------------------
+  // Autodoc - c, cpp ----------------------------------------------------------
 
-  dl:not(.cpp) dt.cpp.sig {
-    // section titles
-    em {
-      color: var(--fontColor);
-    }
-    span.descname {
-      color: var(--fontColor);
-    }
-  }
-
-  dl.cpp {
+  dl.cpp, dl.c {
     margin-bottom: 1rem;
 
     dt.sig {
