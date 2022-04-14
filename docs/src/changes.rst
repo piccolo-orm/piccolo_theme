@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.9.0
+-----
+
+Improved the appearance of autodoc output for C files when using
+`breathe <https://breathe.readthedocs.io/en/latest/>`_). Courtesy @thijsmie.
+
+-------------------------------------------------------------------------------
+
 0.8.1
 -----
 
