@@ -1,6 +1,15 @@
 Changes
 =======
 
+0.10.0
+------
+
+Added support for Python 3.6, as many Ubuntu systems will still be using that
+version, and Sphinx still supports it. Thanks to @oncilla for reporting this
+issue.
+
+-------------------------------------------------------------------------------
+
 0.9.0
 -----
 
