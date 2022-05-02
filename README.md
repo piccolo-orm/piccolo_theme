@@ -29,7 +29,7 @@ We make your autodoc code snippets nice and legible:
 
 ![Screenshot](https://raw.githubusercontent.com/piccolo-orm/piccolo_theme/master/docs/screenshots/api_docs.png)
 
-This even works for C++ files via [breathe](https://breathe.readthedocs.io/en/latest/).
+This even works for C and C++ files via [breathe](https://breathe.readthedocs.io/en/latest/).
 
 ## Dark mode, and darkest mode!
 
