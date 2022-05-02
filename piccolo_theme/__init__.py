@@ -3,7 +3,7 @@ import os
 from sphinx.application import Sphinx
 
 
-__VERSION__ = "0.10.1"
+__VERSION__ = "0.10.2"
 
 
 def setup(app: Sphinx):
