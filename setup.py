@@ -29,7 +29,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Daniel Townsend",
     author_email="dan@dantownsend.co.uk",
-    python_requires=">=3.7.0",
+    python_requires=">=3.6.0",
     url="https://github.com/piccolo-orm/piccolo_theme",
     packages=find_packages(),
     package_data={
