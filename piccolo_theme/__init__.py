@@ -1,12 +1,14 @@
 import os
+import typing as t
 
-from sphinx.application import Sphinx
+if t.TYPE_CHECKING:
+    from sphinx.application import Sphinx
 
 
 __VERSION__ = "0.10.2"
 
 
-def setup(app: Sphinx):
+def setup(app: 'Sphinx'):
     """
     :param app:
         Passed by Sphinx.
