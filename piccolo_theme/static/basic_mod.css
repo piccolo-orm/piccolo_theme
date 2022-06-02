@@ -404,7 +404,7 @@ div.document div#search-results ul.search li {
   margin: 0;
   padding: 2rem 0;
 }
-div.document div#search-results ul.search li a:first-child {
+div.document div#search-results ul.search li > a:first-child {
   font-size: 1.2rem;
 }
 div.document dd ul, div.document dd ol {

@@ -519,7 +519,7 @@ div.document {
         margin: 0;
         padding: 2rem 0;
 
-        a:first-child {
+        & > a:first-child {
           font-size: 1.2rem;
         }
       }
