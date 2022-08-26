@@ -55,7 +55,8 @@ html_theme_options = {
         "Theme!"
     ),
     "banner_hiding": "permanent",
-    "show_theme_credit": True
+    "show_theme_credit": True,
+    "git_url": "https://github.com/piccolo-orm/piccolo_theme/"
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
