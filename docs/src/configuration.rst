@@ -51,7 +51,7 @@ custom URL, you can explicitly tell the theme which icon to use:
 
 The available options for ``source_icon`` are:
 
-* git
+* generic
 * github
 * gitlab
 
