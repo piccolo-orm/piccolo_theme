@@ -1,6 +1,33 @@
 Changes
 =======
 
+0.12.0
+------
+
+You can now specify the source code URL, and it will show in the nav bar.
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "source_url": 'https://github.com/piccolo-orm/piccolo_theme/'
+    }
+
+The icon is inferred automatically based on the URL (in the above example, we
+show the GitHub logo). You explicitly set the icon if you prefer:
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "source_url": 'https://self-hosted.foo.com/',
+        "source_icon": "gitlab"
+    }
+
+-------------------------------------------------------------------------------
+
 0.11.1
 ------
 
