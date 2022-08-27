@@ -223,7 +223,7 @@ div#top_nav {
     }
 
     // Toggles light mode / dark mode
-    a#mode_toggle {
+    a#mode_toggle, a#source_link {
       margin-right: 1rem;
       display: block;
       flex-grow: 0;

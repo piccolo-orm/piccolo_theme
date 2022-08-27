@@ -14,6 +14,10 @@
         </p>
         <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">{{ shorttitle }}</a></h1>
 
+        {%- if theme_source_url %}
+            {% include "./components/source_link.html" %}
+        {% endif %}
+
         {% include "./components/dark_mode_toggle.html" %}
 
         {%- if pagename != "search" %}

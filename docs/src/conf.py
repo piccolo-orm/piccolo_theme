@@ -10,6 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+import datetime
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../..'))
@@ -18,7 +19,8 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'Piccolo Theme'
-copyright = '2022, Daniel Townsend'
+year = datetime.datetime.now().year
+copyright = f'{year}, Daniel Townsend'
 author = 'Daniel Townsend'
 
 
@@ -55,7 +57,8 @@ html_theme_options = {
         "Theme!"
     ),
     "banner_hiding": "permanent",
-    "show_theme_credit": True
+    "show_theme_credit": True,
+    "source_url": "https://github.com/piccolo-orm/piccolo_theme/"
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -69,8 +72,8 @@ breathe_projects = {
 }
 breathe_default_project = "cpp_demo"
 breathe_domain_by_extension = {
-    "h" : "c",
-    "c" : "c",
-    "hpp" : "cpp",
-    "cpp" : "cpp"
+    "h": "c",
+    "c": "c",
+    "hpp": "cpp",
+    "cpp": "cpp"
 }
