@@ -23,21 +23,21 @@ appear in the navigation bar. Specify this using ``html_short_title`` in
 Theme specific
 --------------
 
-``git_url``
-~~~~~~~~~~~
+``source_url``
+~~~~~~~~~~~~~~
 
-If specified, a link is shown in the nav bar to the Git repository.
+If specified, a link is shown in the nav bar to the source code.
 
 .. code-block:: python
 
     # conf.py
 
     html_theme_options = {
-        "git_url": 'https://github.com/piccolo-orm/piccolo_theme/'
+        "source_url": 'https://github.com/piccolo-orm/piccolo_theme/'
     }
 
 We try and detect if the URL points to GitHub or GitLab, and show the correct
-icon. However, if you're using a self hosted version GitHub or GitLab on a
+icon. However, if you're using a self hosted version of GitHub or GitLab on a
 custom URL, you can explicitly tell the theme which icon to use:
 
 .. code-block:: python
@@ -45,11 +45,11 @@ custom URL, you can explicitly tell the theme which icon to use:
     # conf.py
 
     html_theme_options = {
-        "git_url": 'https://self-hosted.foo.com/',
-        "git_icon": "gitlab"
+        "source_url": 'https://self-hosted.foo.com/',
+        "source_icon": "gitlab"
     }
 
-The available options for ``git_icon`` are:
+The available options for ``source_icon`` are:
 
 * git
 * github
