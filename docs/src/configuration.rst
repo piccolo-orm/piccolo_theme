@@ -23,6 +23,19 @@ appear in the navigation bar. Specify this using ``html_short_title`` in
 Theme specific
 --------------
 
+``git_url``
+~~~~~~~~~~~
+
+If specified, a link is shown in the nav bar to the Git repository.
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "git_url": 'https://github.com/piccolo-orm/piccolo_theme/'
+    }
+
 ``banner_text``
 ~~~~~~~~~~~~~~~
 
