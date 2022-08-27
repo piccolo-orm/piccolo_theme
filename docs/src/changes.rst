@@ -15,7 +15,7 @@ You can now specify the source code URL, and it will show in the nav bar.
     }
 
 The icon is inferred automatically based on the URL (in the above example, we
-show the GitHub logo). You explicitly set the icon if you prefer:
+show the GitHub logo). You can explicitly set the icon if you prefer:
 
 .. code-block:: python
 
