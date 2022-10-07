@@ -50,8 +50,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'piccolo_theme'
 html_short_title = 'Piccolo Theme'
-# Enabling this line will change the NAV title from a text to an image:
-# html_logo = './_static/awesome_logo.png'
+# Enabling this line will change the nav title from a text to an image:
+# html_logo = './static/awesome_logo.png'
 
 html_theme_options = {
     "banner_text": (
@@ -66,7 +66,7 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = []
 
 breathe_projects = {
     "cpp_demo": "./cpp_breathe_demo",
