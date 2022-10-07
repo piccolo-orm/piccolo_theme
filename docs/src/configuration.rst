@@ -19,7 +19,7 @@ appear in the navigation bar. Specify this using ``html_short_title`` in
     html_short_title = "Amazing Docs"
 
 ``html_logo``
---------------------
+-------------
 
 If you prefer an image logo to a text in the nav bar, specify this using 
 ``html_logo`` in ``conf.py``:
