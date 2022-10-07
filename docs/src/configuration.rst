@@ -18,6 +18,21 @@ appear in the navigation bar. Specify this using ``html_short_title`` in
     # If specified, this will be used in the nav bar instead.
     html_short_title = "Amazing Docs"
 
+``html_logo``
+--------------------
+
+If you prefer an image logo to a text in the nav bar, specify this using 
+``html_logo`` in ``conf.py``:
+
+.. code-block:: python
+
+    # If specified, this will be used in the nav bar instead of textual title
+    html_logo = './_static/logo.png'
+
+.. note:: It is a common practice to place static resources like images
+   inside of subdirectories (e.g. ``_static``). Make sure to list such a 
+   directory in the variable ``html_static_path = []``.
+
 -------------------------------------------------------------------------------
 
 Theme specific
