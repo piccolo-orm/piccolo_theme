@@ -18,6 +18,22 @@ appear in the navigation bar. Specify this using ``html_short_title`` in
     # If specified, this will be used in the nav bar instead.
     html_short_title = "Amazing Docs"
 
+``html_logo``
+-------------
+
+If you want to use a logo in the nav bar instead of text, specify ``html_logo``
+in ``conf.py``:
+
+.. code-block:: python
+
+    # conf.py
+
+    # It can either be a path to an image, relative to conf.py:
+    html_logo = './static/logo.png'
+
+    # Or it can be a URL:
+    html_logo = 'https://awesome.com/static/logo.png'
+
 -------------------------------------------------------------------------------
 
 Theme specific

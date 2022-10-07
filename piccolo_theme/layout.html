@@ -9,10 +9,16 @@
     {% endif %}
 
     <nav>
+        {% if logo_url %}
+            {% set nav_title = '<img src="' + logo_url + '"/>' %}
+        {% else %}
+            {% set nav_title = shorttitle %}
+        {% endif %}
+
         <p id="toggle_sidebar">
             <a href="#" title="Toggle sidebar">|||</a>
         </p>
-        <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">{{ shorttitle }}</a></h1>
+        <h1><a href="{{ pathto(root_doc)|e }}" title="Go to homepage">{{ nav_title }}</a></h1>
 
         {%- if theme_source_url %}
             {% include "./components/source_link.html" %}

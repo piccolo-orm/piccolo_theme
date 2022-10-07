@@ -50,6 +50,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'piccolo_theme'
 html_short_title = 'Piccolo Theme'
+# Enabling this line will change the nav title from a text to an image:
+# html_logo = './static/awesome_logo.png'
 
 html_theme_options = {
     "banner_text": (
