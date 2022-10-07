@@ -1,6 +1,25 @@
 Changes
 =======
 
+0.13.0
+------
+
+A logo can now be used in the nav bar, instead of text.
+
+.. code-block:: python
+
+    # conf.py
+
+    # Relative to conf.py:
+    html_logo = './path/to/logo.png'
+
+    # Or an absolute URL:
+    html_logo = 'https://awesome.com/static/logo.png'
+
+Thanks to @are-scenic for adding this.
+
+-------------------------------------------------------------------------------
+
 0.12.0
 ------
 
