@@ -34,6 +34,29 @@ in ``conf.py``:
     # Or it can be a URL:
     html_logo = 'https://awesome.com/static/logo.png'
 
+.. _PygmentsStyle:
+
+``pygments_style``
+------------------
+
+We use the ``default`` Pygments theme for syntax highlighting of code blocks.
+It gives good results out of the box (including great dark mode support).
+
+If you'd prefer to use a different Pygments style, you can specify it using
+``pygments_style`` in ``conf.py``:
+
+.. code-block:: python
+
+    # conf.py
+
+    pygments_style = "stata-dark"
+
+Dark Mode
+~~~~~~~~~
+
+When switching to dark mode, we automatically apply our own dark mode styles to
+code blocks. If you'd like to disable this behaviour, see :ref:`DarkModeCodeBlocks`.
+
 -------------------------------------------------------------------------------
 
 Theme specific
@@ -122,6 +145,27 @@ need again. For example:
 .. note:: If you configure a different ``banner_text`` value in the future,
    then the banner will appear again, even if the user has previously hidden
    it.
+
+.. _DarkModeCodeBlocks:
+
+``dark_mode_code_blocks``
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When switching to dark mode, we apply our own custom CSS styles to code blocks.
+This gives a great dark mode experience out of the box.
+
+However, if you've specified a custom Pygments theme (see :ref:`PygmentsStyle`),
+and you want to use that theme for both light mode and dark mode, you can
+disable our custom dark mode styles:
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "dark_mode_code_blocks": False,
+    }
+
 
 ``show_theme_credit``
 ~~~~~~~~~~~~~~~~~~~~~
