@@ -1,6 +1,26 @@
 Changes
 =======
 
+0.14.0
+------
+
+When switching to dark mode, we automatically apply our own custom dark mode
+styles to code blocks.
+
+This gives a great experience out of the box. However, if someone uses their
+own Pygments theme, they might want to use that theme in both light mode, and
+dark mode. They can now do so, using the ``dark_mode_code_blocks`` option.
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "dark_mode_code_blocks": False
+    }
+
+-------------------------------------------------------------------------------
+
 0.13.0
 ------
 
