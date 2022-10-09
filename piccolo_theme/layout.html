@@ -1,5 +1,6 @@
 {% extends "basic/layout.html" %}
 
+{%- block body_tag %}<body data-dark_mode_code_blocks="{{ 'true' if theme_dark_mode_code_blocks else 'false' }}">{% endblock %}
 
 {%- block header %}
 

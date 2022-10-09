@@ -53,6 +53,9 @@ html_short_title = 'Piccolo Theme'
 # Enabling this line will change the nav title from a text to an image:
 # html_logo = './static/awesome_logo.png'
 
+# To experiment with custom code block styles:
+# pygments_style = "stata-dark"
+
 html_theme_options = {
     "banner_text": (
         "This is an example notification banner - welcome to the Piccolo "
@@ -60,7 +63,8 @@ html_theme_options = {
     ),
     "banner_hiding": "permanent",
     "show_theme_credit": True,
-    "source_url": "https://github.com/piccolo-orm/piccolo_theme/"
+    "source_url": "https://github.com/piccolo-orm/piccolo_theme/",
+    "dark_mode_code_blocks": True
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
