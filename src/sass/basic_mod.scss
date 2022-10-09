@@ -380,15 +380,12 @@ div.document {
   }
 
   div.highlight {
+    color: #252630;
     box-sizing: border-box;
     padding: 0.2rem 1rem;
     margin: 0.5rem 0;
     border-radius: $borderRadius;
     font-size: 0.9rem;
-
-    // Some Pygments themes leave some elements unstyled - we don't want
-    // our dark mode styles to turn the text white for example.
-    color: var(--fontColor);
 
     pre {
       font-family: $codeFont;
@@ -915,8 +912,8 @@ div.button_nav_wrapper {
 // Sphinx and Pygments don't officially support dark mode, so this is a bit
 // of a hack.
 
-:root[data-mode="dark"],
-:root[data-mode="darkest"] {
+:root[data-mode="dark"] body[data-dark_mode_code_blocks="true"],
+:root[data-mode="darkest"] body[data-dark_mode_code_blocks="true"] {
   .highlight {
     --black: #000000;
     --red: #ff9393;
