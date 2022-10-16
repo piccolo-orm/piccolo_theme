@@ -7,7 +7,7 @@ def test_homepage(page: Page):
     # Expect a title "to contain" a substring.
     expect(page).to_have_title(re.compile("Piccolo Theme"))
 
-    # Github Link
+    # Open sidebar
     page.locator('#toggle_sidebar').click()
     expect(page.locator('.sphinxsidebar')
            ).to_have_attribute("style", "display: none;")
