@@ -18,5 +18,6 @@ formats:
 
 python:
    install:
-   - path: .
    - requirements: requirements/doc-requirements.txt
+   - requirements: requirements/dev-requirements.txt
+   - path: .
