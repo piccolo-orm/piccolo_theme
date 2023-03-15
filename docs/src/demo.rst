@@ -27,6 +27,28 @@ Breathe
 
 -------------------------------------------------------------------------------
 
+Code Blocks
+-----------
+
+Basic
+~~~~~
+
+.. code-block:: python
+
+  def say_hello():
+      print("hello world!")
+
+Emphasize
+~~~~~~~~~
+
+.. code-block:: python
+  :emphasize-lines: 1,2
+
+  def say_hello():
+      print("hello world!")
+
+-------------------------------------------------------------------------------
+
 Tables
 ------
 
