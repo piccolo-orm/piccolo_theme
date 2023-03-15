@@ -47,6 +47,24 @@ Emphasize
   def say_hello():
       print("hello world!")
 
+Line numbers
+~~~~~~~~~~~~
+
+.. code-block:: python
+  :linenos:
+
+  def say_hello():
+      print("hello world!")
+
+Caption
+~~~~~~~
+
+.. code-block:: python
+  :caption: Some example code
+
+  def say_hello():
+      print("hello world!")
+
 -------------------------------------------------------------------------------
 
 Tables
