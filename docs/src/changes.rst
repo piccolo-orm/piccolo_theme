@@ -1,6 +1,15 @@
 Changes
 =======
 
+0.15.0
+------
+
+Improved the colours used for showing emphasis in code blocks in dark mode.
+
+Made some minor fixes to the HTML templates.
+
+-------------------------------------------------------------------------------
+
 0.14.0
 ------
 
