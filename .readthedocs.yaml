@@ -12,9 +12,9 @@ build:
 sphinx:
    configuration: docs/src/conf.py
 
-# formats:
-#    - pdf
-#    - epub
+formats:
+   - pdf
+   - epub
 
 python:
    install:
