@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap?family=Roboto+Mono&display=swap");
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(fonts/roboto/roboto.woff2) format("woff2");
+}
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Mono Regular"), local("RobotoMono-Regular"), url(fonts/roboto-mono/roboto-mono-regular.woff2) format("woff2");
+}
 /*****************************************************************************/
 /* Typography */
 :root {
