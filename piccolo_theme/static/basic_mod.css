@@ -20,7 +20,13 @@
   font-family: Roboto Mono;
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto Mono Regular"), local("RobotoMono-Regular"), url(fonts/roboto-mono/roboto-mono-regular.woff2) format("woff2");
+  src: local("Roboto Mono Regular"), local("RobotoMono-Regular"), url(fonts/roboto-mono/roboto-mono.woff2) format("woff2");
+}
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Roboto Mono Italic"), local("RobotoMono-Italic"), url(fonts/roboto-mono/roboto-mono-italic.woff2) format("woff2");
 }
 @font-face {
   font-family: Roboto Mono;
