@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.16.0
+------
+
+The custom fonts are now bundled with the theme. Thanks to @noxpardalis for
+this.
+
+-------------------------------------------------------------------------------
+
 0.15.0
 ------
 
