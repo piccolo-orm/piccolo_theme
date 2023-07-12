@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.16.1
+------
+
+Bundling the Roboto Mono bold-italic font with the theme, as it's used in
+some code blocks. Thanks to @noxpardalis for adding this.
+
+-------------------------------------------------------------------------------
+
 0.16.0
 ------
 
