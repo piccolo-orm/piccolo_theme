@@ -26,6 +26,8 @@ jobs:
                   pip install Sphinx==${{ matrix.sphinx-version }}
             - name: Install breathe
               run: pip install breathe==4.35.0
+            - name: Install wheel
+              run: pip install wheel
             - name: Install piccolo_theme
               run: pip install .
             - name: Build docs
