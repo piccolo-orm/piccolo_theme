@@ -1,0 +1,29 @@
+name: Test Suite
+
+on:
+    push:
+        branches: ["master"]
+    pull_request:
+        branches: ["master"]
+
+jobs:
+    test_sphinx:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: ["3.8", "3.9", "3.10", "3.11"]
+                sphinx-version: ["7.22", "6.21", "5.30"]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v2
+              with:
+                  python-version: ${{ matrix.python-version }}
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install Sphinx==${{ matrix.python-version }}
+            - name: Build docs
+              run: make html
+              working-directory: ./docs
