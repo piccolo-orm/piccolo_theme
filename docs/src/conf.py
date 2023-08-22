@@ -13,6 +13,9 @@
 import datetime
 import os
 import sys
+
+import sphinx
+
 sys.path.insert(0, os.path.abspath('../..'))
 
 
@@ -31,7 +34,6 @@ author = 'Daniel Townsend'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -72,14 +74,17 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = []
 
-breathe_projects = {
-    "cpp_demo": "./cpp_breathe_demo",
-    "c_demo": "./c_breathe_demo"
-}
-breathe_default_project = "cpp_demo"
-breathe_domain_by_extension = {
-    "h": "c",
-    "c": "c",
-    "hpp": "cpp",
-    "cpp": "cpp"
-}
+if sphinx.version_info[0] < 7:
+    extensions.append('breathe')
+
+    breathe_projects = {
+        "cpp_demo": "./cpp_breathe_demo",
+        "c_demo": "./c_breathe_demo"
+    }
+    breathe_default_project = "cpp_demo"
+    breathe_domain_by_extension = {
+        "h": "c",
+        "c": "c",
+        "hpp": "cpp",
+        "cpp": "cpp"
+    }
