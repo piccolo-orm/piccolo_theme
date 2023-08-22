@@ -29,7 +29,7 @@ jobs:
             - name: Install wheel
               run: pip install wheel
             - name: Install piccolo_theme
-              run: pip install .
+              run: setup.py install
             - name: Build docs
               run: make html
               working-directory: ./docs
