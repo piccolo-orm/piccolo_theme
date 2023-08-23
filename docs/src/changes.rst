@@ -1,6 +1,13 @@
 Changes
 =======
 
+0.17.0
+------
+
+Fixes to support Sphinx 7.2. Thanks to @alexlancaster for reporting this.
+
+-------------------------------------------------------------------------------
+
 0.16.1
 ------
 
