@@ -33,3 +33,18 @@ jobs:
             - name: Build docs
               run: make html
               working-directory: ./docs
+            - name: "Setup Node"
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: Install Playwright
+              run: pip install -r requirements/e2e-requirements.txt
+            - name: Ensure Chromium is installed
+              run: python -m playwright install chromium --with-deps
+            - name: Start Playwright tests
+              run: ./scripts/run-e2e-tests.sh
+            - uses: actions/upload-artifact@v3
+              with:
+                name: playwright-artifacts
+                path: videos/
+              if: always()
