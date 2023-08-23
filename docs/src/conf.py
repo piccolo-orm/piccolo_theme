@@ -75,6 +75,8 @@ html_theme_options = {
 html_static_path = []
 
 if sphinx.version_info[0] < 7:
+    # Breathe only works on certain Sphinx versions.
+
     extensions.append('breathe')
 
     breathe_projects = {
@@ -88,3 +90,9 @@ if sphinx.version_info[0] < 7:
         "hpp": "cpp",
         "cpp": "cpp"
     }
+
+    # By using tags, we can exclude the breathe examples from the docs using
+    # the ``only`` directive.
+    tags.add('include_breathe')  # noqa  # type: ignore
+else:
+    tags.add('exclude_breathe')  # noqa  # type: ignore

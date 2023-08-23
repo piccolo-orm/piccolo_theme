@@ -17,13 +17,19 @@ Autodoc
 Breathe
 -------
 
-.. doxygenclass:: CppClass
-    :members:
+.. only:: include_breathe
 
-.. doxygenfunction:: cpp_function
+  .. doxygenclass:: CppClass
+      :members:
 
-.. doxygenfunction:: c_function
-    :project: c_demo
+  .. doxygenfunction:: cpp_function
+
+  .. doxygenfunction:: c_function
+      :project: c_demo
+
+.. only:: exclude_breathe
+
+  We can't demo Breathe on this version of Sphinx.
 
 -------------------------------------------------------------------------------
 
