@@ -799,6 +799,7 @@ div.sphinxsidebar {
   width: $sidebarWidth;
   box-sizing: border-box;
   padding: var(--navbarHeight) 1rem 1rem;
+  z-index: 50;
 
   @media (max-width: $mobileTransition) {
     display: none;
