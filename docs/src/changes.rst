@@ -1,6 +1,15 @@
 Changes
 =======
 
+0.19.0
+------
+
+Fixed span tags (thanks to @jvcarli for this).
+
+Added support for Python 3.12.
+
+-------------------------------------------------------------------------------
+
 0.18.0
 ------
 
