@@ -62,38 +62,6 @@ code blocks. If you'd like to disable this behaviour, see :ref:`DarkModeCodeBloc
 Theme specific
 --------------
 
-``source_url``
-~~~~~~~~~~~~~~
-
-If specified, a link is shown in the nav bar to the source code.
-
-.. code-block:: python
-
-    # conf.py
-
-    html_theme_options = {
-        "source_url": 'https://github.com/piccolo-orm/piccolo_theme/'
-    }
-
-We try and detect if the URL points to GitHub or GitLab, and show the correct
-icon. However, if you're using a self hosted version of GitHub or GitLab on a
-custom URL, you can explicitly tell the theme which icon to use:
-
-.. code-block:: python
-
-    # conf.py
-
-    html_theme_options = {
-        "source_url": 'https://self-hosted.foo.com/',
-        "source_icon": "gitlab"
-    }
-
-The available options for ``source_icon`` are:
-
-* generic
-* github
-* gitlab
-
 ``banner_text``
 ~~~~~~~~~~~~~~~
 
@@ -166,6 +134,33 @@ disable our custom dark mode styles:
         "dark_mode_code_blocks": False,
     }
 
+``globaltoc_collapse``
+~~~~~~~~~~~~~~~~~~~~~~
+
+By default, the sidebar just shows the top level:
+
+.. image:: static/sidebar/default.png
+    :width: 200px
+
+When you click on an item, it shows the children:
+
+.. image:: static/sidebar/clicked.png
+    :width: 200px
+
+If you want the children to be visible at all times, you can do so as follows:
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "globaltoc_collapse": False
+    }
+
+It will then look something like this:
+
+.. image:: static/sidebar/expanded.png
+    :width: 200px
 
 ``show_theme_credit``
 ~~~~~~~~~~~~~~~~~~~~~
@@ -185,3 +180,35 @@ You can hide this if required:
     }
 
 If hiding it, please consider :ref:`supporting us <SupportUs>` in a different way.
+
+``source_url``
+~~~~~~~~~~~~~~
+
+If specified, a link is shown in the nav bar to the source code.
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "source_url": 'https://github.com/piccolo-orm/piccolo_theme/'
+    }
+
+We try and detect if the URL points to GitHub or GitLab, and show the correct
+icon. However, if you're using a self hosted version of GitHub or GitLab on a
+custom URL, you can explicitly tell the theme which icon to use:
+
+.. code-block:: python
+
+    # conf.py
+
+    html_theme_options = {
+        "source_url": 'https://self-hosted.foo.com/',
+        "source_icon": "gitlab"
+    }
+
+The available options for ``source_icon`` are:
+
+* generic
+* github
+* gitlab
