@@ -15,11 +15,6 @@ def test_homepage(page: Page):
     expect(page.locator('.sphinxsidebar')
            ).to_have_attribute("style", "display: none;")
 
-    # Github Link
-    page.locator('#source_link').click()
-    expect(page).to_have_url(re.compile(
-        'https://github.com/piccolo-orm/piccolo_theme/'))
-
     # Dark Mode
     page.goto(BASE_URL)
     expect(page.locator('html')).to_have_attribute("data-mode", "light")
@@ -46,3 +41,8 @@ def test_homepage(page: Page):
     page.goto(BASE_URL)
     page.locator('//*[@id="piccolo-theme"]/div/ul/li[1]/a').click()
     expect(page).to_have_title(re.compile("Setup"))
+
+    # Github Link
+    page.locator('#source_link').click()
+    expect(page).to_have_url(re.compile(
+        'https://github.com/piccolo-orm/piccolo_theme/'))
