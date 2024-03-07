@@ -28,6 +28,8 @@ jobs:
               run: pip install breathe==4.35.0
             - name: Install wheel
               run: pip install wheel
+            - name: Install setuptools
+              run: pip install setuptools
             - name: Install piccolo_theme
               run: python setup.py install
             - name: Build docs
