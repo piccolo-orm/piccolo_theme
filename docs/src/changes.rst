@@ -1,6 +1,13 @@
 Changes
 =======
 
+0.20.0
+------
+
+Added additional ordered list styles - thanks to @fizbin for reporting this.
+
+-------------------------------------------------------------------------------
+
 0.19.0
 ------
 
