@@ -125,14 +125,55 @@ Unordered List
 
 * Python
 * Rust
-* Javascript
+* JavaScript
 
 Ordered List
 ~~~~~~~~~~~~
 
+Explicit numbers:
+
 1. Python
 2. Rust
-3. Javascript
+3. JavaScript
+
+Auto numbers:
+
+#. Python
+#. Rust
+#. JavaScript
+
+Lower-alpha:
+
+a. Rust
+#. C++
+#. C
+
+Upper-alpha:
+
+A. reStructuredText
+#. HTML
+#. Markdown
+
+Lower-roman:
+
+i. reStructuredText
+#. HTML
+#. Markdown
+
+Upper-roman:
+
+I. reStructuredText
+#. HTML
+#. Markdown
+
+Nested List
+~~~~~~~~~~~
+
+1. Languages
+
+   a. Python
+   #. Rust
+   #. JavaScript
 
 -------------------------------------------------------------------------------
 

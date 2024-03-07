@@ -502,6 +502,31 @@ div.document {
     padding-left: 2rem;
   }
 
+  ol {
+    // Sphinx lets the user specify what kind of list style they want using
+    // these classes:
+
+    &.loweralpha {
+      list-style: lower-alpha;
+    }
+
+    &.arabic {
+      list-style: decimal;
+    }
+
+    &.lowerroman {
+      list-style: lower-roman;
+    }
+
+    &.upperalpha {
+      list-style: upper-alpha;
+    }
+
+    &.upperroman {
+      list-style: upper-roman;
+    }
+  }
+
   dd {
     margin-left: 1.5rem;
   }
