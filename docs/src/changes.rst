@@ -1,6 +1,13 @@
 Changes
 =======
 
+0.21.0
+------
+
+Allow `parallel builds <https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-j>`_.
+
+-------------------------------------------------------------------------------
+
 0.20.0
 ------
 
