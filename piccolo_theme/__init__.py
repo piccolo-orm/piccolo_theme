@@ -8,7 +8,7 @@ if t.TYPE_CHECKING:
 __VERSION__ = "0.20.0"
 
 
-def setup(app: 'Sphinx'):
+def setup(app: 'Sphinx') -> t.Dict:
     """
     :param app:
         Passed by Sphinx.
@@ -35,3 +35,13 @@ def setup(app: 'Sphinx'):
                     html_theme_options['source_icon'] = 'gitlab'
                 else:
                     html_theme_options['source_icon'] = 'git'
+
+    ###########################################################################
+    # Return metadata
+    # https://www.sphinx-doc.org/en/master/extdev/index.html#extension-metadata
+
+    return {
+        "version": __VERSION__,
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }
