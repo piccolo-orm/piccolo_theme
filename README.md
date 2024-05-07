@@ -63,3 +63,9 @@ Then:
 ```
 ./scripts/build-styles.sh
 ```
+
+## Used by
+Here are some awesome projects using our theme. We welcome PRs to extend the list:
+* [Cyclone DDS Python: Python binding for Eclipse Cyclone DDS](https://cyclonedds.io/docs/cyclonedds-python/latest/)
+* [bitstring: A Python module to help make the creation and analysis of all types of bit-level binary data as simple and efficient as possible](https://bitstring.readthedocs.io/en/stable/#)
+* [Lance: Modern columnar data format for ML](https://lancedb.github.io/lance/)
