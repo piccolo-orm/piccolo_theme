@@ -147,7 +147,9 @@ body {
 /*****************************************************************************/
 /* Top nav */
 
-div#searchbox {
+// Prior to Sphinx 7.3.7, it was div#searchbox, and is now search#searchbox
+// https://github.com/piccolo-orm/piccolo_theme/issues/77
+#searchbox {
   h3#searchlabel {
     display: none;
   }
