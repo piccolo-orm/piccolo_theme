@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.22.0
+------
+
+Fixed a styling issue with the searchbox in Sphinx 7.3.x. Thanks to @heuer for
+reporting this issue.
+
+-------------------------------------------------------------------------------
+
 0.21.0
 ------
 
