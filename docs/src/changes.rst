@@ -1,6 +1,13 @@
 Changes
 =======
 
+0.23.0
+------
+
+Fixing some style issues in the search results page in Sphinx 7.3.x.
+
+-------------------------------------------------------------------------------
+
 0.22.0
 ------
 

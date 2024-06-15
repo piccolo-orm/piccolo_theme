@@ -5,7 +5,7 @@ if t.TYPE_CHECKING:
     from sphinx.application import Sphinx
 
 
-__VERSION__ = "0.22.0"
+__VERSION__ = "0.23.0"
 
 
 def setup(app: 'Sphinx') -> t.Dict:
