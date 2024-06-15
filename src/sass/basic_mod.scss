@@ -312,7 +312,9 @@ div#top_nav {
         display: none;
       }
 
-      div#searchbox {
+      // Prior to Sphinx 7.3.7, it was div#searchbox, and is now search#searchbox
+      // https://github.com/piccolo-orm/piccolo_theme/issues/79
+      #searchbox {
         align-items: center;
         display: flex !important; // important is required, as an inline display: search is added by Sphinx in >= 5.0
         flex-direction: row-reverse;
