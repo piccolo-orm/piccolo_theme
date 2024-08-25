@@ -74,7 +74,7 @@ Caption
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
 
-An example of how syntax highlighting works for various bits of code:
+An example of how syntax highlighting looks for various bits of code:
 
 .. code-block:: python
 
