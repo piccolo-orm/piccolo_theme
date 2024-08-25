@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.24.0
+------
+
+Improved the colours used for syntax highlighting whilst in dark mode (one of
+the blue colours was too dark). Thanks to @superstes for reporting this issue.
+
+-------------------------------------------------------------------------------
+
 0.23.0
 ------
 
