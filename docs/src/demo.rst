@@ -71,6 +71,33 @@ Caption
   def say_hello():
       print("hello world!")
 
+Syntax highlighting
+~~~~~~~~~~~~~~~~~~~
+
+An example of how syntax highlighting works for various bits of code:
+
+.. code-block:: python
+
+  a = 1
+  print(a)
+
+
+  def hello_world():
+      print("hello world!")
+
+
+  class Greeting():
+    def __init__(self, message: str):
+        self.message = message
+
+    def greeting(self):
+        print(self.message)
+
+
+  if __name__ == '__main__':
+      greeting = Greeting(message="hello world")
+      greeting.greeting()
+
 -------------------------------------------------------------------------------
 
 Tables
